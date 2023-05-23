@@ -102,7 +102,7 @@ Projet transversal pour la formation Développement Web et Web Mobile de l'Écol
                En tant qu'Utilisateur (Prêteur et Emprunteur), je peux modifier l'aspect de l'interface 
                (couleur de fond, taille de police de caractères, etc.)
                       
-  - Fonctionnalités ajoutées par les développeurs :
+  ### Fonctionnalités ajoutées par les développeurs :
  
             - Recherche d'outil (Emprunteur) : 
                 En tant qu'Utilisateur (Prêteur et Emprunteur), je peux effectuer une recherche d'outils basée sur son emprunteur
