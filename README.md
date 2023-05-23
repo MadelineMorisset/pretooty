@@ -31,11 +31,11 @@ Projet transversal pour la formation Développement Web et Web Mobile de l'Écol
          - lorsqu'un "Emprunteur" emprunte un outil, il indique les dates de début et de fin d’emprunt
          - le gestionnaire du site peut nommer certains "Utilisateurs" comme "Administrateur", afin de leur permettre d’administrer 
            les "Utilisateurs"; ils peuvent : 
-              ●	désactiver un compte Utilisateur
-              ●	modifier des informations d’un Utilisateur (pour réinitialiser son mot de passe par exemple, ou lui donner 
+              ● désactiver un compte Utilisateur
+              ● modifier des informations d’un Utilisateur (pour réinitialiser son mot de passe par exemple, ou lui donner 
                 le rôle Administrateur)
-              ●	modifier/supprimer un outil d’un Prêteur
-              ●	créer, modifier et supprimer une catégorie d’outils, et lister les catégories existantes
+              ● modifier/supprimer un outil d’un Prêteur
+              ● créer, modifier et supprimer une catégorie d’outils, et lister les catégories existantes
          - un "Utilisateur" peut être "Prêteur", "Emprunteur" et parfois même "Administrateur" à la fois
          - la plateforme propose un moteur de recherche permettant de trouver des outils en fonction de différents critères :
                ● catégorie
