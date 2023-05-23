@@ -1,5 +1,5 @@
 # Pretooty
-Projet transversal pour la formation Développement Web et Web Mobile de l'École Atypique (86360 Chasseneuil-du-Poitou).
+Projet transversal pour la formation Développement Web et Web Mobile de l'École Atypique (86360 Chasseneuil-du-Poitou) pour la session 2022-2023.
 
 
 ## Équipe de développement :
