@@ -15,11 +15,11 @@
         <!-- Formulaire de connexion -->
 
         <form action="login.php" method="post">
-            <label for="pseudo" required>Pseudo / Adresse mail :</label>
-            <input type="text" name="pseudo">
+            <label for="pseudo">Pseudo / Adresse mail :</label>
+            <input type="text" name="pseudo" required>
 
-            <label for="mdp" required>Mot de passe :</label>
-            <input type="text" name="mdp">
+            <label for="mdp">Mot de passe :</label>
+            <input type="text" name="mdp" required>
             <button type="submit">Se connecter</button>
         </form>
 
