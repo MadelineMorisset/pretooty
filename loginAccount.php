@@ -20,8 +20,10 @@
 
             <label for="mdp">Mot de passe :</label>
             <input type="text" name="mdp" required>
+            <a href="forgottenPassword_mail.php">Mot de passe oublié ?</a>
 
             <button type="submit">Se connecter</button>
+            <a href="createAccount.php">Pas encore membre ?</a>
         </form>
 
     <?php } ?>

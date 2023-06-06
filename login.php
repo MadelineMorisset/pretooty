@@ -31,6 +31,6 @@ foreach ($users as $user) {
     } 
 }
 
-header('Location: espacePersonnel.php');
+header('Location: userPage.php');
 
 ?>
