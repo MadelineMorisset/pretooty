@@ -12,8 +12,10 @@ catch (Exception $e) {
     exit('<strong>Error:</strong>'.$e->getMessage());
 }
 
-$query = $db->prepare('SELECT * FROM utilisateur WHERE pseudonyme = '.$_POST['pseudoMail'].' OR mail = '.$_POST['pseudoMail'].'');
-$query->execute();
+$query = $db->prepare('SELECT * FROM utilisateur WHERE pseudonyme = :pseudomail OR mail = :pseudomail');
+$query->execute([
+    "pseudoMail" => $_POST['pseudoMail'],
+    ]);
 $users = $query->fetchAll();
 
 if (!isset($_POST['pseudoMail']) || empty($_POST['pseudoMail']) || !isset($_POST['mdp']) || empty($_POST['mdp'])) {
