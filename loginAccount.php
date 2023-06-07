@@ -15,21 +15,16 @@
         <!-- Formulaire de connexion -->
 
         <form action="login.php" method="post">
-            <label for="pseudo">Pseudo / Adresse mail :</label>
-            <input type="text" name="pseudo" required>
+            <label for="pseudoMail">Pseudo / Adresse mail :</label>
+            <input type="text" name="pseudoMail" required>
 
             <label for="mdp">Mot de passe :</label>
             <input type="text" name="mdp" required>
+            <a href="forgottenPassword_mail.php">Mot de passe oublié ?</a>
+
             <button type="submit">Se connecter</button>
+            <a href="createAccount.php">Pas encore membre ?</a>
         </form>
-
-    <?php } 
-        else { ?>
-
-        <!-- Bonjour pseudo -->
-
-        <h1><?php echo 'Bonjour '.$_SESSION['pseudonyme'].' !'; ?></h1>
-        <!-- <h2>Bienvenue sur votre espace personnel.</h2> -->
 
     <?php } ?>
 
