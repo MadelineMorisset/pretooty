@@ -33,6 +33,6 @@ foreach ($users as $user) {
     } 
 }
 
-header('Location: userPage.php');
+header('Location: userPageAccount.php');
 
 ?>
