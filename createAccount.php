@@ -15,13 +15,13 @@
         <input type="text" name="pseudo" required>
 
         <label for="mail">Adresse mail :</label>
-        <input type="text" name="mail" required>
+        <input type="email" name="mail" required>
 
         <label for="mdp">Mot de passe :</label>
-        <input type="text" name="mdp" required>
+        <input type="password" name="mdp" required>
 
         <label for="confirm">Confirmer le mot de passe :</label>
-        <input type="text" name="confirm" required>
+        <input type="password" name="confirm" required>
 
         <button type="submit">Se connecter</button>
     </form>

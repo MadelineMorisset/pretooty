@@ -9,7 +9,7 @@
 
     <body>
         <form action="mailInitPassword.php" method="post">
-            <input type="text" name="mail" placeholder="Votre adresse mail" required>
+            <input type="email" name="mail" placeholder="Votre adresse mail" required>
             <button type="submit">Envoyer</button>
 
             <a href="login.php">Retour vers connexion</a>
