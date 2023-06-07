@@ -18,12 +18,6 @@ catch (Exception $e) {
 
 
 
-// Cryptage du mdp
-
-$password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
-
-
-
 // Vérification du mdp
 
 $regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}/";
@@ -44,6 +38,7 @@ elseif ($_POST['mdp'] != $_POST['confirm']) {
 else {
     ('Une erreur est survenue.');
 } 
+
 
 
 
@@ -75,11 +70,18 @@ if (!empty($users)) {
 
 
 
+// Cryptage du mdp
+
+$password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+
+
+
+
+
 // Insertion des données dans la BDD
 
 $pseudo = strip_tags($_POST['pseudo']);
 $mail = strip_tags($_POST['mail']);
-$mdp = strip_tags($_POST['mdp']);
 $confirm = strip_tags($_POST['confirm']);
 
 
@@ -96,6 +98,15 @@ $query->execute([
 $users = $query->fetchAll();
 
 
-header()
+$checkPassword = password_verify($_POST['mdp'], $users['mdp']);
+
+foreach ($users as $user) {
+    if ($user['pseudonyme'] === $_POST['pseudo'] && $checkPassword === true) {
+        $_SESSION['pseudonyme'] = $pseudo;
+    }
+}
+
+
+header('Location: userPage.php');
 
 ?>
