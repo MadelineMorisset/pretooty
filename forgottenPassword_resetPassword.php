@@ -14,8 +14,10 @@
             <input type="password" name="mdp" placeholder="Mot de passe" required>
             <input type="password" name="confirm" placeholder="Confirmer mot de passe" required>
 
-            
+            <button type="submit">Envoyer</button>
 
+            <a href="loginAccount.php">Retour vers connexion</a>
+            <a href="createAccount.php">Retour vers création de compte</a>
         </form>
     </body>
  </html>
