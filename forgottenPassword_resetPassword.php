@@ -1,6 +1,4 @@
- <?php session_start(); ?>
-
- <!DOCTYPE html>
+<!DOCTYPE html>
  <html lang="fr">
     <head>
         <meta charset="UTF-8">
@@ -20,4 +18,4 @@
             <a href="createAccount.php">Retour vers création de compte</a>
         </form>
     </body>
- </html>
+</html>
