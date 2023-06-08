@@ -1,16 +1,7 @@
 <?php
 session_start();
 
-try {
-    $db = new PDO(
-        'mysql:host=localhost;dbname=pretooty;charset=utf8',
-        'root',
-        '',
-    );
-}
-catch (Exception $e) {
-    exit('<strong>Error:</strong>'.$e->getMessage());
-}
+include('dataBaseConnexion.php');
 
 
 if (isset($_POST['mdp']) || !empty($_POST['mdp']) || isset($_POST['confirm']) || !empty($_POST['confirm'])) {
