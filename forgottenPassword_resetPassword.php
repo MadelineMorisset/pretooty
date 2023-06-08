@@ -8,6 +8,8 @@
     </head>
 
     <body>
+        <?php include('header.php'); ?>
+
         <form action="setNewPassword.php" method="post">
             <input type="password" name="mdp" placeholder="Mot de passe" required>
             <input type="password" name="confirm" placeholder="Confirmer mot de passe" required>
@@ -17,5 +19,7 @@
             <a href="loginAccount.php">Retour vers connexion</a>
             <a href="createAccount.php">Retour vers création de compte</a>
         </form>
+
+    <?php include('footer.php'); ?>
     </body>
 </html>

@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <?php include('header.php'); ?>
+
     <form action="signup.php" method="post">
         <label for="pseudo">Pseudonyme :</label>
         <input type="text" name="pseudo" required>
@@ -25,5 +27,7 @@
 
         <button type="submit">Se connecter</button>
     </form>
+
+    <?php include('footer.php'); ?>
 </body>
 </html>
