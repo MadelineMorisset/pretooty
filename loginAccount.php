@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php if (!isset($_SESSION['pseudonyme'])) { ?>
+    <?php include('header.php'); ?>
 
         <!-- Formulaire de connexion -->
 
@@ -26,7 +26,7 @@
             <a href="createAccount.php">Pas encore membre ?</a>
         </form>
 
-    <?php } ?>
+    <?php include('footer.php'); ?>
 
 </body>
 

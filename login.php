@@ -3,9 +3,10 @@ session_start();
 
 include('dataBaseConnexion.php');
 
-$query = $db->prepare('SELECT * FROM utilisateur WHERE pseudonyme = :pseudomail OR mail = :pseudomail');
+$query = $db->prepare('SELECT * FROM utilisateur WHERE pseudonyme = :pseudo OR mail = :mail');
 $query->execute([
-    "pseudoMail" => $_POST['pseudoMail'],
+    "pseudo" => $_POST['pseudoMail'],
+    "mail" => $_POST['pseudoMail'],
     ]);
 $users = $query->fetchAll();
 
