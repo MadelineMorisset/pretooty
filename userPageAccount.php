@@ -12,6 +12,8 @@
     <body>
         <?php include('header.php'); ?>
 
+        <?php include('functions.php');
+        showMyAccount(); ?>
 
 
         <?php include('footer.php'); ?>
