@@ -1,5 +1,6 @@
 <?php
 
+// USERPAGEACCOUNT
 
 function showMyAccount() {
     include('dataBaseConnexion.php');
@@ -8,14 +9,14 @@ function showMyAccount() {
                                                     INNER JOIN categorie ON outil.id_categorie = categorie.id_categorie
                                                     INNER JOIN categorie_u ON utilisateur.categorie_u = categorie_u.id_categorie_u
                                                     INNER JOIN emprunt ON outil.id_outil = emprunt.id_outil
-                                                    WHERE pseudonyme = :pseudo');
+                                                    WHERE utilisateur.id_utilisateur = :id_utilisateur');
     $query->execute([
-        "pseudo" => $_SESSION,
+        "id_utilisateur" => $_SESSION['id_utilisateur'],
     ]);
     $users = $query->fetchAll();
 }
 
 
-
+var_dump($_SESSION['id_utilisateur']);
 
 ?>
