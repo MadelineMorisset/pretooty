@@ -5,7 +5,7 @@ include('dataBaseConnexion.php');
 
 
 if (isset($_POST['mdp']) || !empty($_POST['mdp']) || isset($_POST['confirm']) || !empty($_POST['confirm'])) {
-    if ($_POST['mdp'] === $_POST['confirm']) {
+    if ($_POST['mdp'] == $_POST['confirm']) {
 
         $id_user = $_GET['id_user'];
         $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
@@ -20,14 +20,5 @@ if (isset($_POST['mdp']) || !empty($_POST['mdp']) || isset($_POST['confirm']) ||
 
 
 $users = $query->fetchAll();
-
-
-
-
-
-
-
-
-
 
 ?>
