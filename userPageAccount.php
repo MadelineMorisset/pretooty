@@ -13,7 +13,8 @@
         <?php include('header.php'); ?>
 
         <?php include('functions.php');
-        showMyAccount(); ?>
+        showMyAccountGeneral(); 
+        showMyAccountCoordonnees()?>
 
 
         <?php include('footer.php'); ?>
