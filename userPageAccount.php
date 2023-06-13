@@ -17,8 +17,8 @@
         showMyAccountContactDetails()?>
 
         <div>
-        <label for="id_police">Taille de la police</label>
-            <select name="id_police">
+        <label for="id_font">Taille de la police</label>
+            <select name="id_font">
                 <option value="1">Petite</option>
                 <option value="2">Moyenne</option>
                 <option value="3">Grande</option>
