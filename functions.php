@@ -18,10 +18,28 @@ error_reporting(E_ALL);
         $users = $query->fetchAll();
 
         foreach($users as $user) {
-            echo '<div>Catégorie : '.$user['nom_categorie_u'].' </div>
-            <div>Pseudonyme : '.$user['pseudonyme'].' </div>
-            <div>Nom : '.$user['nom_utilisateur'].' </div>
-            <div>Prénom : '.$user['prenom_utilisateur'].' </div>';
+            echo '<label for="categoryButton">Catégorie :</label>
+                    <select name="categoryButton" readonly style="border-color:transparent">
+                        <option value="'.$user['id_categorie_u'].'">'.$user['nom_categorie_u'].'</option>
+                    </select>
+
+                <button onclick="clickButtonCategory() id="categoryEditButton">Modifier</button>
+
+                <div>Pseudonyme : '.$user['pseudonyme'].' </div>
+
+                <label for="nameButton">Nom :</label> 
+                    <input type="text" id="nameButton" value="'.$user['nom_utilisateur'].'" readonly style="border-color:transparent">
+
+                <button onclick="clickButtonName()" id="nameEditButton">Modifier</button>
+
+                <button onclick="editMyAccountName()" id="validateName" class="hidden">Valider</button>
+
+                <label for="firstnameButton">Prénom :</label> 
+                    <input type="text" id="firstnameButton" value="'.$user['prenom_utilisateur'].'" readonly style="border-color:transparent">
+
+                <button onclick="editMyAccountFirstName()" id="firstnameEditButton">Modifier</button>
+                
+                <button onclick="editMyAccountFirstName()" id="validatefirstname" class="hidden">Valider</button>';
         }
     }
 
