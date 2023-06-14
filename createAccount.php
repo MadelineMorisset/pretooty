@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php include('header.phtml'); ?>
+    <?php include('header.php'); ?>
 
     <form action="signup.php" method="post">
         <label for="pseudo">Pseudonyme :</label>
