@@ -10,11 +10,13 @@
     </head>
 
     <body>
-        <?php include('header.php'); ?>
+        <?php include('views\header.php'); ?>
 
-        <?php include('functions.php');
+        <!-- <?php include('functions.php');
         showMyAccountGeneral(); 
-        showMyAccountContactDetails()?>
+        showMyAccountContactDetails()?> -->
+
+
 
         <div>
         <label for="id_font">Taille de la police</label>
@@ -35,8 +37,8 @@
         </div>
 
 
-        <?php include('footer.php'); ?>
+        <?php include('views\footer.php'); ?>
 
         <script src="assets\js\script.js"></script>
     </body>
-</html>
+</html>                                                       

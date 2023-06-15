@@ -23,7 +23,7 @@ error_reporting(E_ALL);
                         <option value="'.$user['id_categorie_u'].'">'.$user['nom_categorie_u'].'</option>
                     </select>
 
-                <button onclick="clickButtonCategory() id="categoryEditButton">Modifier</button>
+                <button onclick="clickButtonCategory()" id="categoryEditButton">Modifier</button>
 
                 <div>Pseudonyme : '.$user['pseudonyme'].' </div>
 

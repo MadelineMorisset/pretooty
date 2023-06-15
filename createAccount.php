@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php include('header.php'); ?>
+    <?php include('views\header.php'); ?>
 
     <form action="signup.php" method="post">
         <label for="pseudo">Pseudonyme :</label>
@@ -28,6 +28,6 @@
         <button type="submit">Se connecter</button>
     </form>
 
-    <?php include('footer.php'); ?>
+    <?php include('views\footer.php'); ?>
 </body>
 </html>

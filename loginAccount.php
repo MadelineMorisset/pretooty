@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php include('header.php'); ?>
+    <?php include('views\header.php'); ?>
 
         <!-- Formulaire de connexion -->
 
@@ -26,7 +26,7 @@
             <a href="createAccount.php">Pas encore membre ?</a>
         </form>
 
-    <?php include('footer.php'); ?>
+    <?php include('views\footer.php'); ?>
 
 </body>
 
