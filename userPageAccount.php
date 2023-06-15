@@ -16,29 +16,68 @@
         showMyAccountGeneral(); 
         showMyAccountContactDetails()?> -->
 
+        <form action="userEditPageAccount.php" method="post">
+            <fieldset>
+                <legend>Général</legend>
 
+                <label for="category">Catégorie :</label>
+                <input type="text" name="category" value=""/>
 
-        <div>
-        <label for="id_font">Taille de la police</label>
-            <select name="id_font">
-                <option value="1">Petite</option>
-                <option value="2">Moyenne</option>
-                <option value="3">Grande</option>
-                <option value="4">Très grande</option>
-            </select>
-        </div>
+                <label for="pseudo">Pseudonyme :</label>
+                <input type="text" name="pseudo" value=""/>
 
-        <div>
-        <label for="id_theme">Thème couleur</label>
-            <select name="id_theme">
-                <option value="1">Pretooty</option>
-                <option value="2">Nuit</option>
-            </select>
-        </div>
+                <label for="name">Nom :</label>
+                <input type="text" name="name" value=""/>
 
+                <label for="firstname">Prénom :</label>
+                <input type="text" name="firstname" value=""/>
+            </fieldset>
 
+            <fieldset>
+                <legend>Coordonnées</legend>
+
+                <label for="address">Adresse :</label>
+                <input type="text" name="address" value=""/>
+
+                <label for="city">Ville :</label>
+                <input type="text" name="city" value=""/>
+
+                <label for="cp">Code Postal :</label>
+                <input type="text" name="cp" value=""/>
+
+                <label for="tel">Téléphone :</label>
+                <input type="text" name="tel" value=""/>
+
+                <label for="email">Adresse mail :</label>
+                <input type="email" name="email" value=""/>
+
+                <label for="mdp">Mot de passe :</label>
+                <input type="text" name="mdp" value=""/>
+            </fieldset>
+
+            <div>
+            <label for="id_font">Taille de la police</label>
+                <select name="id_font">
+                    <option value="1">Petite</option>
+                    <option value="2">Moyenne</option>
+                    <option value="3">Grande</option>
+                    <option value="4">Très grande</option>
+                </select>
+            </div>
+
+            <div>
+            <label for="id_theme">Thème couleur</label>
+                <select name="id_theme">
+                    <option value="1">Pretooty</option>
+                    <option value="2">Nuit</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Modifier"/>
+        </form>
+
+        
         <?php include('views\footer.php'); ?>
 
-        <script src="assets\js\script.js"></script>
     </body>
 </html>                                                       

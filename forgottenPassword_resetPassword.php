@@ -10,7 +10,7 @@
     <body>
         <?php include('views\header.php'); ?>
 
-        <form action="setNewPassword.php" method="post">
+        <form action="php\setNewPassword.php" method="post">
             <input type="password" name="mdp" placeholder="Mot de passe" required>
             <input type="password" name="confirm" placeholder="Confirmer mot de passe" required>
 

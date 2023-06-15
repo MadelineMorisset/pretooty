@@ -12,7 +12,7 @@
 <body>
     <?php include('views\header.php'); ?>
 
-    <form action="signup.php" method="post">
+    <form action="php\signup.php" method="post">
         <label for="pseudo">Pseudonyme :</label>
         <input type="text" name="pseudo" required>
 

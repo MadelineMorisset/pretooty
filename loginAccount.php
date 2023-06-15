@@ -14,7 +14,7 @@
 
         <!-- Formulaire de connexion -->
 
-        <form action="login.php" method="post">
+        <form action="php\login.php" method="post">
             <label for="pseudoMail">Pseudo / Adresse mail :</label>
             <input type="text" name="pseudoMail" required>
 
