@@ -12,9 +12,6 @@
     <body>
         <?php include('views\header.php'); ?>
 
-        <?php include('php\functions.php');
-        showMyAccountGeneral(); 
-        showMyAccountContactDetails()?>
 
         <form action="userEditPageAccount.php" method="post">
             <fieldset>
@@ -75,8 +72,6 @@
                     <option value="2">Nuit</option>
                 </select>
             </div>
-
-            
 
         
         <?php include('views\footer.php'); ?>
