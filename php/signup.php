@@ -5,7 +5,7 @@ session_start();
 
 // Connexion à la BDD
 
-include('dataBaseConnexion.php');
+include('php\dataBaseConnexion.php');
 
 
 

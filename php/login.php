@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('dataBaseConnexion.php');
+include('php\dataBaseConnexion.php');
 
 if (!isset($_POST['pseudoMail']) || empty($_POST['pseudoMail']) || !isset($_POST['mdp']) || empty($_POST['mdp'])) {
     die('<strong>Le pseudonyme ou le mail et le mot de passe sont nécessaires pour se connecter à l\'espace personnel.</strong>');

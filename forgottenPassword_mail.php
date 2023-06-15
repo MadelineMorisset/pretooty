@@ -8,16 +8,16 @@
     </head>
 
     <body>
-        <?php include('header.php'); ?>
+        <?php include('views\header.php'); ?>
 
-        <form action="mailInitPassword.php" method="post">
+        <form action="php\mailInitPassword.php" method="post">
             <input type="email" name="mail" placeholder="Votre adresse mail" required>
             <button type="submit">Envoyer</button>
 
-            <a href="login.php">Retour vers connexion</a>
+            <a href="loginAccount.php">Retour vers connexion</a>
             <a href="createAccount.php">Retour vers création de compte</a>
         </form>
 
-        <?php include('footer.php'); ?>
+        <?php include('views\footer.php'); ?>
     </body>
 </html>

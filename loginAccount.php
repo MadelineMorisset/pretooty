@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <?php include('header.php'); ?>
+    <?php include('views\header.php'); ?>
 
         <!-- Formulaire de connexion -->
 
-        <form action="login.php" method="post">
+        <form action="php\login.php" method="post">
             <label for="pseudoMail">Pseudo / Adresse mail :</label>
             <input type="text" name="pseudoMail" required>
 
@@ -26,7 +26,7 @@
             <a href="createAccount.php">Pas encore membre ?</a>
         </form>
 
-    <?php include('footer.php'); ?>
+    <?php include('views\footer.php'); ?>
 
 </body>
 
