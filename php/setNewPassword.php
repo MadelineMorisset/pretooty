@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('dataBaseConnexion.php');
+include('php\dataBaseConnexion.php');
 
 
 if (isset($_POST['mdp']) || !empty($_POST['mdp']) || isset($_POST['confirm']) || !empty($_POST['confirm'])) {

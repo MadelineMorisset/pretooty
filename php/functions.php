@@ -9,7 +9,7 @@ error_reporting(E_ALL);
     // ONGLET GENERAL
 
     function showMyAccountGeneral() {
-        include('dataBaseConnexion.php');
+        include('php\dataBaseConnexion.php');
         $query = $db->prepare('SELECT * FROM utilisateur INNER JOIN categorie_u ON utilisateur.categorie_u = categorie_u.id_categorie_u
     WHERE utilisateur.id_utilisateur = :id_user');
         $query->execute([
@@ -47,7 +47,7 @@ error_reporting(E_ALL);
         // MODIFIER CATEGORIE
 
         function editMyAccountCategory() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET categorie_u = :category WHERE id_utilisateur = :id_user');
             $query-> execute([
                 "category" => $_POST['category'],
@@ -59,7 +59,7 @@ error_reporting(E_ALL);
         // MODIFIER NOM
 
         function editMyAccountName() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET nom_utilisateur = :names WHERE id_utilisateur = :id_user');
             $query-> execute([
                 "names" => $_POST['names'],
@@ -71,7 +71,7 @@ error_reporting(E_ALL);
         // MODIFIER PRENOM
 
         function editMyAccountFirstName() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET prenom_utilisateur = :firstname WHERE id_utilisateur = :id_user');
             $query-> execute([
                 "firstname" => $_POST['firstname'],
@@ -83,7 +83,7 @@ error_reporting(E_ALL);
     // ONGLET COORDONNEES
 
     function showMyAccountContactDetails() {
-        include('dataBaseConnexion.php');
+        include('php\dataBaseConnexion.php');
         $query = $db->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = :id_user');
         $query->execute([
             "id_user" => $_SESSION['id_utilisateur'],
@@ -104,7 +104,7 @@ error_reporting(E_ALL);
         // MODIFIER ADRESSE
 
         function editMyAccountAddress() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET adresse = :adress WHERE id_utilisateur = :id_user');
             $query-> execute([
                 "adress" => $_POST['adress'],
@@ -116,7 +116,7 @@ error_reporting(E_ALL);
         // MODIFIER VILLE
 
         function editMyAccountTown() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET ville = :town WHERE id_utilisateur = :id_user');
             $query-> execute([
                 "town" => $_POST['town'],
@@ -128,7 +128,7 @@ error_reporting(E_ALL);
         // MODIFIER CODE POSTAL
 
         function editMyAccountCP() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET cp = :CP WHERE id_utilisateur = :id_user');
             $query-> execute([
                 "CP" => $_POST['CP'],
@@ -140,7 +140,7 @@ error_reporting(E_ALL);
         // MODIFIER TELEPHONE
 
         function editMyAccountTelephone() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET tel = :telephone WHERE id_utilisateur = :id_user');
             $query-> execute([
                 "telephone" => $_POST['telephone'],
@@ -152,7 +152,7 @@ error_reporting(E_ALL);
         // MODIFIER MOT DE PASSE
 
         function editMyAccountPassword() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET mdp = :passwords WHERE id_utilisateur = :id_user');
             $query-> execute([
                 "passwords" => $_POST['passwords'],
@@ -170,7 +170,7 @@ error_reporting(E_ALL);
         // SUPPRIMER MON COMPTE
 
         function deleteMyAccount() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('DELETE FROM utilisateur WHERE id_utilisateur = :id_user');
             $query->execute([
                 "id_user" => $_SESSION['id_utilisateur'],
@@ -184,7 +184,7 @@ error_reporting(E_ALL);
         // TAILLE DE LA POLICE ET THEME COULEUR
 
         function chooseFontSize() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET id_police = :id_font WHERE id_utilisateur = :id_user');
             $query->execute([
                 "id_font" => $_POST['id_font'],
@@ -195,7 +195,7 @@ error_reporting(E_ALL);
 
 
         function chooseThemeColor() {
-            include('dataBaseConnexion.php');
+            include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET id_theme = :id_theme WHERE id_utilisateur = :id_user');
             $query->execute([
                 "id_theme" => $_POST['id_theme'],

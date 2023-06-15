@@ -12,9 +12,9 @@
     <body>
         <?php include('views\header.php'); ?>
 
-        <!-- <?php include('functions.php');
+        <?php include('php\functions.php');
         showMyAccountGeneral(); 
-        showMyAccountContactDetails()?> -->
+        showMyAccountContactDetails()?>
 
         <form action="userEditPageAccount.php" method="post">
             <fieldset>
@@ -55,6 +55,9 @@
                 <input type="text" name="mdp" value=""/>
             </fieldset>
 
+            <input type="submit" value="Modifier"/>
+        </form>
+
             <div>
             <label for="id_font">Taille de la police</label>
                 <select name="id_font">
@@ -73,8 +76,7 @@
                 </select>
             </div>
 
-            <input type="submit" value="Modifier"/>
-        </form>
+            
 
         
         <?php include('views\footer.php'); ?>
