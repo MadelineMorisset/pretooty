@@ -12,7 +12,7 @@
     <body>
         <?php include('views\header.php'); ?>
 
-        <form action="" method="post">
+        <form action="editAccount.php" method="post">
             <fieldset>
                 <legend>Mes informations</legend>
 
@@ -41,7 +41,7 @@
                 <input type="text" name="tel" value=""/>
 
                 <input type="submit" value="Valider"/>
-                <input type="reset" value="Annuler" formaction="userPageAccount.php"/>
+                <a href="userPageAccount.php">Annuler</a>
             </fieldset>
         </form>
 

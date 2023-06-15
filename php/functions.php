@@ -18,69 +18,12 @@ error_reporting(E_ALL);
         $users = $query->fetchAll();
 
         foreach($users as $user) {
-            echo '<label for="categoryButton">Catégorie :</label>
-                    <select name="categoryButton" readonly style="border-color:transparent">
-                        <option value="'.$user['id_categorie_u'].'">'.$user['nom_categorie_u'].'</option>
-                    </select>
-
-                <button onclick="clickButtonCategory()" id="categoryEditButton">Modifier</button>
-
-                <div>Pseudonyme : '.$user['pseudonyme'].' </div>
-
-                <label for="nameButton">Nom :</label> 
-                    <input type="text" id="nameButton" value="'.$user['nom_utilisateur'].'" readonly style="border-color:transparent">
-
-                <button onclick="clickButtonName()" id="nameEditButton">Modifier</button>
-
-                <button onclick="editMyAccountName()" id="validateName" class="hidden">Valider</button>
-
-                <label for="firstnameButton">Prénom :</label> 
-                    <input type="text" id="firstnameButton" value="'.$user['prenom_utilisateur'].'" readonly style="border-color:transparent">
-
-                <button onclick="editMyAccountFirstName()" id="firstnameEditButton">Modifier</button>
-                
-                <button onclick="editMyAccountFirstName()" id="validatefirstname" class="hidden">Valider</button>';
+            
         }
     }
 
 
-        // MODIFIER CATEGORIE
-
-        function editMyAccountCategory() {
-            include('php\dataBaseConnexion.php');
-            $query = $db->prepare('UPDATE utilisateur SET categorie_u = :category WHERE id_utilisateur = :id_user');
-            $query-> execute([
-                "category" => $_POST['category'],
-                "id_user" => $_SESSION['id_utilisateur'],
-            ]);
-        }
-
-
-        // MODIFIER NOM
-
-        function editMyAccountName() {
-            include('php\dataBaseConnexion.php');
-            $query = $db->prepare('UPDATE utilisateur SET nom_utilisateur = :names WHERE id_utilisateur = :id_user');
-            $query-> execute([
-                "names" => $_POST['names'],
-                "id_user" => $_SESSION['id_utilisateur'],
-            ]);
-        }
-
-
-        // MODIFIER PRENOM
-
-        function editMyAccountFirstName() {
-            include('php\dataBaseConnexion.php');
-            $query = $db->prepare('UPDATE utilisateur SET prenom_utilisateur = :firstname WHERE id_utilisateur = :id_user');
-            $query-> execute([
-                "firstname" => $_POST['firstname'],
-                "id_user" => $_SESSION['id_utilisateur'],
-            ]);
-        }
-
-
-    // ONGLET COORDONNEES
+    
 
     function showMyAccountContactDetails() {
         include('php\dataBaseConnexion.php');
@@ -91,62 +34,12 @@ error_reporting(E_ALL);
         $users = $query->fetchAll();
 
         foreach($users as $user) {
-            echo '<div>Adresse : '.$user['adresse'].' </div>
-            <div>Ville : '.$user['ville'].' </div>
-            <div>Code Postal : '.$user['cp'].' </div>
-            <div>Téléphone : '.$user['tel'].' </div>
-            <div>Adresse mail : '.$user['mail'].' </div>
-            <div>Mot de passe</div>';
+            
         }
     }
 
 
-        // MODIFIER ADRESSE
-
-        function editMyAccountAddress() {
-            include('php\dataBaseConnexion.php');
-            $query = $db->prepare('UPDATE utilisateur SET adresse = :adress WHERE id_utilisateur = :id_user');
-            $query-> execute([
-                "adress" => $_POST['adress'],
-                "id_user" => $_SESSION['id_utilisateur'],
-            ]);
-        }
-
-
-        // MODIFIER VILLE
-
-        function editMyAccountTown() {
-            include('php\dataBaseConnexion.php');
-            $query = $db->prepare('UPDATE utilisateur SET ville = :town WHERE id_utilisateur = :id_user');
-            $query-> execute([
-                "town" => $_POST['town'],
-                "id_user" => $_SESSION['id_utilisateur'],
-            ]);
-        }
-
-
-        // MODIFIER CODE POSTAL
-
-        function editMyAccountCP() {
-            include('php\dataBaseConnexion.php');
-            $query = $db->prepare('UPDATE utilisateur SET cp = :CP WHERE id_utilisateur = :id_user');
-            $query-> execute([
-                "CP" => $_POST['CP'],
-                "id_user" => $_SESSION['id_utilisateur'],
-            ]);
-        }
-
-
-        // MODIFIER TELEPHONE
-
-        function editMyAccountTelephone() {
-            include('php\dataBaseConnexion.php');
-            $query = $db->prepare('UPDATE utilisateur SET tel = :telephone WHERE id_utilisateur = :id_user');
-            $query-> execute([
-                "telephone" => $_POST['telephone'],
-                "id_user" => $_SESSION['id_utilisateur'],
-            ]);
-        }
+        
 
 
         // MODIFIER MOT DE PASSE
@@ -155,7 +48,7 @@ error_reporting(E_ALL);
             include('php\dataBaseConnexion.php');
             $query = $db->prepare('UPDATE utilisateur SET mdp = :passwords WHERE id_utilisateur = :id_user');
             $query-> execute([
-                "passwords" => $_POST['passwords'],
+                "passwords" => $_POST['passwords'],             // PASSWORD HASH !!!!!
                 "id_user" => $_SESSION['id_utilisateur'],
             ]);
         }
