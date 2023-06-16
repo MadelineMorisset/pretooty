@@ -1,6 +1,6 @@
 <?php
 
-include('php\dataBaseConnexion.php');
+include('dataBaseConnexion.php');
 
 
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('php\dataBaseConnexion.php');
+include('dataBaseConnexion.php');
 
 $query = $db->prepare('UPDATE utilisateur SET categorie_u = :category, nom_utilisateur = :name, prenom_utilisateur = :firstname, adresse = :address, ville = :city, cp = :CP, tel = :telephone WHERE id_utilisateur = :id_user');
             $query-> execute([
