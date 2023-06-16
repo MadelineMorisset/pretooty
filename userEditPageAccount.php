@@ -10,40 +10,47 @@
     </head>
 
     <body>
-        <?php include('views\header.php'); ?>
+        <?php include('views\header.php'); 
+        include('php/functions.php');
+        $infoUser=showMyAccount(); ?>
 
-        <form action="php/editAccount.php" method="post">
-            <fieldset>
-                <legend>Mes informations</legend>
 
-                <label for="category">Catégorie :</label>
-                    <select name="category">
-                        <option value="1">Professionnel</option>
-                        <option value="2">Particulier</option>
-                    </select>
+        <main>
 
-                <label for="name">Nom :</label>
-                <input type="text" name="name" value=""/>
+            <form action="php/editAccount.php" method="post">
+                <fieldset>
+                    <legend>Mes informations</legend>
 
-                <label for="firstname">Prénom :</label>
-                <input type="text" name="firstname" value=""/>
+                    <label for="category">Catégorie :</label>
+                        <select name="category">
+                            <option value="1">Professionnel</option>
+                            <option value="2">Particulier</option>
+                        </select>
 
-                <label for="address">Adresse :</label>
-                <input type="text" name="address" value=""/>
+                    <label for="name">Nom :</label>
+                    <input type="text" name="name" value="<?= $infoUser["nom_utilisateur"]; ?>"/>
 
-                <label for="city">Ville :</label>
-                <input type="text" name="city" value=""/>
+                    <label for="firstname">Prénom :</label>
+                    <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>"/>
 
-                <label for="cp">Code Postal :</label>
-                <input type="text" name="cp" value=""/>
+                    <label for="address">Adresse :</label>
+                    <input type="text" name="address" value="<?= $infoUser["nom_utilisateur"]; ?>"/>
 
-                <label for="tel">Téléphone :</label>
-                <input type="text" name="tel" value=""/>
+                    <label for="city">Ville :</label>
+                    <input type="text" name="city" value="<?= $infoUser["ville"]; ?>"/>
 
-                <input type="submit" value="Valider"/>
-                <a href="userPageAccount.php">Annuler</a>
-            </fieldset>
-        </form>
+                    <label for="cp">Code Postal :</label>
+                    <input type="text" name="cp" value="<?= $infoUser["cp"]; ?>"/>
+
+                    <label for="tel">Téléphone :</label>
+                    <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>"/>
+
+                    <input type="submit" value="Valider"/>
+                    <a href="userPageAccount.php">Annuler</a>
+                </fieldset>
+            </form>
+
+        </main>
 
 
 

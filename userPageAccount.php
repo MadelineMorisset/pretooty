@@ -17,7 +17,7 @@
 
         <main>
 
-            <form action="php\showMyAccount.php" method="post">
+            <form action="userEditPageAccount.php" method="post">
                 <fieldset>
                     <legend>Général</legend>
 
@@ -31,14 +31,14 @@
                     <input type="text" name="name" value="<?= $infoUser["nom_utilisateur"]; ?>"/>
 
                     <label for="firstname">Prénom :</label>
-                    <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>"/>
+                    <input type="text" name="firstname" value="<?= $infoUser["nom_utilisateur"]; ?>"/>
                 </fieldset>
 
                 <fieldset>
                     <legend>Coordonnées</legend>
 
                     <label for="address">Adresse :</label>
-                    <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>"/>
+                    <input type="text" name="address" value="<?= $infoUser["nom_utilisateur"]; ?>"/>
 
                     <label for="city">Ville :</label>
                     <input type="text" name="city" value="<?= $infoUser["ville"]; ?>"/>
@@ -56,7 +56,7 @@
                 
                 </fieldset>
 
-                <input type="submit" value="Modifier" formaction="userEditPageAccount.php"/>
+                <input type="submit" value="Modifier"/>
             </form>
 
             <div>
