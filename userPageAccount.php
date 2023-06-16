@@ -10,50 +10,54 @@
     </head>
 
     <body>
-        <?php include('views\header.php'); ?>
+        <?php include('views\header.php'); 
+        include("php/functions.php");
+        $infoUser=showMyAccount(); ?>
 
 
-        <form action="userEditPageAccount.php" method="post">
-            <fieldset>
-                <legend>Général</legend>
+        <main>
 
-                <label for="category">Catégorie :</label>
-                <input type="text" name="category" value=""/>
+            <form action="php\showMyAccount.php" method="post">
+                <fieldset>
+                    <legend>Général</legend>
 
-                <label for="pseudo">Pseudonyme :</label>
-                <input type="text" name="pseudo" value=""/>
+                    <label for="category">Catégorie :</label>
+                    <input type="text" name="category" value="<?= $infoUser["nom_categorie_u"]; ?>" />
 
-                <label for="name">Nom :</label>
-                <input type="text" name="name" value=""/>
+                    <label for="pseudo">Pseudonyme :</label>
+                    <input type="text" name="pseudo" value="<?= $infoUser["pseudonyme"]; ?>"/>
 
-                <label for="firstname">Prénom :</label>
-                <input type="text" name="firstname" value=""/>
-            </fieldset>
+                    <label for="name">Nom :</label>
+                    <input type="text" name="name" value="<?= $infoUser["nom_utilisateur"]; ?>"/>
 
-            <fieldset>
-                <legend>Coordonnées</legend>
+                    <label for="firstname">Prénom :</label>
+                    <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>"/>
+                </fieldset>
 
-                <label for="address">Adresse :</label>
-                <input type="text" name="address" value=""/>
+                <fieldset>
+                    <legend>Coordonnées</legend>
 
-                <label for="city">Ville :</label>
-                <input type="text" name="city" value=""/>
+                    <label for="address">Adresse :</label>
+                    <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>"/>
 
-                <label for="cp">Code Postal :</label>
-                <input type="text" name="cp" value=""/>
+                    <label for="city">Ville :</label>
+                    <input type="text" name="city" value="<?= $infoUser["ville"]; ?>"/>
 
-                <label for="tel">Téléphone :</label>
-                <input type="text" name="tel" value=""/>
+                    <label for="cp">Code Postal :</label>
+                    <input type="text" name="cp" value="<?= $infoUser["cp"]; ?>"/>
 
-                <label for="email">Adresse mail :</label>
-                <input type="email" name="email" value=""/>
+                    <label for="tel">Téléphone :</label>
+                    <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>"/>
 
-                <label for="mdp">Mot de passe :</label>
-                <input type="text" name="mdp" value=""/>
-            </fieldset>
+                    <label for="email">Adresse mail :</label>
+                    <input type="email" name="email" value="<?= $infoUser["mail"]; ?>"/>
 
-            <input type="submit" value="Modifier"/>
-        </form>
+                    <label for="mdp">Mot de passe</label>
+                
+                </fieldset>
+
+                <input type="submit" value="Modifier" formaction="userEditPageAccount.php"/>
+            </form>
 
             <div>
             <label for="id_font">Taille de la police</label>
@@ -72,6 +76,7 @@
                     <option value="2">Nuit</option>
                 </select>
             </div>
+        </main>
 
         
         <?php include('views\footer.php'); ?>
