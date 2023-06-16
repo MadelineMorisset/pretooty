@@ -5,7 +5,7 @@ session_start();
 
 // Connexion à la BDD
 
-include('php\dataBaseConnexion.php');
+include('dataBaseConnexion.php');
 
 
 
@@ -98,6 +98,6 @@ foreach ($users as $user) {
 }
 
 
-header('Location: userPageAccount.php');
+header('Location: ../userPageAccount.php');
 
 ?>

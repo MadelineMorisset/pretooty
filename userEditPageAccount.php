@@ -12,7 +12,7 @@
     <body>
         <?php include('views\header.php'); ?>
 
-        <form action="editAccount.php" method="post">
+        <form action="php/editAccount.php" method="post">
             <fieldset>
                 <legend>Mes informations</legend>
 
