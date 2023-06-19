@@ -34,7 +34,7 @@
                     <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>"/>
 
                     <label for="address">Adresse :</label>
-                    <input type="text" name="address" value="<?= $infoUser["nom_utilisateur"]; ?>"/>
+                    <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>"/>
 
                     <label for="city">Ville :</label>
                     <input type="text" name="city" value="<?= $infoUser["ville"]; ?>"/>
