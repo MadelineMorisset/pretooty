@@ -56,30 +56,27 @@
                 
                 </fieldset>
 
-                <input type="submit" value="Modifier"/>
+                <fieldset>
+                    <legend>Paramètres</legend>
+
+                    <div>Notifications</div>
+
+                    <label for="delete">Supprimer mon compte</label>
+                    <input type="button" name="delete" value="Supprimer"/>
+
+                    <label for="police">Taille de la police</label>
+                    <input type="text" name="police" value="<?= $infoUser["nom_taille"]; ?>" />
+
+                    <label for="theme">Thème couleur</label>
+                    <input type="text" name="theme" value="<?= $infoUser["nom_theme"]; ?>" />
+                </fieldset>
+
+            <input type="submit" value="Modifier"/>
             </form>
-
-            <div>
-            <label for="id_font">Taille de la police</label>
-                <select name="id_font">
-                    <option value="1">Petite</option>
-                    <option value="2">Moyenne</option>
-                    <option value="3">Grande</option>
-                    <option value="4">Très grande</option>
-                </select>
-            </div>
-
-            <div>
-            <label for="id_theme">Thème couleur</label>
-                <select name="id_theme">
-                    <option value="1">Pretooty</option>
-                    <option value="2">Nuit</option>
-                </select>
-            </div>
         </main>
 
         
         <?php include('views\footer.php'); ?>
 
     </body>
-</html>                                                       
+</html>

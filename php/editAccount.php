@@ -15,7 +15,7 @@ $query = $db->prepare('UPDATE utilisateur SET categorie_u = :category, nom_utili
                 "id_user" => $_SESSION['id_utilisateur'],
             ]);
 
-// header('Location: ../userPageAccount.php');
+header('Location: ../userPageAccount.php');
 
 
 

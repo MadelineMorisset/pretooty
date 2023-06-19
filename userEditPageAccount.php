@@ -23,8 +23,8 @@
 
                     <label for="category">Catégorie :</label>
                         <select name="category">
-                            <option value="1">Professionnel</option>
-                            <option value="2">Particulier</option>
+                            <option value="1" <?php if ($infoUser["category"]=1) {echo "selected";}  ?> >Professionnel</option>
+                            <option value="2" <?php if ($infoUser["category"]=2) {echo "selected";}  ?> >Particulier</option>
                         </select>
 
                     <label for="name">Nom :</label>
@@ -47,6 +47,24 @@
 
                     <input type="submit" value="Valider"/>
                     <a href="userPageAccount.php">Annuler</a>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Paramètres</legend>
+
+                    <label for="id_font">Taille de la police</label>
+                    <select name="id_font">
+                        <option value="1">Petite</option>
+                        <option value="2">Moyenne</option>
+                        <option value="3">Grande</option>
+                        <option value="4">Très grande</option>
+                </select>
+
+                    <label for="id_theme">Thème couleur</label>
+                    <select name="id_theme">
+                        <option value="1">Pretooty</option>
+                        <option value="2">Nuit</option>
+                    </select>
                 </fieldset>
             </form>
 
