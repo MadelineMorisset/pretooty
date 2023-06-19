@@ -1,5 +1,9 @@
 <footer>
-    <a href="index.php">Accueil</a>
-    <a href="contact.php">Contact</a>
-    <a href="loginAccount.php">Se connecter</a>
+    <div class="navFooter">
+        <a href="index.php">Accueil</a>
+        <p>|</p>
+        <a href="contact.php">Contact</a>
+        <p>|</p>
+        <a href="loginAccount.php">Se connecter</a>
+    </div>
 </footer>

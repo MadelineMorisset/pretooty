@@ -1,0 +1,8 @@
+/* Page de style générale */
+body {
+    margin: 0;
+}
+
+header, main {
+    height: 10vh;
+}
