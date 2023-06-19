@@ -1,0 +1,87 @@
+/* ------------- En commun ------------- */
+header {
+    margin: 8vh 3vw;
+}
+
+/* Boutons recherche et utilisateur */
+.searchButton:active, .userButton:active {
+    border-bottom: 2px solid #3C5E68;
+    box-shadow: inset 0 2px rgba(0, 0, 0, .25);
+}
+
+/* Images SVG des bouton recherche et utilisateur */
+.fa-magnifying-glass, .fa-user {
+    color: #33A4B2;
+}
+
+.fa-magnifying-glass:active, .fa-user:active {
+    color: #3C5E68;
+}
+
+/* ------------- Spécifique ------------- */
+/* Section contenant section "search" et section "user" */
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #FFFDF9;
+}
+
+/* Section contenant bouton recherche et zone de recherche */
+.search {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Zone de recherche */
+.searchBar, .searchBar:focus {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 55px;
+    padding-left: 10px;
+    width: 20%;
+    height: 45px;
+    border-top: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid #3C5E68;
+    border-left: transparent;
+    outline: none;
+}
+
+/* Section contenant bouton utilisateur et section "navHidden" 
+(navigation dans le compte utilisateur) */
+.user {
+    display: flex; 
+    justify-content: end;
+}
+
+.navHidden {
+    position: absolute;
+    padding: 10px 6px;
+    width: 9vw;
+    border: 0.5px solid #3C5E68;
+    border-radius: 10PX;
+    -webkit-border-radius: 10PX;
+    -moz-border-radius: 10PX;
+    -ms-border-radius: 10PX;
+    -o-border-radius: 10PX;
+    background-color: #FFFDF9;
+    text-align: right;
+}
+
+.navUserAccount {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: end;
+}
+
+/* Logo de le Plateforme Pretooty*/
+.logoPretooty {
+    position: relative;
+    top: -80px;
+    left: 40%;
+    width: 383px;
+    height: 111px;
+    background-image: url(../img/LogoPretooty.svg);
+    background-repeat: no-repeat;
+}
