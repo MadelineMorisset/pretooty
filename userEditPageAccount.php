@@ -23,8 +23,8 @@
 
                     <label for="category">Catégorie :</label>
                         <select name="category">
-                            <option value="1" <?php if ($infoUser["category"]=1) {echo "selected";}  ?> >Professionnel</option>
-                            <option value="2" <?php if ($infoUser["category"]=2) {echo "selected";}  ?> >Particulier</option>
+                            <option value="1" <?php if ($infoUser["category"]==1) {echo "selected";} ?> >Professionnel</option>
+                            <option value="2" <?php if ($infoUser["category"]==2) {echo "selected";}  ?> >Particulier</option>
                         </select>
 
                     <label for="name">Nom :</label>
@@ -64,16 +64,16 @@
 
                     <label for="id_font">Taille de la police</label>
                     <select name="id_font">
-                        <option value="1">Petite</option>
-                        <option value="2">Moyenne</option>
-                        <option value="3">Grande</option>
-                        <option value="4">Très grande</option>
+                        <option value="1" <?php if ($infoUser["id_police"]==1) {echo "selected";} ?> >Petite</option>
+                        <option value="2" <?php if ($infoUser["id_police"]==2) {echo "selected";} ?> >Moyenne</option>
+                        <option value="3" <?php if ($infoUser["id_police"]==3) {echo "selected";} ?> >Grande</option>
+                        <option value="4" <?php if ($infoUser["id_police"]==4) {echo "selected";} ?> >Très grande</option>
                 </select>
 
                     <label for="id_theme">Thème couleur</label>
                     <select name="id_theme">
-                        <option value="1">Pretooty</option>
-                        <option value="2">Nuit</option>
+                        <option value="1" <?php if ($infoUser["id_theme"]==1) {echo "selected";} ?> >Pretooty</option>
+                        <option value="2" <?php if ($infoUser["id_theme"]==2) {echo "selected";} ?> >Nuit</option>
                     </select>
                 </fieldset>
 

@@ -18,45 +18,6 @@ error_reporting(E_ALL);
     }
 
 
-    
-
-    
-
-
-        
-
-
-        // MODIFIER MOT DE PASSE
-
-        function editMyAccountPassword() {
-            include('php\dataBaseConnexion.php');
-
-            $query = $db->prepare('SELECT * FROM utilisateur WHERE id_utilisateur = :id_user');
-            $query->execute([
-                "id_user" => $_SESSION['id_utilisateur'],
-                ]);
-            $user = $query->fetch(PDO::FETCH_ASSOC);
-
-            $mdp = strip_tags($_POST['currentmdp']);
-            $checkPassword = password_verify($mdp, $user['mdp']);
-
-            if ($checkPassword === true) {
-                if (isset($_POST['newmdp']) || !empty($_POST['newmdp']) || isset($_POST['confirm']) || !empty($_POST['confirm'])) {
-                    if ($_POST['newmdp'] == $_POST['confirm']) {
-                
-                        $mdpHash = password_hash($_POST['newmdp'], PASSWORD_DEFAULT);
-                
-                        $query = $db->prepare('UPDATE utilisateur SET mdp = :newPassword WHERE id_utilisateur = :id_user');
-                        $query-> execute([
-                                "newPassword" => $mdpHash,
-                                "id_user" => $_SESSION['id_utilisateur'],
-                                ]);
-                    }
-                }
-            }
-        }
-
-
     // ONGLET PARAMETRES
 
         // NOTIFICATIONS

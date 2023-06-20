@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 include('dataBaseConnexion.php');
 
 
-$query = $db->prepare('UPDATE utilisateur SET categorie_u = :category, nom_utilisateur = :name, prenom_utilisateur = :firstname, adresse = :address, ville = :city, cp = :CP, tel = :telephone WHERE id_utilisateur = :id_user');
+$query = $db->prepare('UPDATE utilisateur SET categorie_u = :category, nom_utilisateur = :name, prenom_utilisateur = :firstname, adresse = :address, ville = :city, cp = :CP, tel = :telephone, id_police = :id_font, id_theme = :id_theme WHERE id_utilisateur = :id_user');
             $query-> execute([
                 "category" => $_POST['category'],
                 "name" => $_POST['name'],
@@ -18,6 +18,8 @@ $query = $db->prepare('UPDATE utilisateur SET categorie_u = :category, nom_utili
                 "CP" => $_POST['cp'],
                 "telephone" => $_POST['tel'],
                 "id_user" => $_SESSION['id_utilisateur'],
+                "id_font" => $_POST['id_font'],
+                "id_theme" => $_POST['id_theme'],
             ]);
 
 
@@ -48,6 +50,8 @@ if ($checkPassword === true) {
         }
     }
 }
+
+
 
 
 header('Location: ../userPageAccount.php');
