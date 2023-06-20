@@ -76,13 +76,14 @@ $mail = strip_tags($_POST['mail']);
 $confirm = strip_tags($_POST['confirm']);
 
 
-$query = $db->prepare('INSERT INTO utilisateur (pseudonyme,mail,mdp,ville,id_theme,id_statut) VALUES (:pseudo, :mail, :mdp,:ville,:theme,:statut)');
+$query = $db->prepare('INSERT INTO utilisateur (pseudonyme,mail,mdp,ville,id_theme,id_police,id_statut) VALUES (:pseudo, :mail, :mdp,:ville,:theme,:police,:statut)');
 $query->execute([
     'pseudo'=>$_POST['pseudo'],
     'mail'=>$_POST['mail'],
     'mdp'=>$password,
     'ville'=>'',
     'theme'=>'1',
+    'police'=>'2',
     'statut'=>'2',
     ]);
 
