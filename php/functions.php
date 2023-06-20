@@ -38,31 +38,4 @@ error_reporting(E_ALL);
         }
 
 
-        // TAILLE DE LA POLICE ET THEME COULEUR
-
-        function chooseFontSize() {
-            include('php\dataBaseConnexion.php');
-            $query = $db->prepare('UPDATE utilisateur SET id_police = :id_font WHERE id_utilisateur = :id_user');
-            $query->execute([
-                "id_font" => $_POST['id_font'],
-                "id_user" => $_SESSION['id_utilisateur'],
-            ]);
-            $query->fetchAll();
-        }
-
-
-        function chooseThemeColor() {
-            include('php\dataBaseConnexion.php');
-            $query = $db->prepare('UPDATE utilisateur SET id_theme = :id_theme WHERE id_utilisateur = :id_user');
-            $query->execute([
-                "id_theme" => $_POST['id_theme'],
-                "id_user" => $_SESSION['id_utilisateur'],
-            ]);
-            $query->fetchAll();
-        }
-
-
-
-
-
 ?>

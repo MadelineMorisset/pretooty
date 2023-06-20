@@ -23,8 +23,8 @@
 
                     <label for="category">Catégorie :</label>
                         <select name="category">
-                            <option value="1" <?php if ($infoUser["category"]==1) {echo "selected";} ?> >Professionnel</option>
-                            <option value="2" <?php if ($infoUser["category"]==2) {echo "selected";}  ?> >Particulier</option>
+                            <option value="1" <?php if ($infoUser["category"]=1) {echo "selected";} ?> >Professionnel</option>
+                            <option value="2" <?php if ($infoUser["category"]=2) {echo "selected";} ?> >Particulier</option>
                         </select>
 
                     <label for="name">Nom :</label>
