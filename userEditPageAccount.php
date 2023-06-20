@@ -23,8 +23,8 @@
 
                     <label for="category">Catégorie :</label>
                         <select name="category">
-                            <option value="1">Professionnel</option>
-                            <option value="2">Particulier</option>
+                            <option value="1" <?php if ($infoUser["category"]=1) {echo "selected";} ?> >Professionnel</option>
+                            <option value="2" <?php if ($infoUser["category"]=2) {echo "selected";} ?> >Particulier</option>
                         </select>
 
                     <label for="name">Nom :</label>
@@ -34,7 +34,7 @@
                     <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>"/>
 
                     <label for="address">Adresse :</label>
-                    <input type="text" name="address" value="<?= $infoUser["nom_utilisateur"]; ?>"/>
+                    <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>"/>
 
                     <label for="city">Ville :</label>
                     <input type="text" name="city" value="<?= $infoUser["ville"]; ?>"/>
@@ -44,10 +44,41 @@
 
                     <label for="tel">Téléphone :</label>
                     <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>"/>
-
-                    <input type="submit" value="Valider"/>
-                    <a href="userPageAccount.php">Annuler</a>
                 </fieldset>
+
+                <fieldset>
+                    <legend>Mot de passe</legend>
+
+                    <label for="currentmdp">Mot de passe actuel</label>
+                    <input type="password" name="currentmdp"/>
+
+                    <label for="newmdp">Nouveau mot de passe</label>
+                    <input type="password" name="newmdp"/>
+
+                    <label for="confirm">Confirmer le nouveau mot de passe</label>
+                    <input type="password" name="confirm"/>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Paramètres</legend>
+
+                    <label for="id_font">Taille de la police</label>
+                    <select name="id_font">
+                        <option value="1" <?php if ($infoUser["id_police"]==1) {echo "selected";} ?> >Petite</option>
+                        <option value="2" <?php if ($infoUser["id_police"]==2) {echo "selected";} ?> >Moyenne</option>
+                        <option value="3" <?php if ($infoUser["id_police"]==3) {echo "selected";} ?> >Grande</option>
+                        <option value="4" <?php if ($infoUser["id_police"]==4) {echo "selected";} ?> >Très grande</option>
+                </select>
+
+                    <label for="id_theme">Thème couleur</label>
+                    <select name="id_theme">
+                        <option value="1" <?php if ($infoUser["id_theme"]==1) {echo "selected";} ?> >Pretooty</option>
+                        <option value="2" <?php if ($infoUser["id_theme"]==2) {echo "selected";} ?> >Nuit</option>
+                    </select>
+                </fieldset>
+
+                <input type="submit" value="Valider"/>
+                <a href="userPageAccount.php">Annuler</a>
             </form>
 
         </main>
