@@ -33,32 +33,38 @@ $query->execute([
     ]);
 $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$mdp = strip_tags($_POST['currentmdp']);
-$checkPassword = password_verify($mdp, $user['mdp']);
+$currentmdp = strip_tags($_POST['currentmdp']);
+$newmdp = strip_tags($_POST['newmdp']);
+$confirm = strip_tags($_POST['confirm']);
+$checkPassword = password_verify($currentmdp, $user['mdp']);
+
+$regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}/";
 
 if ($checkPassword === true) {
     if (isset($_POST['newmdp']) || !empty($_POST['newmdp']) || isset($_POST['confirm']) || !empty($_POST['confirm'])) {
-        if ($_POST['newmdp'] == $_POST['confirm']) {
+        if (preg_match($regex, $newmdp)) {
+            if ($newmdp == $confirm) {
     
-            $mdpHash = password_hash($_POST['newmdp'], PASSWORD_DEFAULT);
-    
-            $query = $db->prepare('UPDATE utilisateur SET mdp = :newPassword WHERE id_utilisateur = :id_user');
-            $query-> execute([
-                    "newPassword" => $mdpHash,
-                    "id_user" => $_SESSION['id_utilisateur'],
-                    ]);
-        }
+                $mdpHash = password_hash($newmdp, PASSWORD_DEFAULT);
+        
+                $query = $db->prepare('UPDATE utilisateur SET mdp = :newPassword WHERE id_utilisateur = :id_user');
+                $query-> execute([
+                        "newPassword" => $mdpHash,
+                        "id_user" => $_SESSION['id_utilisateur'],
+                        ]);
+            } else {
+                die('Le nouveau mot de passe et sa confirmation doivent être identiques.');
+            }
+        } else {
+            die('Le mot de passe doit contenir au minimum 6 caractères dont 1 majuscule, 1 minuscule et 1 chiffre.');
+        }   
     }
+} else {
+    die('Mot de passe erronné');
 }
 
 
-
-
 header('Location: ../userPageAccount.php');
-
-
-
-
 
 
 ?>
