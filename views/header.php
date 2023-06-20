@@ -1,24 +1,26 @@
 <header>
   <div class="navHeader">
     <div class="search">
-      <div><i class="fa-solid fa-magnifying-glass fa-xl searchButton squareButtons"></i></div>
+      <div class="searchButton squareButtons"><i class="fa-solid fa-magnifying-glass fa-xl"></i></div>
       <input id="searchInput" class="searchBar" type="search"  value="Rechercher un outil ...">
     </div>
 
-    <div class="user">
-      <i class="fa-solid fa-user fa-2x userButton squareButtons"></i>
+    <div class="user" onClick="navHidden()">
+      <div class="userButton squareButtons"><i class="fa-solid fa-user fa-xl"></i></div>
 
-      <div class="navHidden">
-        <div class="navUserLogin">
-          <a href="loginAccount.php">Me connecter / M’inscrire</a>
+      <div id="navHidden" class="visibilityNav">
+        <div class="navUserLogin titleBox separationLine">
+          <a href="loginAccount.php" class="title titleHeader">Me connecter / M’inscrire</a>
         </div>
-        <div class="navUserAccount">
-          <a href="userPageAccount.php">Mon compte</a>
-          <a href="userPageActivities.php">Mes activités</a>
-          <a href="userMessaging.php">Ma messagerie</a>
+
+        <div class="navUserAccount titleBox separationLine">
+          <a href="userPageAccount.php" class="navUserAccountLinks title titleHeader">Mon compte</a>
+          <a href="userPageActivities.php" class="navUserAccountLinks title titleHeader">Mes activités</a>
+          <a href="userMessaging.php" class="navUserAccountLinks title titleHeader">Ma messagerie</a>
         </div>
-        <div class="navUserLogout">
-          <a href="logoutAccount.php">Me déconnecter</a>
+
+        <div class="navUserLogout titleBox">
+          <a href="logoutAccount.php" class="title titleHeader">Me déconnecter</a>
         </div>
       </div>
     </div> 
