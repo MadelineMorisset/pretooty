@@ -45,8 +45,6 @@
                     <label for="tel">Téléphone :</label>
                     <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>"/>
 
-                    <input type="submit" value="Valider"/>
-                    <a href="userPageAccount.php">Annuler</a>
                 </fieldset>
 
                 <fieldset>
@@ -66,6 +64,9 @@
                         <option value="2">Nuit</option>
                     </select>
                 </fieldset>
+
+                <input type="submit" value="Valider"/>
+                <a href="userPageAccount.php">Annuler</a>
             </form>
 
         </main>
