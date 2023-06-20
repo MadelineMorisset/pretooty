@@ -44,7 +44,19 @@
 
                     <label for="tel">Téléphone :</label>
                     <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>"/>
+                </fieldset>
 
+                <fieldset>
+                    <legend>Mot de passe</legend>
+
+                    <label for="currentmdp">Mot de passe actuel</label>
+                    <input type="password" name="currentmdp"/>
+
+                    <label for="newmdp">Nouveau mot de passe</label>
+                    <input type="password" name="newmdp"/>
+
+                    <label for="confirm">Confirmer le nouveau mot de passe</label>
+                    <input type="password" name="confirm"/>
                 </fieldset>
 
                 <fieldset>
