@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 13 juin 2023 à 12:06
+-- Généré le : mer. 21 juin 2023 à 14:52
 -- Version du serveur : 10.4.25-MariaDB
 -- Version de PHP : 8.1.10
 
@@ -69,8 +69,8 @@ CREATE TABLE `categorie_u` (
 --
 
 INSERT INTO `categorie_u` (`id_categorie_u`, `nom_categorie_u`) VALUES
-(1, 'professionnel'),
-(2, 'particulier');
+(1, 'Professionnel'),
+(2, 'Particulier');
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,11 @@ CREATE TABLE `disponibilite` (
 INSERT INTO `disponibilite` (`id_disponibilite`, `date_debut_dispo`, `date_fin_dispo`, `id_outil`) VALUES
 (1, '2023-06-01', '2023-06-15', 1),
 (2, '2023-06-10', '2023-06-17', 5),
-(3, '2023-06-10', '2023-06-11', 2);
+(3, '2023-06-10', '2023-06-11', 2),
+(4, '2023-06-23', '2023-06-26', 3),
+(5, '2023-07-01', '2023-06-06', 4),
+(6, '2023-07-12', '2023-07-17', 6),
+(7, '2023-07-10', '2023-07-15', 7);
 
 -- --------------------------------------------------------
 
@@ -154,23 +158,28 @@ CREATE TABLE `outil` (
   `id_outil` int(11) NOT NULL,
   `nom_outil` varchar(100) DEFAULT NULL,
   `description` text DEFAULT NULL,
+  `consignes_securite` text NOT NULL,
+  `accessoires` text NOT NULL,
   `photo` varchar(255) NOT NULL,
   `id_utilisateur` int(11) NOT NULL,
-  `id_categorie` int(11) NOT NULL
+  `id_categorie` int(11) NOT NULL,
+  `id_etat_outil` int(11) NOT NULL,
+  `id_disponibilite` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `outil`
 --
 
-INSERT INTO `outil` (`id_outil`, `nom_outil`, `description`, `photo`, `id_utilisateur`, `id_categorie`) VALUES
-(1, 'Marteau perforateur skil', 'Utilisation : L’outil est conçu pour le martelage dans le béton, la brique et dans la pierre naturelle ainsi que pour d’autres travaux de burinage légers, pour le perçage dans le bois, le métal et les matières plastiques ainsi que pour le vissage avec des accessoires spécifiques.\r\nConsignes de sécurité :\r\nPorter des lunettes de protection.\r\nTenir fermement l’outil et garder une position stable.\r\nPorter un casque anti-bruit.\r\nFixer solidement la pièce à travailler.\r\nSélectionner le mode de fonctionnement seulement lorsque l’outil n’est pas sous tension.\r\nAccessoires fournis avec l’outil :\r\nBoite de mèches pour perfo inclus à l’achat\r\nAdaptateur SDS\r\nEtat de l’outil : neuf', 'C:\\xampp\\htdocs\\pretooty\\img\\Marteau perforateur Skil.jpg', 1, 10),
-(2, 'Scie circulaire sans fil bosch', 'Utilisation : Outil conçu pour réaliser sur un support stable des coupes dans le bois.\r\nConsignes de sécurité :\r\nNe pas approcher les mains de la zone de coupe et de la lame.\r\nAjuster la profondeur de découpe à l’épaisseur de la pièce à travailler.\r\nToujours placer la pièce à découper sur un support stable.\r\nBien maintenir la scie avec les deux mains et toujours se placer d’un des côtés de la lame, et non dans son alignement.\r\nBloquer la pièce à travailler.\r\nNe pas sciez des métaux ferreux.\r\nPorter un masque anti-poussière, des lunettes de protection.\r\nAccessoires fournis avec l’outil :\r\nUne batterie et un chargeur.\r\nDes lunettes de protection.\r\nUne butée parallèle\r\nEtat de l’outil : neuf', 'C:\\xampp\\htdocs\\pretooty\\img\\Scie circulaire sans fil bosch.jpg', 3, 2),
-(3, 'Perceuse percussion visseuse sans fil', 'Utilisation : l’outil est conçu pour le perçage avec percussion dans la brique, la maçonnerie en briques et la maçonnerie. Il convient aussi pour le vissage et perçage sans percussion dans le bois, le métal, la céramique et le plastique.\r\nConsignes de sécurité :\r\nPorter un casque anti-bruit.\r\nTenir fermement l’outil.\r\nNe pas toucher le foret ou la pièce immédiatement après son utilisation, ils peuvent être extrêmement chaud.\r\nPour le perçage utiliser les forets qui conviennent à la matière à percer (ex : pour du métal utiliser un foret pour le métal).\r\nAccessoires fournis avec l’outil :\r\nBatteries et chargeur.\r\nBoite d’embout foret\r\nEtat de l’outil : neuf', 'C:\\xampp\\htdocs\\pretooty\\img\\Perceuse percussion visseuse sans fil.jpg', 3, 10),
-(4, 'Ponceuse orbitale pour plaques de plâtre', 'Utilisation : Pour poncer le plâtre et les plaques de plâtres (murs, sous-pente, plafonds).\r\nDescription du produit :\r\nOutils très maniable et léger pour un travail en toute sécurité. Il dispose d’un système d\'évacuation des poussières qui se raccorde à l’aspirateur. Il possède un variateur de vitesse pour réguler le travail du ponçage. Fourni avec deux adaptateurs et un flexible de 3m pour une grande liberté de mouvement. Ouverture du carter pour un ponçage d’angle. Il existe différentes vitesses.\r\nConsigne de sécurité :\r\nAttention à l’effet d’aspiration.\r\nPorter des lunettes de sécurité et un casque anti-bruit.\r\nTenir l’outil fermement et bien à plat lors de son utilisation.\r\nAccessoires fournis avec l’outil :\r\nUn disque pour poncer.\r\nUn raccord aspirateur.\r\nUne poignée amovible.\r\nEtat de l’outil : neuf', 'C:\\xampp\\htdocs\\pretooty\\img\\Ponceuse orbitale pour plaques de plâtre.jpg', 3, 7),
-(5, 'Scie sauteuse makita', 'Utilisation :\r\nL’outil est conçu pour la coupe des matériaux de bois, de plastique et de métal. Tout dépend de la lame utiliser pour la coupe. Particulièrement adéquat pour une coupe circulaire et des lignes incurvées, arrondies.\r\nConsignes de sécurité :\r\nIl est possible d’accorder un aspirateur à la scie afin de collecter la poussière.\r\nUtiliser un dispositif de serrage pour fixer la pièce à découper sur une surface de travail stable.\r\nPorter des lunettes de sécurité.\r\nNe pas couper des pièces trop grandes.\r\nToujours vérifier qu’il y ait assez d’espace sous la pièce à découper pour que la lame ne heurte aucune surface (sol, établi etc.).\r\nPorter un masque anti-poussière.\r\nTenir l’outil fermement.\r\nBien régler la scie en fonction de la coupe désirée (ligne droite, petite orbite, orbite moyenne, grande orbite) et du matériau à couper (bois, acier doux, acier inoxydable, aluminium, plastique).\r\nBien utiliser la lame en la mettant dans le bon sens.\r\nAccessoires fournis avec l’outil :\r\nLames de scie sauteuse x2\r\nLunette de protection\r\nEtat de l’outil : neuf', 'C:\\xampp\\htdocs\\pretooty\\img\\Scie sauteuse makita.jpg', 3, 2),
-(6, 'Ponceuse à bande', 'Utilisation : L’outil est conçu pour le ponçage à sec de surface en bois, matières plastiques, métal, mastic et surfaces vernies. Les bandes abrasives doivent être choisies en fonction du matériau à poncer et de l’enlèvement de la matière souhaité.\r\nConsignes de sécurité :\r\nPorter des lunettes de protection.\r\nBien tenir l’outil et maintenir une pression constante lors de son utilisation pour avoir un ponçage égal.\r\nPorter un casque anti-bruit.\r\nLors du ponçage de certains types de produits, l’utilisateur de l’outil peut être exposé çà des substances chimiques dangereuses, veillez à porter un masque anti-poussière.\r\nAccessoires fournis avec l’outil :\r\nUne bande pour poncer.\r\nBoitier microfibre pour la poussière\r\nEtat de l’outil : neuf', 'C:\\xampp\\htdocs\\pretooty\\img\\Ponceuse à bande.jpg', 1, 7),
-(7, 'Ponceuse excentrique Makita', 'Utilisation : L’outil est conçu pour le ponçage de grandes surfaces de bois, de plastique et de métal, ainsi que des surfaces peintes.\r\nConsignes de sécurité :\r\nPorter des lunettes de protection.\r\nTenir l’outil fermement.\r\nLors du ponçage de certains types de produits, l’utilisateur de l’outil peut être exposé çà des substances chimiques dangereuses, veillez à porter un masque anti-poussière.\r\nToujours vérifier que l’outil est hors tension avant de le brancher, c’est-à-dire qu’il est en mode off.\r\nAvant d’utiliser l’outil attendre qu’il ait atteint sa pleine vitesse.\r\nExercer une légère pression sur l’outil. Ne jamais exercer une trop grande pression cela peut causer une diminution de l’efficacité du ponçage, l’endommagement du disque de ponçage.\r\nRégler la vitesse en fonction du ponçage désiré (plage A = polissage, plage B = ponçage fin, plage C = ponçage ordinaire).\r\nAccessoires fournis avec l’outil :\r\nUn disque pour poncer.\r\nUn sac à poussière.\r\nEtat de l’outil : neuf', 'C:\\xampp\\htdocs\\pretooty\\img\\Ponceuse excentrique Makita.jpg', 3, 7);
+INSERT INTO `outil` (`id_outil`, `nom_outil`, `description`, `consignes_securite`, `accessoires`, `photo`, `id_utilisateur`, `id_categorie`, `id_etat_outil`, `id_disponibilite`) VALUES
+(1, 'Marteau perforateur skil', 'Utilisation : L’outil est conçu pour le martelage dans le béton, la brique et dans la pierre naturelle ainsi que pour d’autres travaux de burinage légers, pour le perçage dans le bois, le métal et les matières plastiques ainsi que pour le vissage avec des accessoires spécifiques.', 'Porter des lunettes de protection. Tenir fermement l’outil et garder une position stable. Porter un casque anti-bruit. Fixer solidement la pièce à travailler. Sélectionner le mode de fonctionnement seulement lorsque l’outil n’est pas sous tension.', 'Boite de mèches pour perfo inclus à l’achat Adaptateur SDS', 'C:\\xampp\\htdocs\\pretooty\\img\\Marteau perforateur Skil.jpg', 1, 10, 6, 1),
+(2, 'Scie circulaire sans fil bosch', 'Utilisation : Outil conçu pour réaliser sur un support stable des coupes dans le bois.', 'Ne pas approcher les mains de la zone de coupe et de la lame. Ajuster la profondeur de découpe à l’épaisseur de la pièce à travailler. Toujours placer la pièce à découper sur un support stable. Bien maintenir la scie avec les deux mains et toujours se placer d’un des côtés de la lame, et non dans son alignement. Bloquer la pièce à travailler. Ne pas sciez des métaux ferreux. Porter un masque anti-poussière, des lunettes de protection.', 'Une batterie et un chargeur. Des lunettes de protection. Une butée parallèle', 'C:\\xampp\\htdocs\\pretooty\\img\\Scie circulaire sans fil bosch.jpg', 3, 2, 6, 3),
+(3, 'Perceuse percussion visseuse sans fil', 'Utilisation : l’outil est conçu pour le perçage avec percussion dans la brique, la maçonnerie en briques et la maçonnerie. Il convient aussi pour le vissage et perçage sans percussion dans le bois, le métal, la céramique et le plastique.', 'Porter un casque anti-bruit. Tenir fermement l’outil. Ne pas toucher le foret ou la pièce immédiatement après son utilisation, ils peuvent être extrêmement chaud. Pour le perçage utiliser les forets qui conviennent à la matière à percer (ex : pour du métal utiliser un foret pour le métal).', 'Batteries et chargeur. Boite d’embout foret', 'C:\\xampp\\htdocs\\pretooty\\img\\Perceuse percussion visseuse sans fil.jpg', 3, 10, 6, 4),
+(4, 'Ponceuse orbitale pour plaques de plâtre', 'Utilisation : Pour poncer le plâtre et les plaques de plâtres (murs, sous-pente, plafonds).\nDescription du produit :\nOutils très maniable et léger pour un travail en toute sécurité. Il dispose d’un système d\'évacuation des poussières qui se raccorde à l’aspirateur. Il possède un variateur de vitesse pour réguler le travail du ponçage. Fourni avec deux adaptateurs et un flexible de 3m pour une grande liberté de mouvement. Ouverture du carter pour un ponçage d’angle. Il existe différentes vitesses.', 'Attention à l’effet d’aspiration. Porter des lunettes de sécurité et un casque anti-bruit. Tenir l’outil fermement et bien à plat lors de son utilisation. ', 'Un disque pour poncer. Un raccord aspirateur. Une poignée amovible.', 'C:\\xampp\\htdocs\\pretooty\\img\\Ponceuse orbitale pour plaques de plâtre.jpg', 3, 7, 6, 5),
+(5, 'Scie sauteuse makita', 'Utilisation :\nL’outil est conçu pour la coupe des matériaux de bois, de plastique et de métal. Tout dépend de la lame utiliser pour la coupe. Particulièrement adéquat pour une coupe circulaire et des lignes incurvées, arrondies.', 'Il est possible d’accorder un aspirateur à la scie afin de collecter la poussière. Utiliser un dispositif de serrage pour fixer la pièce à découper sur une surface de travail stable. Porter des lunettes de sécurité. Ne pas couper des pièces trop grandes. Toujours vérifier qu’il y ait assez d’espace sous la pièce à découper pour que la lame ne heurte aucune surface (sol, établi etc.). Porter un masque anti-poussière. Tenir l’outil fermement. Bien régler la scie en fonction de la coupe désirée (ligne droite, petite orbite, orbite moyenne, grande orbite) et du matériau à couper (bois, acier doux, acier inoxydable, aluminium, plastique). Bien utiliser la lame en la mettant dans le bon sens.', 'Lames de scie sauteuse x2 Lunette de protection', 'C:\\xampp\\htdocs\\pretooty\\img\\Scie sauteuse makita.jpg', 3, 2, 6, 2),
+(6, 'Ponceuse à bande', 'Utilisation : L’outil est conçu pour le ponçage à sec de surface en bois, matières plastiques, métal, mastic et surfaces vernies. Les bandes abrasives doivent être choisies en fonction du matériau à poncer et de l’enlèvement de la matière souhaité.', 'Porter des lunettes de protection. Bien tenir l’outil et maintenir une pression constante lors de son utilisation pour avoir un ponçage égal. Porter un casque anti-bruit. Lors du ponçage de certains types de produits, l’utilisateur de l’outil peut être exposé çà des substances chimiques dangereuses, veillez à porter un masque anti-poussière.', 'Une bande pour poncer. Boitier microfibre pour la poussière', 'C:\\xampp\\htdocs\\pretooty\\img\\Ponceuse à bande.jpg', 1, 7, 6, 6),
+(7, 'Ponceuse excentrique Makita', 'Utilisation : L’outil est conçu pour le ponçage de grandes surfaces de bois, de plastique et de métal, ainsi que des surfaces peintes.', 'Porter des lunettes de protection. Tenir l’outil fermement. Lors du ponçage de certains types de produits, l’utilisateur de l’outil peut être exposé çà des substances chimiques dangereuses, veillez à porter un masque anti-poussière. Toujours vérifier que l’outil est hors tension avant de le brancher, c’est-à-dire qu’il est en mode off. Avant d’utiliser l’outil attendre qu’il ait atteint sa pleine vitesse. Exercer une légère pression sur l’outil. Ne jamais exercer une trop grande pression cela peut causer une diminution de l’efficacité du ponçage, l’endommagement du disque de ponçage. Régler la vitesse en fonction du ponçage désiré (plage A = polissage, plage B = ponçage fin, plage C = ponçage ordinaire).', 'Un disque pour poncer. Un sac à poussière.', 'C:\\xampp\\htdocs\\pretooty\\img\\Ponceuse excentrique Makita.jpg', 3, 7, 6, 7),
+(8, 'Ponceuse excentrique Bosch', 'La ponceuse est conçue pour effectuer tous les travaux de ponçage et de polissage sur des surfaces plates ou bombées en bois, matières plastiques, métal et surfaces vernies, ainsi que sur des enduits et le plâtre.', 'Porter des lunettes de protection. S’assurer que l’interrupteur est en mode arrêt avant de brancher l’outil sur secteur. Ne pas se précipiter et garder une position adaptée. Utiliser l’outil de manière adaptée à son application. Lors de l’utilisation de l’outil sur du métal, bien faire attention aux étincelles que cela peut produire, et ne pas laisser d’objets inflammables à proximité. Nettoyer régulièrement les ouïes d’aération de l’outil. Bien tenir l’outil avec les deux mains pour une meilleure prise et avoir la position la plus stable possible. Bloquer la pièce à travailler avant la mise en marche de l’outil.', 'Batterie et chargeur. Un disque à poncer. Un boitier microfibre pour la poussière.', 'ponceuse excentrique bosch.jpg', 13, 7, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -286,8 +295,8 @@ INSERT INTO `utilisateur` (`id_utilisateur`, `id_provisoire`, `pseudonyme`, `mai
 (9, '', 'maddy', 'elodie-thierry@orange.com', '$2y$10$m.zcwo8gB9LGU4fTUSYDFe7GU4KktDFRgdv7KOznAAKyd4garIIQe', '', 1, 0, 2, '', '', '0', '', 0, 0),
 (10, '', 'maddyf', 'elodie-thierry@orange.ch', '$2y$10$fMksGhfZchWjkb4T0vCOMe97dKMRtOX5seXZRoes23RBg0Qw19apq', '', 1, 0, 2, '', '', '0', '', 0, 0),
 (11, '', 'Dave', 'dave@toto.fr', '$2y$10$sttD5tN7RGLEpAe8mR0veemari1E0KMiehqMwPloY991Fu6XgqYmm', '', 1, 0, 2, '', '', '0', '', 0, 0),
-(12, '', 'EA', 'eangenard@deastanceservices.fr', '$2y$10$X6nhBx7HUVmI1KQBmuEfCOknT68pAqYqqQuMEDzjRu/oLRweJn2Pa', '', 1, 0, 2, '', '', '0', '', 0, 0),
-(13, '', 'marty', 'marty@toutou.fr', '$2y$10$A28azzCd5pFfF81hJdyVge54AiJBh0k.5t3oyn6RFm3LHi6E.D/xW', 'Nieuil L\'Espoir', 1, 0, 2, 'Angenard', 'Marty', '05 49 53 17 10', '13 rue des cèdres', 86340, 2);
+(12, '', 'EA', 'eangenard@deastanceservices.fr', '$2y$10$X6nhBx7HUVmI1KQBmuEfCOknT68pAqYqqQuMEDzjRu/oLRweJn2Pa', '', 1, 0, 2, '', '', '0', '', 0, 2),
+(13, '', 'marty', 'marty@toutou.fr', '$2y$10$.fgC8tSLNQvszfgEyRlCHumgWsUrgI8DbInzyDqtdHY2KNai3M7ty', 'Nieuil L\'Espoirito', 1, 2, 2, 'Angenardo', 'Martyni', '05 49 53 17 66', '13 rue des cèdrito', 8634000, 2);
 
 --
 -- Index pour les tables déchargées
@@ -383,7 +392,7 @@ ALTER TABLE `categorie_u`
 -- AUTO_INCREMENT pour la table `disponibilite`
 --
 ALTER TABLE `disponibilite`
-  MODIFY `id_disponibilite` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_disponibilite` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `emprunt`
@@ -401,7 +410,7 @@ ALTER TABLE `etat_outil`
 -- AUTO_INCREMENT pour la table `outil`
 --
 ALTER TABLE `outil`
-  MODIFY `id_outil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_outil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `statut`
