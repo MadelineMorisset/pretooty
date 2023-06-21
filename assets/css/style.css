@@ -1,4 +1,4 @@
-/* ---------------------- Style général ---------------------- */
+/* ---------------------------- STYLE GÉNÉRAL ---------------------------- */
 body {
     margin: 0;
 }
@@ -13,7 +13,7 @@ header, main {
     text-decoration: none;
 }
 
-/* ---------------- Boutons Carrés ---------------- */
+/* --------------- Boutons Carrés --------------- */
 .squareButtons {
     display: flex;
     justify-content: center;
@@ -39,8 +39,8 @@ header, main {
 /* Boutons rectangulaires */
 /* px */
 
-/* ------------------------------ HEADER ------------------------------ */
-/* ------------- Header - Commun ------------- */
+/* ------------------------------- HEADER ------------------------------- */
+/* --------------- Header - Commun --------------- */
 header {
     margin: 8vh 3vw;
 }
@@ -60,7 +60,7 @@ header {
     color: #3C5E68;
 }
 
-/* ------------- Header - Spécifique ------------- */
+/* --------------- Header - Spécifique --------------- */
 /* Section contenant section "search" et section "user" */
 .navHeader {
   display: flex;
@@ -146,4 +146,19 @@ header {
     height: 111px;
     background-image: url(../img/LogoPretooty.svg);
     background-repeat: no-repeat;
+}
+
+/* ------------------------------- FOOTER ------------------------------- */
+/* --------------- Footer - Commun --------------- */
+footer {
+    height: 6.3vh;
+    background-color: #3C5E68;
+}
+
+/* ------------- Footer - Spécifique ------------- */
+.navFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
 }
