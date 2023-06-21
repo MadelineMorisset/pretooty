@@ -8,11 +8,12 @@ header {
 }
 
 main {
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 25px 185px 40px 185px;
+    margin: 25px 64px 60px 64px;
 }
 
 .title {
@@ -58,8 +59,6 @@ a {
 
 /* ------------------------------- INDEX -------------------------------- */
 /* ----------------- Index - Commun ----------------- */
-
-
 .indexText {
     font-size: 1.15em; /* 18.4px */
 }
@@ -70,12 +69,12 @@ a {
     text-align: center;
 }
 
-/* .indexBox {
-    margin-top: 61px;
-} */
+.indexBox {
+    margin: 61px 61px 0 61px;
+}
 
 .indexInnerBox {
-    margin: 61px;
+    margin: 61px 61px 0 61px;
 }
 
 /* ------------------------------- HEADER ------------------------------- */
@@ -190,7 +189,7 @@ header {
 /* ------------------------------- FOOTER ------------------------------- */
 /* --------------- Footer - Commun --------------- */
 footer {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
