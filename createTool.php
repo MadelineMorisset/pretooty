@@ -13,13 +13,14 @@
         <?php include('views\header.php'); ?>
 
         <main>
-            <form>
+            <form action="./php/toolCreation.php" method="post">
                 <div>
                     <label for="toolName">Nom de l'outil</label>
-                    <input type="text" name="toolName" value="" />
+                    <input type="text" name="toolName" value="" required/>
 
                     <label for="toolCategory">Catégorie :</label>
-                        <select name="toolCategory">
+                        <select name="toolCategory" required>
+                            <option value="">Veuillez choisir une catégorie</option>
                             <option value="1">Clé</option>
                             <option value="2">Couper</option>
                             <option value="3">Frapper</option>
@@ -64,7 +65,7 @@
 
                 <div>
                     <label for="toolDescription">Description :</label>
-                    <input type="textarea" name="toolDescription"/>
+                    <input type="textarea" name="toolDescription" required/>
                 </div>
 
                 <div>
@@ -76,6 +77,9 @@
                     <label for="toolAccessories">Accessoires fournis avec l'outil :</label>
                     <input type="textarea" name="toolAccessories"/>
                 </div>
+
+                <input type="submit" value="Valider"/>
+                <a href="userPageAccount.php">Annuler</a>
 
             </form>
         </main>
