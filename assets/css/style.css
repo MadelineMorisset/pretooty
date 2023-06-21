@@ -21,9 +21,25 @@ main {
     color: #000;
 }
 
+.title16px, .text16px {
+    font-size: 1em;
+}
+
+.title12px {
+    font-size: 0.75em;
+}
+
 .text {
     font-family: 'Lora';
     color: #000;
+}
+
+.text18px {
+    font-size: 1.12em;
+}
+
+.text14px {
+    font-size: 0.8em;
 }
 
 a {
@@ -59,9 +75,7 @@ a {
 
 /* ------------------------------- INDEX -------------------------------- */
 /* ----------------- Index - Commun ----------------- */
-.indexText {
-    font-size: 1.15em; /* 18.4px */
-}
+
 
 /* --------------- Index - Spécifique --------------- */
 .titleWelcome {
@@ -161,7 +175,6 @@ header {
 }
 
 .titleHeader {
-    font-size: 0.75em; /* 12px */
     margin: 8px 0;
 }
 
@@ -222,4 +235,74 @@ footer {
 
 .footerLinks:active {
     text-shadow: none;
+}
+
+/* ---------------------------- LOGINACCOUNT ----------------------------- */
+/* --------------- loginAccount - Commun --------------- */
+.connectionAndCreationAccount {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}
+
+.signInContainer {
+    flex-wrap: wrap;
+     width: 20%;
+}
+
+.titleConnection, .textConnection, .label, .input, .forgottenPassword {
+    width: 100%;
+}
+
+.otherConnections { /* À voir plus tard */
+    visibility: hidden;
+    margin: 38px 0 38px 47px;
+    height: 34px;
+}
+
+.identification {
+    border-left: 5px solid #d9d9d9;
+    padding-left: 41px;
+}
+
+.pseudoEmail {
+    margin-bottom: 15px;
+}
+
+.pseudoEmail, .password {
+    max-width: 97%;
+}
+
+.input {
+    margin: 9px 0;
+}
+
+.forgottenPassword {
+    color: #33A4B2;
+}
+
+.connectionOrMember {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-top: 13px;
+}
+
+.connect {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #33A4B2;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.notMember {
+    width: 100%;
+    margin-top: 45px;
+    text-align: right;
+    color: #33A4B2;
 }

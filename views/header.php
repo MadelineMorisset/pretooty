@@ -10,17 +10,17 @@
 
       <div id="navHidden" class="visibilityNav">
         <div class="navUserLogin titleBox separationLine">
-          <a href="loginAccount.php" class="title titleHeader">Me connecter / M’inscrire</a>
+          <a href="loginAccount.php" class="title titleHeader title12px">Me connecter / M’inscrire</a>
         </div>
 
         <div class="navUserAccount titleBox separationLine">
-          <a href="userPageAccount.php" class="navUserAccountLinks title titleHeader">Mon compte</a>
-          <a href="userPageActivities.php" class="navUserAccountLinks title titleHeader">Mes activités</a>
-          <a href="userMessaging.php" class="navUserAccountLinks title titleHeader">Ma messagerie</a>
+          <a href="userPageAccount.php" class="navUserAccountLinks title titleHeader title12px">Mon compte</a>
+          <a href="userPageActivities.php" class="navUserAccountLinks title titleHeader title12px">Mes activités</a>
+          <a href="userMessaging.php" class="navUserAccountLinks title titleHeader title12px">Ma messagerie</a>
         </div>
 
         <div class="navUserLogout titleBox">
-          <a href="logoutAccount.php" class="title titleHeader">Me déconnecter</a>
+          <a href="logoutAccount.php" class="title titleHeader title12px">Me déconnecter</a>
         </div>
       </div>
     </div> 

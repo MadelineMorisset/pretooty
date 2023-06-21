@@ -16,6 +16,7 @@
         <script src="https://kit.fontawesome.com/23c1a897ea.js" crossorigin="anonymous"></script>
         <!-- JavaScript -->
         <script src="assets/js/script.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
 
         <title>Pretooty</title>
         <meta name="description" content="">
@@ -24,26 +25,38 @@
 <body>
     <?php include('views/header.php'); ?>
 
+    <main class="connectionAndCreationAccount">
         <!-- Formulaire de connexion -->
-        <div>
-            <h2>Connexion</h2>
+        <div class="signInContainer">
+            <h2 class="title title24px titleConnection">Connexion</h2>
 
-            <div>
-                
+            <div class="otherConnections">
+                <div class="googleSignIn"></div>
+                <div class="appleSignIn"></div>
             </div>
+
+            <p class="text text20px textConnection">Identifiants personnels</p>
+            <form action="php\login.php" method="post" class="formConnection">
+                <div class="identification">
+                    <div class="pseudoEmail">
+                        <label for="pseudoMail" class="title title16px label">Pseudo / Adresse mail :</label>
+                        <input type="text" name="pseudoMail" required class="input">
+                    </div>
+
+                    <div class="password">
+                        <label for="mdp" class="title title16px label">Mot de passe :</label>
+                        <input type="password" name="mdp" required class="input">
+                        <a href="forgottenPassword_mail.php" class="text text14px forgottenPassword">Mot de passe oublié ?</a>
+                    </div>
+                </div>
+
+                <div class="connectionOrMember">
+                    <button type="submit" class="title title16px connect">Se connecter</button>
+                    <a href="createAccount.php" class="text text16px notMember">Pas encore membre ?</a>
+                </div>
+            </form>
         </div>
-
-        <form action="php\login.php" method="post">
-            <label for="pseudoMail">Pseudo / Adresse mail :</label>
-            <input type="text" name="pseudoMail" required>
-
-            <label for="mdp">Mot de passe :</label>
-            <input type="password" name="mdp" required>
-            <a href="forgottenPassword_mail.php">Mot de passe oublié ?</a>
-
-            <button type="submit">Se connecter</button>
-            <a href="createAccount.php">Pas encore membre ?</a>
-        </form>
+    </main>
 
     <?php include('views/footer.php'); ?>
 
