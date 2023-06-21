@@ -1,14 +1,27 @@
-/* ---------------------------- STYLE GÉNÉRAL ---------------------------- */
+/* ---------------------------- STYLE GÉNÉRAL --------------------------- */
 body {
     margin: 0;
 }
 
-header, main {
+header {
     height: 10vh;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25px 185px 40px 185px;
 }
 
 .title {
     font-family: 'Merriweather';
+    color: #000;
+}
+
+.text {
+    font-family: 'Lora';
     color: #000;
 }
 
@@ -42,10 +55,33 @@ a {
 /* Boutons rectangulaires */
 /* px */
 
+
+/* ------------------------------- INDEX -------------------------------- */
+/* ----------------- Index - Commun ----------------- */
+
+
+.indexText {
+    font-size: 1.15em; /* 18.4px */
+}
+
+/* --------------- Index - Spécifique --------------- */
+.titleWelcome {
+    width: 100%;
+    text-align: center;
+}
+
+/* .indexBox {
+    margin-top: 61px;
+} */
+
+.indexInnerBox {
+    margin: 61px;
+}
+
 /* ------------------------------- HEADER ------------------------------- */
-/* --------------- Header - Commun --------------- */
+/* ----------------- Header - Commun ----------------- */
 header {
-    margin: 8vh 3vw;
+    margin: 49px 64px;
 }
 
 /* Boutons recherche et utilisateur */
@@ -142,8 +178,8 @@ header {
 
 /* Logo de le Plateforme Pretooty*/
 .logoPretooty {
-    position: relative;
-    top: -80px;
+    position: absolute;
+    top: 19px;
     left: 40%;
     width: 383px;
     height: 111px;

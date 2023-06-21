@@ -10,7 +10,7 @@
 
       <div id="navHidden" class="visibilityNav">
         <div class="navUserLogin titleBox separationLine">
-          <a href="loginAccount.php" class="title titleHeade">Me connecter / M’inscrire</a>
+          <a href="loginAccount.php" class="title titleHeader">Me connecter / M’inscrire</a>
         </div>
 
         <div class="navUserAccount titleBox separationLine">

@@ -20,6 +20,32 @@
 
     <body>
         <?php include("views/header.php"); ?>
+
+        <main>
+            <h1 class="title titleWelcome">Bienvenue sur Pretooty</h1>
+
+            <div class="indexBox">
+                <div class="indexInnerBox">
+                    <h2 class="title indexTitle">Qu’est-ce que “Pretooty” ?</h2>
+                    <p class="text indexText">
+                        C’est une plateforme sur laquelle chacun peut prêter et/ou emprunter à d’autres utilisateurs des outils divers (jardinage, manutention, peinture, ...).
+                    </p>
+                </div>
+                <div class="indexInnerBox">
+                    <h2 class="title indexTitle">Qui peut prêter / emprunter les outils sur Pretooty ?</h2>
+                    <p class="text indexText">
+                        Tous les utilisateurs, c’est à dire, tous ceux s’étant inscris sur la plateforme.
+                        De plus, chaque utilisateur peut être prêteur ET emprunteur, cela sur un même compte (voir les sections “Prêteur” et “Emprunteur” dans les informations utilisateur).
+                    </p>
+                </div>
+                <div class="indexInnerBox">
+                    <h2 class="title indexTitle">Comment utiliser Pretooty ?</h2>
+                    <p class="text indexText">
+                        (À venir ...)
+                    </p>
+                </div>
+            </div>
+        </main>
         
         <?php include("views/footer.php"); ?>
     </body>
