@@ -22,44 +22,44 @@
         <meta name="description" content="">
     </head>
 
-<body>
-    <?php include('views/header.php'); ?>
+    <body>
+        <?php include('views/header.php'); ?>
 
-    <main class="connectionAndCreationAccount">
-        <!-- Formulaire de connexion -->
-        <div class="signInContainer">
-            <h2 class="title title24px titleConnection">Connexion</h2>
+        <main class="connectionAndCreationAccount">
+            <!-- Formulaire de connexion -->
+            <div class="signInContainer">
+                <h2 class="title title24px titleConnection">Connexion</h2>
 
-            <div class="otherConnections">
-                <div class="googleSignIn"></div>
-                <div class="appleSignIn"></div>
+                <div class="otherConnections">
+                    <div class="googleSignIn"></div>
+                    <div class="appleSignIn"></div>
+                </div>
+
+                <p class="text text20px textConnection">Identifiants personnels</p>
+                <form action="php/login.php" method="post" class="formConnection">
+                    <div class="identification">
+                        <div class="pseudoEmail">
+                            <label for="pseudoMail" class="title title16px label">Pseudo / Adresse mail :</label>
+                            <input type="text" name="pseudoMail" required class="input">
+                        </div>
+
+                        <div class="password">
+                            <label for="mdp" class="title title16px label">Mot de passe :</label>
+                            <input type="password" name="mdp" required class="input">
+                            <a href="forgottenPassword_mail.php" class="text text14px forgottenPasswordLink">Mot de passe oublié ?</a>
+                        </div>
+                    </div>
+
+                    <div class="connection">
+                        <button type="submit" class="title title16px connectButton">Se connecter</button>
+                        <a href="createAccount.php" class="text text16px notMemberLink">Pas encore membre ?</a>
+                    </div>
+                </form>
             </div>
+        </main>
 
-            <p class="text text20px textConnection">Identifiants personnels</p>
-            <form action="php\login.php" method="post" class="formConnection">
-                <div class="identification">
-                    <div class="pseudoEmail">
-                        <label for="pseudoMail" class="title title16px label">Pseudo / Adresse mail :</label>
-                        <input type="text" name="pseudoMail" required class="input">
-                    </div>
+        <?php include('views/footer.php'); ?>
 
-                    <div class="password">
-                        <label for="mdp" class="title title16px label">Mot de passe :</label>
-                        <input type="password" name="mdp" required class="input">
-                        <a href="forgottenPassword_mail.php" class="text text14px forgottenPasswordLink">Mot de passe oublié ?</a>
-                    </div>
-                </div>
-
-                <div class="connectionOrMember">
-                    <button type="submit" class="title title16px connectButton">Se connecter</button>
-                    <a href="createAccount.php" class="text text16px notMemberLink">Pas encore membre ?</a>
-                </div>
-            </form>
-        </div>
-    </main>
-
-    <?php include('views/footer.php'); ?>
-
-</body>
+    </body>
 
 </html>

@@ -258,7 +258,6 @@ footer {
     display: flex;
     justify-content: center;
     align-content: center;
-    padding-top: 65px;
 }
 
 .signInContainer {
@@ -285,7 +284,7 @@ footer {
     margin-bottom: 15px;
 }
 
-.pseudoEmail, .password {
+.pseudoEmail, .pseudo, .email, .password, .confirmPassword {
     max-width: 97%;
 }
 
@@ -308,7 +307,7 @@ footer {
     text-decoration: underline;
 }
 
-.connectionOrMember {
+.connection {
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
