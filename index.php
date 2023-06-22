@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr-FR">
     <head>
         <meta charset="UTF-8">
@@ -26,21 +27,21 @@
 
             <div class="indexBox">
                 <div class="indexInnerBox">
-                    <h2 class="title indexTitle">Qu’est-ce que “Pretooty” ?</h2>
-                    <p class="text indexText">
+                    <h2 class="title title24px">Qu’est-ce que “Pretooty” ?</h2>
+                    <p class="text text18px">
                         C’est une plateforme sur laquelle chacun peut prêter et/ou emprunter à d’autres utilisateurs des outils divers (jardinage, manutention, peinture, ...).
                     </p>
                 </div>
                 <div class="indexInnerBox">
-                    <h2 class="title indexTitle">Qui peut prêter / emprunter les outils sur Pretooty ?</h2>
-                    <p class="text indexText">
+                    <h2 class="title title24px">Qui peut prêter / emprunter les outils sur Pretooty ?</h2>
+                    <p class="text text18px">
                         Tous les utilisateurs, c’est à dire, tous ceux s’étant inscris sur la plateforme.
                         De plus, chaque utilisateur peut être prêteur ET emprunteur, cela sur un même compte (voir les sections “Prêteur” et “Emprunteur” dans les informations utilisateur).
                     </p>
                 </div>
                 <div class="indexInnerBox">
-                    <h2 class="title indexTitle">Comment utiliser Pretooty ?</h2>
-                    <p class="text indexText">
+                    <h2 class="title title24px">Comment utiliser Pretooty ?</h2>
+                    <p class="text text18px">
                         (À venir ...)
                     </p>
                 </div>

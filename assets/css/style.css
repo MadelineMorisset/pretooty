@@ -8,11 +8,8 @@ header {
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 25px 185px 40px 185px;
+    height: auto;
+    margin: 25px 64px 60px 64px;
 }
 
 .title {
@@ -20,9 +17,25 @@ main {
     color: #000;
 }
 
+.title16px, .text16px {
+    font-size: 1em;
+}
+
+.title12px {
+    font-size: 0.75em;
+}
+
 .text {
     font-family: 'Lora';
     color: #000;
+}
+
+.text18px {
+    font-size: 1.12em;
+}
+
+.text14px {
+    font-size: 0.8em;
 }
 
 a {
@@ -52,17 +65,38 @@ a {
     height: 40px;
 }
 
+.searchButton:active, .userButton:active {
+    border-bottom: 2px solid #3C5E68;
+    box-shadow: inset 0 2px rgba(0, 0, 0, .25);
+}
+
 /* Boutons rectangulaires */
+/* Bouton de connexion à l'espace utilisateur */
+.connectButton {
+    padding: 8px;
+    background-color: #33A4B2;
+    color: #fff;
+    border: 1px solid #3C5E68;
+    border-bottom: 4px solid #3C5E68;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.connectButton:active {
+    border: 1px solid #3C5E68;
+    box-shadow: inset 0 2px rgba(0, 0, 0, .25);
+}
+
 /* px */
+
 
 
 /* ------------------------------- INDEX -------------------------------- */
 /* ----------------- Index - Commun ----------------- */
 
-
-.indexText {
-    font-size: 1.15em; /* 18.4px */
-}
 
 /* --------------- Index - Spécifique --------------- */
 .titleWelcome {
@@ -70,24 +104,18 @@ a {
     text-align: center;
 }
 
-/* .indexBox {
-    margin-top: 61px;
-} */
+.indexBox {
+    margin: 61px 61px 0 61px;
+}
 
 .indexInnerBox {
-    margin: 61px;
+    margin: 61px 61px 0 61px;
 }
 
 /* ------------------------------- HEADER ------------------------------- */
 /* ----------------- Header - Commun ----------------- */
 header {
     margin: 49px 64px;
-}
-
-/* Boutons recherche et utilisateur */
-.searchButton:active, .userButton:active {
-    border-bottom: 2px solid #3C5E68;
-    box-shadow: inset 0 2px rgba(0, 0, 0, .25);
 }
 
 /* Images SVG des bouton recherche et utilisateur */
@@ -162,7 +190,6 @@ header {
 }
 
 .titleHeader {
-    font-size: 0.75em; /* 12px */
     margin: 8px 0;
 }
 
@@ -190,7 +217,7 @@ header {
 /* ------------------------------- FOOTER ------------------------------- */
 /* --------------- Footer - Commun --------------- */
 footer {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -223,4 +250,78 @@ footer {
 
 .footerLinks:active {
     text-shadow: none;
+}
+
+/* ---------------------------- LOGINACCOUNT ----------------------------- */
+/* --------------- loginAccount - Commun --------------- */
+.connectionAndCreationAccount {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 65px;
+}
+
+.signInContainer {
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.titleConnection, .textConnection, .label, .input, .forgottenPassword {
+    width: 100%;
+}
+
+.otherConnections { /* À voir plus tard */
+    visibility: hidden;
+    margin: 38px 0 38px 47px;
+    height: 34px;
+}
+
+.identification {
+    border-left: 5px solid #d9d9d9;
+    padding-left: 41px;
+}
+
+.pseudoEmail {
+    margin-bottom: 15px;
+}
+
+.pseudoEmail, .password {
+    max-width: 97%;
+}
+
+.input {
+    margin: 9px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FFFDF9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.forgottenPasswordLink {
+    color: #33A4B2;
+}
+
+.forgottenPasswordLink:active {
+    text-decoration: underline;
+}
+
+.connectionOrMember {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-top: 13px;
+}
+
+.notMemberLink {
+    width: 100%;
+    margin-top: 45px;
+    text-align: right;
+    color: #33A4B2;
+}
+
+.notMemberLink:active {
+    text-decoration: underline;
 }
