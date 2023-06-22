@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <?php include('views\header.php'); 
+        <?php include('views/header.php'); 
         include("php/functions.php");
         $infoUser=showMyAccount(); ?>
 
@@ -77,7 +77,7 @@
         </main>
 
         
-        <?php include('views\footer.php'); ?>
+        <?php include('views/footer.php'); ?>
 
     </body>
 </html>

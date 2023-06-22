@@ -46,13 +46,13 @@
                     <div class="password">
                         <label for="mdp" class="title title16px label">Mot de passe :</label>
                         <input type="password" name="mdp" required class="input">
-                        <a href="forgottenPassword_mail.php" class="text text14px forgottenPassword">Mot de passe oublié ?</a>
+                        <a href="forgottenPassword_mail.php" class="text text14px forgottenPasswordLink">Mot de passe oublié ?</a>
                     </div>
                 </div>
 
                 <div class="connectionOrMember">
-                    <button type="submit" class="title title16px connect">Se connecter</button>
-                    <a href="createAccount.php" class="text text16px notMember">Pas encore membre ?</a>
+                    <button type="submit" class="title title16px connectButton">Se connecter</button>
+                    <a href="createAccount.php" class="text text16px notMemberLink">Pas encore membre ?</a>
                 </div>
             </form>
         </div>

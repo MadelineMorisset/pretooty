@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <?php include('views\header.php'); ?>
+        <?php include('views/header.php'); ?>
 
         <main>
             <form>
@@ -80,7 +80,7 @@
             </form>
         </main>
 
-        <?php include('views\footer.php'); ?>
+        <?php include('views/footer.php'); ?>
 
     </body>
 </html>

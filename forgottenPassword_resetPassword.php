@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <?php include('views\header.php'); ?>
+        <?php include('views/header.php'); ?>
 
         <form action="php\setNewPassword.php" method="post">
             <input type="password" name="mdp" placeholder="Mot de passe" required>
@@ -20,6 +20,6 @@
             <a href="createAccount.php">Retour vers création de compte</a>
         </form>
 
-    <?php include('views\footer.php'); ?>
+    <?php include('views/footer.php'); ?>
     </body>
 </html>
