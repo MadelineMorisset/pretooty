@@ -12,12 +12,17 @@
     <body>
         <?php include('views\header.php');
         include('views\userNavbar.php'); 
-        include("php/functions.php");
-        $infoUser=showMyAccount(); ?>
+        include("php/functions.php"); ?>
 
         <main>
 
-        <a href="createTool.php">Ajouter un outil</a>
+            <section>
+                <h1>Mes outils</h1>
+                <?php showMyTools(); ?>
+                <a href="createTool.php">Ajouter un outil</a>
+            </section>
+
+
 
         </main>
 

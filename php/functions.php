@@ -55,4 +55,24 @@ error_reporting(E_ALL);
 //     }
 // }
 
+
+// USERPAGEACTIVITIES
+
+    // MONTRER LES OUTILS
+
+    function showMyTools() {
+        include('php/dataBaseConnexion.php');
+        $query = $db->prepare('SELECT * FROM outil WHERE id_utilisateur =:id_user');
+        $query->execute([
+            "id_user" => $_SESSION['id_utilisateur'],
+        ]);
+        $tools = $query->fetchAll();
+        
+        foreach ($tools as $tool => $userTool) {
+            $imagePath = "./assets/img/tools/".$userTool['photo'];
+            ?> <img src="<?= $imagePath ?>" alt="photo de l'outil"/>
+            <div><?= $userTool['nom_outil']; ?></div> <?php
+        }
+    }
+
 ?>
