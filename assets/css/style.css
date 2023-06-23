@@ -35,6 +35,18 @@ main {
 
 a {text-decoration: none;}
 
+.footerLinks, .footerSeparations, 
+.userNavbarLinks {color: #fff;}
+
+.footerLinks, 
+.userNavbarLinks {text-shadow: #00000088 1px 1px 2px;}
+
+.footerLinks:hover, 
+.userNavbarLinks:hover {text-decoration: underline #fff;}
+
+.footerLinks:active, 
+.userNavbarLinks:active {text-shadow: none;}
+
 /* --------------- Boutons Carrés --------------- */
 .squareButtons {
     display: flex;
@@ -200,8 +212,6 @@ footer {
     background-color: #3C5E68;
 }
 
-.footerLinks, .footerSeparations {color: #fff;}
-
 /* ------------- Footer - Spécifique ------------- */
 .navFooter {
     display: flex;
@@ -210,12 +220,6 @@ footer {
     width: 20%;
     text-align: center;
 }
-
-.footerLinks {text-shadow: #00000088 1px 1px 2px;}
-
-.footerLinks:hover {text-decoration: underline #fff;}
-
-.footerLinks:active {text-shadow: none;}
 
 /* -------------------- LOGINACCOUNT & CREATEACCOUNT --------------------- */
 .connectionAndCreationAccount {
@@ -298,4 +302,31 @@ footer {
     width: 100%;
     margin-top: 90px;
     text-align: left;
+}
+
+/* ------------------------------- USERNAVBAR ------------------------------- */
+.userNavbar {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 394px;
+    height: 712px;
+    background-color: #3C5E68;
+    color: #fff;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+}
+
+.userNavbarLinks {
+    width: 100%;
+}
+
+/* ------------------------------- USERPAGEACCOUNT ------------------------------- */
+.userContainer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userContainerForm {
+    margin-left: 400px;
 }

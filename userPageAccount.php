@@ -22,16 +22,15 @@
     </head>
 
     <body>
-        <?php include('views/header.php'); 
-        include('views/userNavbar.php');
+        <?php include('views/header.php');
         include("php/functions.php");
         $infoUser=showMyAccount(); ?>
 
 
-        <main>
-            <a href="userPageActivities.php">Mes outils</a>
+        <main class="userContainer">
+            <?php include('views/userNavbar.php'); ?>
 
-            <form action="userEditPageAccount.php" method="post">
+            <form action="userEditPageAccount.php" method="post" class="userContainerForm">
                 <fieldset>
                     <legend id="general">Général</legend>
 
