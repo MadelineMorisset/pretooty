@@ -39,17 +39,17 @@
                         </select>
                     
                     <label for="toolStatus">Etat :</label>
-                        <input type="radio" name="toolStatus" value="new"/>
+                        <input type="radio" name="toolStatus" value="6"/>
                         <label for="new">Neuf</label>
-                        <input type="radio" name="toolStatus" value="asNew"/>
+                        <input type="radio" name="toolStatus" value="5"/>
                         <label for="asNew">Comme neuf</label>
-                        <input type="radio" name="toolStatus" value="veryGood"/>
+                        <input type="radio" name="toolStatus" value="4"/>
                         <label for="veryGood">Très bon</label>
-                        <input type="radio" name="toolStatus" value="good"/>
+                        <input type="radio" name="toolStatus" value="3"/>
                         <label for="good">Bon</label>
-                        <input type="radio" name="toolStatus" value="bad"/>
+                        <input type="radio" name="toolStatus" value="2"/>
                         <label for="bad">Mauvais</label>
-                        <input type="radio" name="toolStatus" value="used"/>
+                        <input type="radio" name="toolStatus" value="1"/>
                         <label for="used">Usagé</label>
                 </div>
 
