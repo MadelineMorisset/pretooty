@@ -11,6 +11,7 @@
 
     <body>
         <?php include('views\header.php'); 
+        include('views\userNavbar.php');
         include("php/functions.php");
         $infoUser=showMyAccount(); ?>
 
@@ -21,7 +22,7 @@
 
             <form action="userEditPageAccount.php" method="post">
                 <fieldset>
-                    <legend>Général</legend>
+                    <legend id="general">Général</legend>
 
                     <label for="category">Catégorie :</label>
                     <input type="text" name="category" value="<?= $infoUser["nom_categorie_u"]; ?>" readonly style="border: transparent"/>
@@ -37,7 +38,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Coordonnées</legend>
+                    <legend id="coordinates">Coordonnées</legend>
 
                     <label for="address">Adresse :</label>
                     <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>" readonly style="border: transparent"/>
@@ -59,7 +60,7 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend>Paramètres</legend>
+                    <legend id="parameters">Paramètres</legend>
 
                     <div>Notifications</div>
 
