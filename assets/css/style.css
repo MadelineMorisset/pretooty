@@ -31,6 +31,8 @@ main {
 
 .fontSize13px {font-size: 0.8125em;}
 
+.fontSize12px {font-size: 0.75em;}
+
 a {text-decoration: none;}
 
 /* --------------- Boutons Carrés --------------- */
@@ -270,7 +272,7 @@ footer {
     margin-top: 13px;
 }
 
-.notMemberLink, .toConnectionPage {
+.notMemberLink, .toConnectionPageLink {
     width: 100%;
     margin-top: 45px;
     color: #33A4B2;
@@ -278,7 +280,8 @@ footer {
 
 .notMemberLink {text-align: right;}
 
-.notMemberLink:active {text-decoration: underline;}
+.notMemberLink:active, 
+.toConnectionPageLink:active {text-decoration: underline;}
 
 .requiredCharacters {
     position: absolute;
