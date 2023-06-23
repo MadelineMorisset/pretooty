@@ -38,4 +38,21 @@ error_reporting(E_ALL);
         }
 
 
+
+
+// CREATE TOOL
+
+// function showUploadedToolImage() {             // A VOIR PLUS TARD 
+//     include('php/dataBaseConnexion.php');
+//     $query = $db->prepare('SELECT photo FROM outil WHERE id_utilisateur = :id_user');
+//     $query->execute([
+//         "id_user" => $_SESSION['id_utilisateur'],
+//     ]);
+//     $users = $query->fetch(PDO::FETCH_ASSOC);
+
+//     foreach ($users as $user) {
+//         echo "<img src="./assets/img/tools/'.$user[photo].'"";
+//     }
+// }
+
 ?>

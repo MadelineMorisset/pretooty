@@ -17,6 +17,8 @@
 
         <main>
 
+            <a href="userPageActivities.php">Mes outils</a>
+
             <form action="userEditPageAccount.php" method="post">
                 <fieldset>
                     <legend>Général</legend>

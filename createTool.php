@@ -13,7 +13,7 @@
         <?php include('views\header.php'); ?>
 
         <main>
-            <form action="./php/toolCreation.php" method="post">
+            <form action="./php/toolCreation.php" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="toolName">Nom de l'outil</label>
                     <input type="text" name="toolName" value="" required/>
@@ -56,7 +56,7 @@
                 <div>
                     <label for="toolImage">Photode l'outil :</label>
                     <input type="file" name="toolImage" accept=".png,.jpg,.jpeg"/>
-                    <div style="width:350px; height:224px;border:solid 1px black;"></div>
+                    <!-- <div style="width:350px; height:224px;border:solid 1px black;"> </div> AFFICHAGE DE LA PHOTO A VOIR PLUS TARD-->
                 </div>
 
                 <div>
@@ -79,7 +79,7 @@
                 </div>
 
                 <input type="submit" value="Valider"/>
-                <a href="userPageAccount.php">Annuler</a>
+                <a href="userPageActivities.php">Annuler</a>
 
             </form>
         </main>
