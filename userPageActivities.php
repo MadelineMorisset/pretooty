@@ -10,7 +10,8 @@
     </head>
 
     <body>
-        <?php include('views\header.php'); 
+        <?php include('views\header.php');
+        include('views\userNavbar.php'); 
         include("php/functions.php");
         $infoUser=showMyAccount(); ?>
 
