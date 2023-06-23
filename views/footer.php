@@ -1,5 +1,9 @@
 <footer>
-    <a href="index.php">Accueil</a>
-    <a href="contact.php">Contact</a>
-    <a href="loginAccount.php">Se connecter</a>
+    <div class="navFooter">
+        <a href="index.php" class="footerLinks fontSize14px">Accueil</a>
+        <p class="footerSeparations">|</p>
+        <a href="contact.php" class="footerLinks fontSize14px">Contact</a>
+        <p class="footerSeparations">|</p>
+        <a href="loginAccount.php" class="footerLinks fontSize14px">Se connecter</a>
+    </div>
 </footer>

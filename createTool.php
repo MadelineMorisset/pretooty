@@ -10,8 +10,8 @@
     </head>
 
     <body>
-        <?php include('views\header.php');
-        include('views\userNavbar.php'); ?>
+        <?php include('views/header.php');
+        include('views/userNavbar.php'); ?>
 
         <main>
             <form action="./php/toolCreation.php" method="post" enctype="multipart/form-data">
@@ -85,7 +85,7 @@
             </form>
         </main>
 
-        <?php include('views\footer.php'); ?>
+        <?php include('views/footer.php'); ?>
 
     </body>
 </html>

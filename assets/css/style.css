@@ -1,0 +1,301 @@
+/* ---------------------------- STYLE GÉNÉRAL --------------------------- */
+body {margin: 0;}
+
+header {
+    height: 10vh;
+    margin: 49px 64px 20px 64px;
+}
+
+main {
+    min-height: 65vh;
+    margin: 0 64px 60px 64px;
+}
+
+.title {
+    font-family: 'Merriweather';
+    color: #000;
+}
+
+.text {
+    font-family: 'Lora';
+    color: #000;
+}
+
+.fontSize22px {font-size: 1.375em;}
+
+.fontSize20px {font-size: 1.25em;}
+
+.fontSize18px {font-size: 1.125em}
+
+.fontSize14px {font-size: 0.875em;}
+
+.fontSize13px {font-size: 0.8125em;}
+
+.fontSize12px {font-size: 0.75em;}
+
+a {text-decoration: none;}
+
+/* --------------- Boutons Carrés --------------- */
+.squareButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3C5E68;
+    border-bottom: 5px solid #3C5E68;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: #FFFDF9;
+}
+
+/* ----------- 40px ----------- */
+/* Bouton recherche et Bouton utilisateur (header) 
++  Bouton Filtre des outils (page "allTools") */
+.searchButton, .userButton {
+    width: 40px;
+    height: 40px;
+}
+
+.searchButton:active, .userButton:active {
+    border-bottom: 2px solid #3C5E68;
+    box-shadow: inset 0 2px rgba(0, 0, 0, .25);
+}
+
+/* Boutons rectangulaires */
+/* Bouton de connexion à l'espace utilisateur */
+.connectButton {
+    padding: 8px;
+    background-color: #33A4B2;
+    color: #fff;
+    border: 1px solid #3C5E68;
+    border-bottom: 4px solid #3C5E68;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.connectButton:active {
+    border: 1px solid #3C5E68;
+    box-shadow: inset 0 2px rgba(0, 0, 0, .25);
+}
+
+/* px */
+
+
+
+/* ------------------------------- INDEX -------------------------------- */
+/* ----------------- Index - Commun ----------------- */
+/* --------------- Index - Spécifique --------------- */
+.titleWelcome {
+    width: 100%;
+    text-align: center;
+}
+
+.indexBox {margin: 61px 61px 0 61px;}
+
+.indexInnerBox {margin: 61px 61px 0 61px;}
+
+/* ------------------------------- HEADER ------------------------------- */
+/* ----------------- Header - Commun ----------------- */
+/* Images SVG des bouton recherche et utilisateur */
+.fa-magnifying-glass, 
+.fa-user {color: #33A4B2;}
+
+.fa-magnifying-glass:active, 
+.fa-user:active {color: #3C5E68;}
+
+/* --------------- Header - Spécifique --------------- */
+/* Section contenant section "search" et section "user" */
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Section contenant bouton recherche et zone de recherche */
+.search {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Zone de recherche */
+.searchBar, .searchBar:focus {
+    position: absolute;
+    margin-left: 55px;
+    padding-left: 10px;
+    width: 20%;
+    height: 45px;
+    border-top: transparent;
+    border-right: transparent;
+    border-bottom: 2px solid #3C5E68;
+    border-left: transparent;
+    outline: none;
+}
+
+/* Section contenant bouton utilisateur et section "navHidden" 
+(navigation dans le compte utilisateur) */
+.user {
+    display: flex; 
+    justify-content: end;
+}
+
+#navHidden {
+    position: absolute;
+    margin-top: 60px;
+    padding: 8px 14px;
+    width: 8.4vw;
+    border: 0.5px solid #3C5E68;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: #FFFDF9;
+    text-align: right;
+}
+
+.visibilityNav {visibility: hidden;}
+
+.titleBox {padding: 8px 0;}
+
+.separationLine {border-bottom: 1px solid #33A4B2;}
+
+.titleHeader {margin: 8px 0;}
+
+.navUserAccount {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: end;
+}
+
+.navUserAccountLinks {
+    width: 156px;
+}
+
+/* Logo de le Plateforme Pretooty*/
+.logoPretooty {
+    position: absolute;
+    top: 19px;
+    left: 40%;
+    width: 383px;
+    height: 111px;
+    background-image: url(../img/LogoPretooty.svg);
+    background-repeat: no-repeat;
+}
+
+/* ------------------------------- FOOTER ------------------------------- */
+/* --------------- Footer - Commun --------------- */
+footer {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    bottom: 0;
+    background-color: #3C5E68;
+}
+
+.footerLinks, .footerSeparations {color: #fff;}
+
+/* ------------- Footer - Spécifique ------------- */
+.navFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+}
+
+.footerLinks {text-shadow: #00000088 1px 1px 2px;}
+
+.footerLinks:hover {text-decoration: underline #fff;}
+
+.footerLinks:active {text-shadow: none;}
+
+/* -------------------- LOGINACCOUNT & CREATEACCOUNT --------------------- */
+.connectionAndCreationAccount {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.signInContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.titleConnection, .textConnection, .label, 
+.input, .forgottenPassword {width: 100%;}
+
+.otherConnections { /* À voir plus tard */
+    visibility: hidden;
+    margin: 20px 0 20px 43px;
+    height: 34px;
+}
+
+.formConnection {width: 100%;}
+
+.identification {
+    border-left: 5px solid #d9d9d9;
+    padding: 0 15px 0 41px;
+}
+
+.pseudoEmail {margin-bottom: 15px;}
+
+.input {
+    margin: 9px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FFFDF9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.forgottenPasswordLink {color: #33A4B2;}
+
+.forgottenPasswordLink:active {text-decoration: underline;}
+
+.connection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-top: 13px;
+}
+
+.notMemberLink, .toConnectionPageLink {
+    width: 100%;
+    margin-top: 45px;
+    color: #33A4B2;
+}
+
+.notMemberLink {text-align: right;}
+
+.notMemberLink:active, 
+.toConnectionPageLink:active {text-decoration: underline;}
+
+.requiredCharacters {
+    position: absolute;
+    margin: 13px 0 0 43px;
+    color: #6D6E6F;
+}
+
+.requiredCharactersTitle {margin: 0 0 5px 0;}
+
+.requiredCharactersList {margin: 0;}
+
+.returnLinks {
+    position: relative;
+    width: 100%;
+    margin-top: 90px;
+    text-align: left;
+}

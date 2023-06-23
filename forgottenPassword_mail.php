@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <?php include('views\header.php'); ?>
+        <?php include('views/header.php'); ?>
 
         <form action="php\mailInitPassword.php" method="post">
             <input type="email" name="mail" placeholder="Votre adresse mail" required>
@@ -18,6 +18,6 @@
             <a href="createAccount.php">Retour vers création de compte</a>
         </form>
 
-        <?php include('views\footer.php'); ?>
+        <?php include('views/footer.php'); ?>
     </body>
 </html>
