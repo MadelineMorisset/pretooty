@@ -10,16 +10,18 @@
     </head>
 
     <body>
-        <?php include('views/header.php'); ?>
+        <?php include('views/header.php');
+        include('views/userNavbar.php'); ?>
 
         <main>
-            <form>
+            <form action="./php/toolCreation.php" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="toolName">Nom de l'outil</label>
-                    <input type="text" name="toolName" value="" />
+                    <input type="text" name="toolName" value="" required/>
 
                     <label for="toolCategory">Catégorie :</label>
-                        <select name="toolCategory">
+                        <select name="toolCategory" required>
+                            <option value="">Veuillez choisir une catégorie</option>
                             <option value="1">Clé</option>
                             <option value="2">Couper</option>
                             <option value="3">Frapper</option>
@@ -38,24 +40,24 @@
                         </select>
                     
                     <label for="toolStatus">Etat :</label>
-                        <input type="radio" name="toolStatus" value="new"/>
+                        <input type="radio" name="toolStatus" value="6"/>
                         <label for="new">Neuf</label>
-                        <input type="radio" name="toolStatus" value="asNew"/>
+                        <input type="radio" name="toolStatus" value="5"/>
                         <label for="asNew">Comme neuf</label>
-                        <input type="radio" name="toolStatus" value="veryGood"/>
+                        <input type="radio" name="toolStatus" value="4"/>
                         <label for="veryGood">Très bon</label>
-                        <input type="radio" name="toolStatus" value="good"/>
+                        <input type="radio" name="toolStatus" value="3"/>
                         <label for="good">Bon</label>
-                        <input type="radio" name="toolStatus" value="bad"/>
+                        <input type="radio" name="toolStatus" value="2"/>
                         <label for="bad">Mauvais</label>
-                        <input type="radio" name="toolStatus" value="used"/>
+                        <input type="radio" name="toolStatus" value="1"/>
                         <label for="used">Usagé</label>
                 </div>
 
                 <div>
                     <label for="toolImage">Photode l'outil :</label>
                     <input type="file" name="toolImage" accept=".png,.jpg,.jpeg"/>
-                    <div style="width:350px; height:224px;border:solid 1px black;"></div>
+                    <!-- <div style="width:350px; height:224px;border:solid 1px black;"> </div> AFFICHAGE DE LA PHOTO A VOIR PLUS TARD-->
                 </div>
 
                 <div>
@@ -64,7 +66,7 @@
 
                 <div>
                     <label for="toolDescription">Description :</label>
-                    <input type="textarea" name="toolDescription"/>
+                    <input type="textarea" name="toolDescription" required/>
                 </div>
 
                 <div>
@@ -76,6 +78,9 @@
                     <label for="toolAccessories">Accessoires fournis avec l'outil :</label>
                     <input type="textarea" name="toolAccessories"/>
                 </div>
+
+                <input type="submit" value="Valider"/>
+                <a href="userPageActivities.php">Annuler</a>
 
             </form>
         </main>
