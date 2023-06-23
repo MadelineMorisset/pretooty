@@ -74,7 +74,7 @@
                     </div>
 
                     <div class="returnLinks">
-                        <a href="loginAccount.php" class="text fontSize14px toConnectionPage"> < Retour vers connexion</a>
+                        <a href="loginAccount.php" class="text fontSize14px toConnectionPageLink"> < Retour vers connexion</a>
                     </div>
                 </form>
             </div>
