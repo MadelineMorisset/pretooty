@@ -28,40 +28,40 @@
         <main class="connectionAndCreationAccount">
             <!-- Formulaire de connexion -->
             <div class="signInContainer">
-                <h2 class="title title24px titleConnection">Créer un compte</h2>
+                <h2 class="title fontSize22px titleConnection">Créer un compte</h2>
 
                 <div class="otherConnections">
                     <div class="googleSignIn"></div>
                     <div class="appleSignIn"></div>
                 </div>
 
-                <p class="text text20px textConnection">Identifiants personnels</p>
+                <p class="text fontSize20px textConnection">Identifiants personnels</p>
                 <form action="php/signup.php" method="post" class="formConnection">
                     <div class="identification">
                         <div class="pseudo">
-                            <label for="pseudo" class="title title16px label">Pseudonyme* :</label>
+                            <label for="pseudo" class="title fontSize13px label">Pseudonyme* :</label>
                             <input type="text" name="pseudo" required class="input">
                         </div>
 
                         <div class="email">
-                            <label for="mail" class="title title16px label">Adresse mail* :</label>
+                            <label for="mail" class="title fontSize13px label">Adresse mail* :</label>
                             <input type="email" name="mail" required class="input">
                         </div>
 
                         <div class="password">
-                            <label for="mdp" class="title title16px label">Mot de passe* :</label>
+                            <label for="mdp" class="title fontSize13px label">Mot de passe* :</label>
                             <input type="password" name="mdp" required class="input">
                         </div>
 
                         <div class="confirmPassword">
-                            <label for="confirm" class="title title16px label">Confirmer le mot de passe* :</label>
+                            <label for="confirm" class="title fontSize13px label">Confirmer le mot de passe* :</label>
                             <input type="password" name="confirm" required class="input">
                         </div>
                     </div>
 
                     <div class="requiredCharacters">
-                        <h3>Caractères requis :</h3>
-                        <ul>
+                        <h3 class="requiredCharactersTitle">Caractères requis :</h3>
+                        <ul class="requiredCharactersList">
                             <li>Minimum 6 caractères</li>
                             <li>Majuscules</li>
                             <li>Minuscules</li>
@@ -70,7 +70,11 @@
                     </div>
 
                     <div class="connection">
-                        <button type="submit" class="title title16px connectButton">Se connecter</button>
+                        <button type="submit" class="title fontSize13px connectButton">Se connecter</button>
+                    </div>
+
+                    <div class="returnLinks">
+                        <a href="loginAccount.php" class="text fontSize14px toConnectionPage"> < Retour vers connexion</a>
                     </div>
                 </form>
             </div>

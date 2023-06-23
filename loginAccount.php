@@ -35,24 +35,24 @@
                     <div class="appleSignIn"></div>
                 </div>
 
-                <p class="text text20px textConnection">Identifiants personnels</p>
+                <p class="text fontSize20px textConnection">Identifiants personnels</p>
                 <form action="php/login.php" method="post" class="formConnection">
                     <div class="identification">
                         <div class="pseudoEmail">
-                            <label for="pseudoMail" class="title title16px label">Pseudo / Adresse mail :</label>
+                            <label for="pseudoMail" class="title fontSize13px label">Pseudo / Adresse mail :</label>
                             <input type="text" name="pseudoMail" required class="input">
                         </div>
 
                         <div class="password">
-                            <label for="mdp" class="title title16px label">Mot de passe :</label>
+                            <label for="mdp" class="title fontSize13px label">Mot de passe :</label>
                             <input type="password" name="mdp" required class="input">
-                            <a href="forgottenPassword_mail.php" class="text text14px forgottenPasswordLink">Mot de passe oublié ?</a>
+                            <a href="forgottenPassword_mail.php" class="text fontSize14px forgottenPasswordLink">Mot de passe oublié ?</a>
                         </div>
                     </div>
 
                     <div class="connection">
-                        <button type="submit" class="title title16px connectButton">Se connecter</button>
-                        <a href="createAccount.php" class="text text16px notMemberLink">Pas encore membre ?</a>
+                        <button type="submit" class="title fontSize13px connectButton">Se connecter</button>
+                        <a href="createAccount.php" class="text fontSize14px notMemberLink">Pas encore membre ?</a>
                     </div>
                 </form>
             </div>

@@ -1,15 +1,14 @@
 /* ---------------------------- STYLE GÉNÉRAL --------------------------- */
-body {
-    margin: 0;
-}
+body {margin: 0;}
 
 header {
     height: 10vh;
+    margin: 49px 64px 20px 64px;
 }
 
 main {
-    height: auto;
-    margin: 25px 64px 60px 64px;
+    min-height: 65vh;
+    margin: 0 64px 60px 64px;
 }
 
 .title {
@@ -17,30 +16,22 @@ main {
     color: #000;
 }
 
-.title16px, .text16px {
-    font-size: 1em;
-}
-
-.title12px {
-    font-size: 0.75em;
-}
-
 .text {
     font-family: 'Lora';
     color: #000;
 }
 
-.text18px {
-    font-size: 1.12em;
-}
+.fontSize22px {font-size: 1.375em;}
 
-.text14px {
-    font-size: 0.8em;
-}
+.fontSize20px {font-size: 1.25em;}
 
-a {
-    text-decoration: none;
-}
+.fontSize18px {font-size: 1.125em}
+
+.fontSize14px {font-size: 0.875em;}
+
+.fontSize13px {font-size: 0.8125em;}
+
+a {text-decoration: none;}
 
 /* --------------- Boutons Carrés --------------- */
 .squareButtons {
@@ -96,36 +87,24 @@ a {
 
 /* ------------------------------- INDEX -------------------------------- */
 /* ----------------- Index - Commun ----------------- */
-
-
 /* --------------- Index - Spécifique --------------- */
 .titleWelcome {
     width: 100%;
     text-align: center;
 }
 
-.indexBox {
-    margin: 61px 61px 0 61px;
-}
+.indexBox {margin: 61px 61px 0 61px;}
 
-.indexInnerBox {
-    margin: 61px 61px 0 61px;
-}
+.indexInnerBox {margin: 61px 61px 0 61px;}
 
 /* ------------------------------- HEADER ------------------------------- */
 /* ----------------- Header - Commun ----------------- */
-header {
-    margin: 49px 64px;
-}
-
 /* Images SVG des bouton recherche et utilisateur */
-.fa-magnifying-glass, .fa-user {
-    color: #33A4B2;
-}
+.fa-magnifying-glass, 
+.fa-user {color: #33A4B2;}
 
-.fa-magnifying-glass:active, .fa-user:active {
-    color: #3C5E68;
-}
+.fa-magnifying-glass:active, 
+.fa-user:active {color: #3C5E68;}
 
 /* --------------- Header - Spécifique --------------- */
 /* Section contenant section "search" et section "user" */
@@ -177,21 +156,13 @@ header {
     text-align: right;
 }
 
-.visibilityNav {
-    visibility: hidden;
-}
+.visibilityNav {visibility: hidden;}
 
-.titleBox {
-    padding: 8px 0;
-}
+.titleBox {padding: 8px 0;}
 
-.separationLine {
-    border-bottom: 1px solid #33A4B2;
-}
+.separationLine {border-bottom: 1px solid #33A4B2;}
 
-.titleHeader {
-    margin: 8px 0;
-}
+.titleHeader {margin: 8px 0;}
 
 .navUserAccount {
     display: flex;
@@ -227,9 +198,7 @@ footer {
     background-color: #3C5E68;
 }
 
-.footerLinks, .footerSeparations {
-    color: #fff;
-}
+.footerLinks, .footerSeparations {color: #fff;}
 
 /* ------------- Footer - Spécifique ------------- */
 .navFooter {
@@ -240,20 +209,13 @@ footer {
     text-align: center;
 }
 
-.footerLinks {
-    text-shadow: #00000088 1px 1px 2px;
-}
+.footerLinks {text-shadow: #00000088 1px 1px 2px;}
 
-.footerLinks:hover {
-    text-decoration: underline #fff;
-}
+.footerLinks:hover {text-decoration: underline #fff;}
 
-.footerLinks:active {
-    text-shadow: none;
-}
+.footerLinks:active {text-shadow: none;}
 
-/* ---------------------------- LOGINACCOUNT ----------------------------- */
-/* --------------- loginAccount - Commun --------------- */
+/* -------------------- LOGINACCOUNT & CREATEACCOUNT --------------------- */
 .connectionAndCreationAccount {
     display: flex;
     justify-content: center;
@@ -261,32 +223,30 @@ footer {
 }
 
 .signInContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
     width: 30%;
 }
 
-.titleConnection, .textConnection, .label, .input, .forgottenPassword {
-    width: 100%;
-}
+.titleConnection, .textConnection, .label, 
+.input, .forgottenPassword {width: 100%;}
 
 .otherConnections { /* À voir plus tard */
     visibility: hidden;
-    margin: 38px 0 38px 47px;
+    margin: 20px 0 20px 43px;
     height: 34px;
 }
 
+.formConnection {width: 100%;}
+
 .identification {
     border-left: 5px solid #d9d9d9;
-    padding-left: 41px;
+    padding: 0 15px 0 41px;
 }
 
-.pseudoEmail {
-    margin-bottom: 15px;
-}
-
-.pseudoEmail, .pseudo, .email, .password, .confirmPassword {
-    max-width: 97%;
-}
+.pseudoEmail {margin-bottom: 15px;}
 
 .input {
     margin: 9px 0;
@@ -299,13 +259,9 @@ footer {
     -o-border-radius: 5px;
 }
 
-.forgottenPasswordLink {
-    color: #33A4B2;
-}
+.forgottenPasswordLink {color: #33A4B2;}
 
-.forgottenPasswordLink:active {
-    text-decoration: underline;
-}
+.forgottenPasswordLink:active {text-decoration: underline;}
 
 .connection {
     display: flex;
@@ -314,13 +270,29 @@ footer {
     margin-top: 13px;
 }
 
-.notMemberLink {
+.notMemberLink, .toConnectionPage {
     width: 100%;
     margin-top: 45px;
-    text-align: right;
     color: #33A4B2;
 }
 
-.notMemberLink:active {
-    text-decoration: underline;
+.notMemberLink {text-align: right;}
+
+.notMemberLink:active {text-decoration: underline;}
+
+.requiredCharacters {
+    position: absolute;
+    margin: 13px 0 0 43px;
+    color: #6D6E6F;
+}
+
+.requiredCharactersTitle {margin: 0 0 5px 0;}
+
+.requiredCharactersList {margin: 0;}
+
+.returnLinks {
+    position: relative;
+    width: 100%;
+    margin-top: 90px;
+    text-align: left;
 }
