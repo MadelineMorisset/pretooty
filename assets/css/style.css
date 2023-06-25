@@ -11,6 +11,8 @@ main {
     margin: 0 64px 60px 64px;
 }
 
+/* fonts & font-size */
+
 .title {
     font-family: 'Merriweather';
     color: #000;
@@ -33,6 +35,14 @@ main {
 
 .fontSize12px {font-size: 0.75em;}
 
+/* Images SVG des bouton recherche et utilisateur */
+.fa-magnifying-glass, 
+.fa-user, .fa-pencil {color: #33A4B2;}
+
+.fa-magnifying-glass:active, 
+.fa-user:active, .fa-pencil:active {color: #3C5E68;}
+
+/* Design de liens */
 a {text-decoration: none;}
 
 .footerLinks, .footerSeparations, 
@@ -48,10 +58,19 @@ a {text-decoration: none;}
 .userNavbarLinks:active {text-shadow: none;}
 
 /* --------------- Boutons Carrés --------------- */
-.squareButtons {
+.squareButton {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FFFDF9;
+}
+
+/* ----------- 40px ----------- */
+/* Bouton recherche et Bouton utilisateur (header) 
++  Bouton Filtre des outils (page "allTools") */
+.button40px {
+    width: 40px;
+    height: 40px;
     border: 2px solid #3C5E68;
     border-bottom: 5px solid #3C5E68;
     border-radius: 10px;
@@ -59,19 +78,30 @@ a {text-decoration: none;}
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    background-color: #FFFDF9;
 }
 
-/* ----------- 40px ----------- */
+.button40px:active {
+    border-bottom: 2px solid #3C5E68;
+    box-shadow: inset 0 2px rgba(0, 0, 0, .25);
+}
+
+/* ----------- 28px ----------- */
 /* Bouton recherche et Bouton utilisateur (header) 
 +  Bouton Filtre des outils (page "allTools") */
-.searchButton, .userButton {
-    width: 40px;
-    height: 40px;
+.button28px {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #3C5E68;
+    border-bottom: 2px solid #3C5E68;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
-.searchButton:active, .userButton:active {
-    border-bottom: 2px solid #3C5E68;
+.button28px:active {
+    border-bottom: 1px solid #3C5E68;
     box-shadow: inset 0 2px rgba(0, 0, 0, .25);
 }
 
@@ -112,13 +142,6 @@ a {text-decoration: none;}
 .indexInnerBox {margin: 61px 61px 0 61px;}
 
 /* ------------------------------- HEADER ------------------------------- */
-/* ----------------- Header - Commun ----------------- */
-/* Images SVG des bouton recherche et utilisateur */
-.fa-magnifying-glass, 
-.fa-user {color: #33A4B2;}
-
-.fa-magnifying-glass:active, 
-.fa-user:active {color: #3C5E68;}
 
 /* --------------- Header - Spécifique --------------- */
 /* Section contenant section "search" et section "user" */
@@ -174,7 +197,7 @@ a {text-decoration: none;}
 
 .titleBox {padding: 8px 0;}
 
-.separationLine {border-bottom: 1px solid #33A4B2;}
+.separationHorizontalLine1px {border-bottom: 1px solid #33A4B2;}
 
 .titleHeader {margin: 8px 0;}
 
@@ -308,25 +331,96 @@ footer {
 .userNavbar {
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
-    width: 394px;
-    height: 712px;
+    position: fixed;
+    padding: 34px 25px;
+    width: 300px;
+    height: 630px;
     background-color: #3C5E68;
     color: #fff;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
 }
 
-.userNavbarLinks {
+.userNavbarSections, .userNavbarLinks {
     width: 100%;
+}
+
+.userNavbarInnerSections {
+    margin-top: 10px;
+    padding: 23px 30px 15px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: #fff solid 2px;
+}
+
+/* .userNavbarTitles {
+} */
+
+.userNavbarUnderLinks {
+    margin-bottom: 32px;
+}
+
+
+
+.active {
+    text-decoration: underline solid #fff;
 }
 
 /* ------------------------------- USERPAGEACCOUNT ------------------------------- */
 .userContainer {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
 
 .userContainerForm {
-    margin-left: 400px;
+    width: 100%;
+    padding: 65px 40px 0 380px;
+}
+
+.generalModifyingButton {
+    position: absolute;
+    border: #3C5E68 solid 1px;
+    border-bottom: #3C5E68 solid 4px;
+    top: 0;
+    right: 40px;
+}
+
+fieldset {
+    display: flex;
+    justify-content: space-between;
+    border: transparent;
+}
+
+.userContainerFormTitles {
+    margin-bottom: 10px;
+    color: #33A4B2;
+}
+
+.separationLine2px {
+    border-top: 2px solid #6D6E6F;
+}
+
+.userFormInnerContainer {
+    margin: 27px 27px 36px 36px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.userGeneralInformations {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.userFormCategory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+
 }

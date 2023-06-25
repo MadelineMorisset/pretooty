@@ -18,8 +18,18 @@
 //     })
 // }
 
-/* Header - Menu de navigation utilisateur (en cliquant sur le bouton "userButton") */
+/* Header - Menu de navigation utilisateur qui s'affiche et disparait en cliquant sur le bouton "button40px" */
 function navHidden() {
     let element = document.getElementById("navHidden");
     element.classList.toggle("visibilityNav");
 }
+
+// /* Souligner le lien de la page en cours de visite */
+// let currentPageUrl = window.location.href; // Récupère l'URL de la page en cours de visite
+// let navLinks = document.querySelectorAll('.userNavbarUnderLinks');
+
+// navLinks.forEach(function(link) { // Parcours les liens et vérifie s'ils correspondent à la page en cours de visite
+//     if (link.href === currentPageUrl) {
+//       link.classList.add('active');
+//     }
+// });
