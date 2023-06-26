@@ -16,9 +16,8 @@
         <script src="https://kit.fontawesome.com/23c1a897ea.js" crossorigin="anonymous"></script>
         <!-- JavaScript -->
         <script src="assets/js/script.js"></script>
-
-        <title>Pretooty</title>
-        <meta name="description" content="">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <title>Pretooty, Mon compte</title>
     </head>
 
     <body>
