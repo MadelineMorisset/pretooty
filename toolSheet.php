@@ -27,7 +27,9 @@
         $tool = showToolSheet(); ?>
 
         <main>
-            <form method="post">
+            <form>
+
+                <h1><?= $tool['nom_outil'] ?></h1>
 
                 <img src="./assets/img/tools/<?= $tool['photo'] ?>" alt="photo de l'outil"/>
 
