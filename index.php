@@ -20,7 +20,8 @@
     </head>
 
     <body>
-        <?php include("views/header.php"); ?>
+        <?php include("views/header.php"); 
+        include('php/functions.php'); ?>
 
         <main>
             <h1 class="title titleWelcome">Bienvenue sur Pretooty</h1>
@@ -46,6 +47,11 @@
                     </p>
                 </div>
             </div>
+
+            <section>
+                <?php showAllTools(); ?>
+            </section>
+
         </main>
         
         <?php include("views/footer.php"); ?>
