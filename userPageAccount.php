@@ -40,9 +40,9 @@
                             <div class="userFormCategory firstElement">
                                 <label for="category">Catégorie :</label>
                                 <input type="text" name="category" value="<?= $infoUser["nom_categorie_u"]; ?>" readonly style="border: transparent"/>
-                                <div class="button28px squareButton ModifyingElementButton">
+                                <!-- <div class="button28px squareButton ModifyingElementButton">
                                     <i class="fa-solid fa-pencil fa-xl"></i>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="userFormPseudonym secondElement">
@@ -55,13 +55,13 @@
                             <div class="userFormLastName firstElement">
                                 <label for="name">Nom :</label>
                                 <input type="text" name="name" value="<?= $infoUser["nom_utilisateur"]; ?>" readonly style="border: transparent"/>
-                                <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
 
                             <div class="userFormFirstName secondElement">
                                 <label for="firstname">Prénom :</label>
                                 <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>" readonly style="border: transparent"/>
-                                <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
                         </div>
                     </div>
@@ -74,19 +74,19 @@
                             <div class="userFormAddress firstElement">
                                 <label for="address">Adresse :</label>
                                 <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>" readonly style="border: transparent"/>
-                                <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
 
                             <div class="userFormCity secondElement">
                                 <label for="city">Ville :</label>
                                 <input type="text" name="city" value="<?= $infoUser["ville"]; ?>" readonly style="border: transparent"/>
-                                <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
 
                             <div class="userFormZipCode thirdElement">
                                 <label for="cp">Code Postal :</label>
                                 <input type="text" name="cp" value="<?= $infoUser["cp"]; ?>" readonly style="border: transparent"/>
-                                <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
                         </div>
 
@@ -94,7 +94,7 @@
                             <div class="userFormPhone firstElement">
                                 <label for="tel">Téléphone :</label>
                                 <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>" readonly style="border: transparent"/>
-                                <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
 
                             <div class="userFormMail secondElement">
@@ -104,7 +104,7 @@
 
                             <div class="userFormPassword thirdElement">
                                 <label for="mdp">Mot de passe</label>
-                                <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
                         </div>
                     </div>
