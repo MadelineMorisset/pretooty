@@ -68,15 +68,38 @@ error_reporting(E_ALL);
         ]);
         $tools = $query->fetchAll();
         
-        foreach ($tools as $tool => $userTool) {
+        foreach ($tools as $userTool) {
             $imagePath = "./assets/img/tools/".$userTool['photo'];
             $link = "<a href='./toolSheet.php?id_outil=".$userTool['id_outil']."'>".$userTool['nom_outil']."";
             
-
             ?> <div style= "border: 1px solid black;"><img src="<?= $imagePath ?>" alt="photo de l'outil"/>
             <div> <?= $link; ?> </div></div> <?php
         }
     }
+
+
+
+// ALLTOOLS
+
+function showAllTools() {
+    include('php/dataBaseConnexion.php');
+    $query = $db->prepare('SELECT * FROM outil INNER JOIN utilisateur ON outil.id_utilisateur = utilisateur.id_utilisateur INNER JOIN categorie ON outil.id_categorie = categorie.id_categorie INNER JOIN etat_outil ON outil.id_etat_outil = etat_outil.id_etat_outil');
+    $query->execute();
+    $tools = $query->fetchAll();
+
+    foreach ($tools as $tool) {
+        $imagePath = "./assets/img/tools/".$tool['photo'];
+        $link = "<a href='./toolSheet.php?id_outil=".$tool['id_outil']."'>".$tool['nom_outil']."";
+
+        ?> <div style= "border: 1px solid black;">
+        <div> <?= $link; ?> </div>
+        <img src="<?= $imagePath ?>" alt="photo de l'outil"/>
+        <div> <?= $tool['nom_categorie'] ?>, <?= $tool['nom_etat'] ?> </div>
+        <div> <?= $tool['ville'] ?> </div>
+        </div> <?php
+    }
+}
+
 
 
 // TOOLSHEET
@@ -90,5 +113,8 @@ function showToolSheet() {
     $tool = $query->fetch(PDO::FETCH_ASSOC);
     return $tool;
 }
+
+
+
 
 ?>
