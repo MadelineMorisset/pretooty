@@ -22,68 +22,123 @@
     </head>
 
     <body>
-        <?php include('views/header.php'); 
-        include('views/userNavbar.php');
+        <?php include('views/header.php');
         include("php/functions.php");
         $infoUser=showMyAccount(); ?>
 
 
-        <main>
-            <a href="userPageActivities.php">Mes outils</a>
+        <main class="userContainer">
+            <?php include('views/userNavbar.php'); ?>
 
-            <form action="userEditPageAccount.php" method="post">
+            <form action="userEditPageAccount.php" method="post" class="userContainerForm">
+                <div class="button40px squareButton generalModifyingButton"><i class="fa-solid fa-pencil fa-xl"></i></div>
+
                 <fieldset>
-                    <legend id="general">Général</legend>
+                    <legend id="general" class="title fontSize20px userContainerFormTitles">Général</legend>
+                    <div class="userGeneralInformations separationLine2px">
+                        <div class="userFormInnerContainer leftInnerContainer">
+                            <div class="userFormCategory firstElement">
+                                <label for="category">Catégorie :</label>
+                                <input type="text" name="category" value="<?= $infoUser["nom_categorie_u"]; ?>" readonly style="border: transparent"/>
+                                <!-- <div class="button28px squareButton ModifyingElementButton">
+                                    <i class="fa-solid fa-pencil fa-xl"></i>
+                                </div> -->
+                            </div>
 
-                    <label for="category">Catégorie :</label>
-                    <input type="text" name="category" value="<?= $infoUser["nom_categorie_u"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormPseudonym secondElement">
+                                <label for="pseudo">Pseudonyme :</label>
+                                <input type="text" name="pseudo" value="<?= $infoUser["pseudonyme"]; ?>" readonly style="border: transparent"/>
+                            </div>
+                        </div>
 
-                    <label for="pseudo">Pseudonyme :</label>
-                    <input type="text" name="pseudo" value="<?= $infoUser["pseudonyme"]; ?>" readonly style="border: transparent"/>
+                        <div class="userFormInnerContainer rightInnerContainer">
+                            <div class="userFormLastName firstElement">
+                                <label for="name">Nom :</label>
+                                <input type="text" name="name" value="<?= $infoUser["nom_utilisateur"]; ?>" readonly style="border: transparent"/>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
+                            </div>
 
-                    <label for="name">Nom :</label>
-                    <input type="text" name="name" value="<?= $infoUser["nom_utilisateur"]; ?>" readonly style="border: transparent"/>
-
-                    <label for="firstname">Prénom :</label>
-                    <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormFirstName secondElement">
+                                <label for="firstname">Prénom :</label>
+                                <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>" readonly style="border: transparent"/>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
 
                 <fieldset>
-                    <legend id="coordinates">Coordonnées</legend>
+                    <legend id="coordinates" class="title fontSize20px userContainerFormTitles">Coordonnées</legend>
+                    <div class="userGeneralInformations separationLine2px">
+                        <div class="userFormInnerContainer leftInnerContainer">
+                            <div class="userFormAddress firstElement">
+                                <label for="address">Adresse :</label>
+                                <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>" readonly style="border: transparent"/>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
+                            </div>
 
-                    <label for="address">Adresse :</label>
-                    <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormCity secondElement">
+                                <label for="city">Ville :</label>
+                                <input type="text" name="city" value="<?= $infoUser["ville"]; ?>" readonly style="border: transparent"/>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
+                            </div>
 
-                    <label for="city">Ville :</label>
-                    <input type="text" name="city" value="<?= $infoUser["ville"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormZipCode thirdElement">
+                                <label for="cp">Code Postal :</label>
+                                <input type="text" name="cp" value="<?= $infoUser["cp"]; ?>" readonly style="border: transparent"/>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
+                            </div>
+                        </div>
 
-                    <label for="cp">Code Postal :</label>
-                    <input type="text" name="cp" value="<?= $infoUser["cp"]; ?>" readonly style="border: transparent"/>
+                        <div class="userFormInnerContainer rightInnerContainer">
+                            <div class="userFormPhone firstElement">
+                                <label for="tel">Téléphone :</label>
+                                <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>" readonly style="border: transparent"/>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
+                            </div>
 
-                    <label for="tel">Téléphone :</label>
-                    <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormMail secondElement">
+                                <label for="email">Adresse mail :</label>
+                                <input type="email" name="email" value="<?= $infoUser["mail"]; ?>" readonly style="border: transparent"/>
+                            </div>
 
-                    <label for="email">Adresse mail :</label>
-                    <input type="email" name="email" value="<?= $infoUser["mail"]; ?>" readonly style="border: transparent"/>
-
-                    <label for="mdp">Mot de passe</label>
-                
+                            <div class="userFormPassword thirdElement">
+                                <label for="mdp">Mot de passe</label>
+                                <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
 
                 <fieldset>
-                    <legend id="parameters">Paramètres</legend>
+                    <legend id="parameters" class="title fontSize20px userContainerFormTitles">Paramètres</legend>
+                    <div class="separationLine2px"></div>
 
-                    <div>Notifications</div>
+                    <div class="userGeneralInformations separationLine2px">
+                        <div class="userFormInnerContainer leftInnerContainer">
+                            <div class="userFormPhone firstElement">
+                                <div>Notifications</div>
+                            </div>
 
-                    <label for="delete">Supprimer mon compte</label>
-                    <input type="button" name="delete" value="Supprimer"/>   
-                    <!-- Javascript pour appeler la fonction deleteMyAccount(); -->
+                            <div>
+                                <label for="delete">Supprimer mon compte</label>
+                                <button type="button" class="button28px squareButton deleteAccount"><i class="fa-solid fa-trash-can"></i></button>  
+                                <!-- Javascript pour appeler la fonction deleteMyAccount(); -->
+                            </div>
+                        </div>
 
-                    <label for="police">Taille de la police</label>
-                    <input type="text" name="police" value="<?= $infoUser["nom_taille"]; ?>" readonly style="border: transparent"/>
+                        <div class="userFormInnerContainer rightInnerContainer">
+                            <div>
+                                <label for="police">Taille de la police</label>
+                                <input type="text" name="police" value="<?= $infoUser["nom_taille"]; ?>" readonly style="border: transparent"/>
+                            </div>
 
-                    <label for="theme">Thème couleur</label>
-                    <input type="text" name="theme" value="<?= $infoUser["nom_theme"]; ?>" readonly style="border: transparent"/>
+                            <div>
+                                <label for="theme">Thème couleur</label>
+                                <input type="text" name="theme" value="<?= $infoUser["nom_theme"]; ?>" readonly style="border: transparent"/>
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
 
             <input type="submit" value="Modifier"/>
