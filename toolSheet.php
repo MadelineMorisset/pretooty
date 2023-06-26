@@ -34,31 +34,38 @@
                 <img src="./assets/img/tools/<?= $tool['photo'] ?>" alt="photo de l'outil"/>
 
                 <label for="toolCategory">Catégorie :</label>
-                <input type="text" name="toolCategory" value="<?= $tool['nom_categorie'] ?>"/>
+                <input type="text" name="toolCategory" value="<?= $tool['nom_categorie'] ?>" style="border:transparent"/>
 
                 <label for="lender">Prêteur :</label>
-                <input type="text" name="lender" value="<?= $tool['pseudonyme'] ?>"/>
+                <input type="text" name="lender" value="<?= $tool['pseudonyme'] ?>" style="border:transparent"/>
 
                 <label for="toolSatus">Etat :</label>
-                <input type="text" name="toolSatus" value="<?= $tool['nom_etat'] ?>"/>
+                <input type="text" name="toolSatus" value="<?= $tool['nom_etat'] ?>" style="border:transparent"/>
 
                 <label for="toolPlace">Lieu :</label>
-                <input type="text" name="toolPlace" value="<?= $tool['ville'] ?>"/>
+                <input type="text" name="toolPlace" value="<?= $tool['ville'] ?>" style="border:transparent"/>
+
+
 
                 <label for="toolDescription">Description :</label>
-                <input type="text" name="toolDescription" value="<?= $tool['description'] ?>"/>
+                <input type="text" name="toolDescription" value="<?= $tool['description'] ?>" style="border:transparent"/>
 
                 <label for="toolSecurity">Consignes de sécurité :</label>
-                <input type="text" name="toolSecurity" value="<?= $tool['consignes_securite'] ?>"/>
+                <input type="text" name="toolSecurity" value="<?= $tool['consignes_securite'] ?>" style="border:transparent"/>
 
                 <label for="toolAccessories">Accessoires fournis avec l'outil :</label>
-                <input type="text" name="toolAccessories" value="<?= $tool['accessoires'] ?>"/>
+                <input type="text" name="toolAccessories" value="<?= $tool['accessoires'] ?>" style="border:transparent"/>
 
                 <div>
                     <input type="button" value="Calendrier"/>
                 </div>
 
             </form>
+
+
+            <section>
+                <h1>Commentaires</h1>
+            </section>
         </main>
 
         <?php include('views\footer.php'); ?>
