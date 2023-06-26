@@ -78,4 +78,17 @@ error_reporting(E_ALL);
         }
     }
 
+
+// TOOLSHEET
+
+function showToolSheet() {
+    include('php/dataBaseConnexion.php');
+    $query = $db->prepare('SELECT * FROM outil INNER JOIN categorie ON outil.id_categorie = categorie.id_categorie INNER JOIN utilisateur ON outil.id_utilisateur = utilisateur.id_utilisateur INNER JOIN etat_outil ON outil.id_etat_outil = etat_outil.id_etat_outil WHERE id_outil = :id_tool');
+    $query->execute([
+        "id_tool" => $_GET['id_outil'],
+    ]);
+    $tool = $query->fetch(PDO::FETCH_ASSOC);
+    return $tool;
+}
+
 ?>
