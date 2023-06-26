@@ -29,8 +29,18 @@
 
             <section>
                 <h1>Mes outils</h1>
-                <?php showMyTools(); ?>
+                    <section >
+                        <?php showMyTools(); ?>
+                    </section>
                 <a href="createTool.php">Ajouter un outil</a>
+            </section>
+
+            <section>
+                <h1>Mes prêts</h1>
+            </section>
+
+            <section>
+                <h1>Mes emprunts</h1>
             </section>
 
 
