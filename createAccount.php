@@ -40,22 +40,22 @@
                     <div class="identification">
                         <div class="pseudo">
                             <label for="pseudo" class="title fontSize13px label">Pseudonyme* :</label>
-                            <input type="text" name="pseudo" required class="input">
+                            <input type="text" name="pseudo" required class="inputCreateAccount">
                         </div>
 
                         <div class="email">
                             <label for="mail" class="title fontSize13px label">Adresse mail* :</label>
-                            <input type="email" name="mail" required class="input">
+                            <input type="email" name="mail" required class="inputCreateAccount">
                         </div>
 
                         <div class="password">
                             <label for="mdp" class="title fontSize13px label">Mot de passe* :</label>
-                            <input type="password" name="mdp" required class="input">
+                            <input type="password" name="mdp" required class="inputCreateAccount">
                         </div>
 
                         <div class="confirmPassword">
                             <label for="confirm" class="title fontSize13px label">Confirmer le mot de passe* :</label>
-                            <input type="password" name="confirm" required class="input">
+                            <input type="password" name="confirm" required class="inputCreateAccount">
                         </div>
                     </div>
 

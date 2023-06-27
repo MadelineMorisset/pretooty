@@ -40,12 +40,12 @@
                     <div class="identification">
                         <div class="pseudoEmail">
                             <label for="pseudoMail" class="title fontSize13px label">Pseudo / Adresse mail :</label>
-                            <input type="text" name="pseudoMail" required class="input">
+                            <input type="text" name="pseudoMail" required class="inputLoginAccount">
                         </div>
 
                         <div class="password">
                             <label for="mdp" class="title fontSize13px label">Mot de passe :</label>
-                            <input type="password" name="mdp" required class="input">
+                            <input type="password" name="mdp" required class="inputLoginAccount">
                             <a href="forgottenPassword_mail.php" class="text fontSize14px forgottenPasswordLink">Mot de passe oublié ?</a>
                         </div>
                     </div>
