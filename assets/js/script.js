@@ -24,7 +24,7 @@ function navHidden() {
     element.classList.toggle("visibilityNav");
 }
 
-// /* Souligner le lien de la page en cours de visite */
+// /* Souligner le lien de la page en cours de visite */ // À retravailler
 // let currentPageUrl = window.location.href; // Récupère l'URL de la page en cours de visite
 // let navLinks = document.querySelectorAll('.userNavbarUnderLinks');
 
@@ -33,3 +33,13 @@ function navHidden() {
 //       link.classList.add('active');
 //     }
 // });
+
+/* userPageAccount.php - Toggle de notifications dans l'espace utilisateur */
+let toggle = document.getElementById('toggle');
+toggle.addEventListener('change', function() {
+  if (this.checked) {
+    console.log('Notifications activées');
+  } else {
+    console.log('Notifications désactivées');
+  }
+});
