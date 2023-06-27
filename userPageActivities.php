@@ -16,20 +16,34 @@
         <script src="https://kit.fontawesome.com/23c1a897ea.js" crossorigin="anonymous"></script>
         <!-- JavaScript -->
         <script src="assets/js/script.js"></script>
-
-        <title>Pretooty</title>
-        <meta name="description" content="">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <title>Pretooty, Mon compte</title>
     </head>
 
     <body>
         <?php include('views\header.php');
-        include('views\userNavbar.php'); 
-        include("php/functions.php");
-        $infoUser=showMyAccount(); ?>
+        //include('views\userNavbar.php'); 
+        include("php/functions.php"); ?>
 
         <main>
 
-        <a href="createTool.php">Ajouter un outil</a>
+            <section>
+                <h1>Mes outils</h1>
+                    <section >
+                        <?php showMyTools(); ?>
+                    </section>
+                <a href="createTool.php">Ajouter un outil</a>
+            </section>
+
+            <section>
+                <h1>Mes prêts</h1>
+            </section>
+
+            <section>
+                <h1>Mes emprunts</h1>
+            </section>
+
+
 
         </main>
 
