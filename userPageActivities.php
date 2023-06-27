@@ -22,7 +22,7 @@
 
     <body>
         <?php include('views\header.php');
-        include('views\userNavbar.php'); 
+        //include('views\userNavbar.php'); 
         include("php/functions.php"); ?>
 
         <main>
