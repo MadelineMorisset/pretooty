@@ -70,7 +70,7 @@ error_reporting(E_ALL);
         
         foreach ($tools as $userTool) {
             $imagePath = "./assets/img/tools/".$userTool['photo'];
-            $link = "<a href='./toolSheet.php?id_outil=".$userTool['id_outil']."'><img src=".$imagePath." alt='photo de l'outil'/>".$userTool['nom_outil']."</a>";
+            $link = "<a href='./toolSheet.php?id_outil=".$userTool['id_outil']."'><img src='".$imagePath."' alt='photo de l'outil'/>".$userTool['nom_outil']."</a>";
             
             ?> <div style= "border: 1px solid black;">
             <div> <?= $link; ?>  </div> </div> <?php
