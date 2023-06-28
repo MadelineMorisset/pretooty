@@ -38,11 +38,13 @@ main {
 /* Images SVG des bouton recherche et utilisateur */
 .fa-magnifying-glass, 
 .fa-user, .fa-pencil,
-.fa-trash-can {color: #33A4B2;}
+.fa-trash-can,
+.fa-calendar-check {color: #33A4B2;}
 
 .fa-magnifying-glass:active, 
 .fa-user:active, .fa-pencil:active,
-.fa-trash-can:active {color: #3C5E68;}
+.fa-trash-can:active,
+.fa-calendar-check:active {color: #3C5E68;}
 
 /* Design de liens */
 a {text-decoration: none;}
@@ -58,8 +60,6 @@ a {text-decoration: none;}
 
 .footerLinks:active, 
 .userNavbarLinks:active {text-shadow: none;}
-
-²
 
 /* --------------- Boutons Carrés --------------- */
 .squareButton {
@@ -283,7 +283,8 @@ footer {
 
 .pseudoEmail {margin-bottom: 15px;}
 
-.inputCreateAccount, .inputLoginAccount {
+.inputCreateAccount, .inputLoginAccount, 
+.inputCreateTool {
     margin: 9px 0;
     padding: 5px;
     border-radius: 5px;
@@ -383,7 +384,8 @@ footer {
     padding: 0 40px 0 380px;
 }
 
-.generalModifyingButton {
+.generalModifyingButton, 
+.calendarButtonBig {
     position: absolute;
     border: #3C5E68 solid 1px;
     border-bottom: #3C5E68 solid 4px;
@@ -391,10 +393,18 @@ footer {
     right: 40px;
 }
 
-.generalModifyingButtonTemporary {  
-    border: #3C5E68 solid 1px;
+.generalModifyingButtonTemporary, 
+.calendarButtonBigTemporary {  
+    border: 1px solid #3C5E68;
+    border-bottom: 2px solid #3C5E68;
     top: 10px;
     right: 120px;
+}
+
+.generalModifyingButtonTemporary:active, 
+.calendarButtonBigTemporary:active {  
+    border: 1px solid #3C5E68;
+    box-shadow: inset 0 2px rgba(0, 0, 0, .25);
 }
 
 .userContainerSections {
@@ -414,7 +424,8 @@ footer {
     border-top: 2px solid #6D6E6F;
 }
 
-.userGeneralInformations {
+.userGeneralInformations, 
+.userCreateToolInformations {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -507,8 +518,14 @@ footer {
 }
 
 /* ------------------------------- CREATETOOL ------------------------------- */
-.createToolFirstSection {
-    display: flex;
-    justify-content: space-between;
+.inputCreateTool {
+    width: 50%;
+    margin-left: 24px;
 }
 
+.toolName, .toolCategory, .toolStatus {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    line-height: 3.2em;
+}

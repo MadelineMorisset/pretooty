@@ -22,72 +22,83 @@
     </head>
 
     <body>
-        <?php include('views/header.php');
-        include('views/userNavbar.php'); ?>
+        <?php include('views/header.php'); ?>
 
-        <main>
-            <form action="./php/toolCreation.php" method="post" enctype="multipart/form-data">
-                <div>
-                    <label for="toolName">Nom de l'outil</label>
-                    <input type="text" name="toolName" value="" required/>
+        <main class="userMain">
+            <?php include('views/userNavbar.php'); ?>
 
-                    <label for="toolCategory">Catégorie :</label>
-                        <select name="toolCategory" required>
-                            <option value="">Veuillez choisir une catégorie</option>
-                            <option value="1">Clé</option>
-                            <option value="2">Couper</option>
-                            <option value="3">Frapper</option>
-                            <option value="4">Tracer</option>
-                            <option value="5">Manutention</option>
-                            <option value="6">Mesurer</option>
-                            <option value="7">Poncer</option>
-                            <option value="8">Jardiner</option>
-                            <option value="9">Attacher</option>
-                            <option value="10">Percer</option>
-                            <option value="11">Pincert</option>
-                            <option value="12">Equipement de protection individuelle</option>
-                            <option value="13">Peindre</option>
-                            <option value="14">Visser</option>
-                            <option value="15">Souder</option>
-                        </select>
+            <form action="./php/toolCreation.php" method="post" enctype="multipart/form-data" class="userContainer">
+
+                <div class="button40px squareButton calendarButtonBig"><i class="fa-solid fa-calendar-check fa-xl"></i></div> <!-- Bouton à venir et non fonctionnel -->
+                <input type="button" value="Calendrier" class="squareButton calendarButtonBig calendarButtonBigTemporary"/> <!-- Bouton temporaire mais fonctionnel -->
+
+                <div class="userContainerSections">
+                    <div class="userFormInnerContainer leftInnerContainer">
+                        <div class="toolName">
+                            <label for="toolName" class="title fontSize13px createToolLabel">Nom de l'outil :</label>
+                            <input type="text" name="toolName" value="" required class="inputCreateTool"/>
+                        </div>
+
+                        <div class="toolCategory">
+                            <label for="toolCategory" class="title fontSize13px createToolLabel">Catégorie :</label>
+                            <select name="toolCategory" required class="inputCreateTool">
+                                <option value="">Veuillez choisir une catégorie</option>
+                                <option value="1">Clé</option>
+                                <option value="2">Couper</option>
+                                <option value="3">Frapper</option>
+                                <option value="4">Tracer</option>
+                                <option value="5">Manutention</option>
+                                <option value="6">Mesurer</option>
+                                <option value="7">Poncer</option>
+                                <option value="8">Jardiner</option>
+                                <option value="9">Attacher</option>
+                                <option value="10">Percer</option>
+                                <option value="11">Pincert</option>
+                                <option value="12">Equipement de protection individuelle</option>
+                                <option value="13">Peindre</option>
+                                <option value="14">Visser</option>
+                                <option value="15">Souder</option>
+                            </select>
+                        </div>
+                            
+                        <div class="toolStatus">
+                            <label for="toolStatus" class="title fontSize13px label">État :</label>
+                            <div>
+                                <input type="radio" name="toolStatus" value="6"/>
+                                <label for="new">Neuf</label>
+                                <input type="radio" name="toolStatus" value="5"/>
+                                <label for="asNew">Comme neuf</label>
+                                <input type="radio" name="toolStatus" value="4"/>
+                                <label for="veryGood">Très bon</label>
+                                <input type="radio" name="toolStatus" value="3"/>
+                                <label for="good">Bon</label>
+                                <input type="radio" name="toolStatus" value="2"/>
+                                <label for="bad">Mauvais</label>
+                                <input type="radio" name="toolStatus" value="1"/>
+                                <label for="used">Usagé</label>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <label for="toolStatus">Etat :</label>
-                        <input type="radio" name="toolStatus" value="6"/>
-                        <label for="new">Neuf</label>
-                        <input type="radio" name="toolStatus" value="5"/>
-                        <label for="asNew">Comme neuf</label>
-                        <input type="radio" name="toolStatus" value="4"/>
-                        <label for="veryGood">Très bon</label>
-                        <input type="radio" name="toolStatus" value="3"/>
-                        <label for="good">Bon</label>
-                        <input type="radio" name="toolStatus" value="2"/>
-                        <label for="bad">Mauvais</label>
-                        <input type="radio" name="toolStatus" value="1"/>
-                        <label for="used">Usagé</label>
+                    <div class="userFormInnerContainer rightInnerContainer">
+                        <label for="toolImage" class="title fontSize13px label">Photo de l'outil :</label>
+                        <input type="file" name="toolImage" accept=".png,.jpg,.jpeg"/>
+                        <!-- <div style="width:350px; height:224px;border:solid 1px black;"> </div> AFFICHAGE DE LA PHOTO A VOIR PLUS TARD-->
+                    </div>
                 </div>
 
                 <div>
-                    <label for="toolImage">Photode l'outil :</label>
-                    <input type="file" name="toolImage" accept=".png,.jpg,.jpeg"/>
-                    <!-- <div style="width:350px; height:224px;border:solid 1px black;"> </div> AFFICHAGE DE LA PHOTO A VOIR PLUS TARD-->
-                </div>
-
-                <div>
-                    <input type="button" value="Calendrier"/>
-                </div>
-
-                <div>
-                    <label for="toolDescription">Description :</label>
+                    <label for="toolDescription" class="title fontSize13px label">Description :</label>
                     <input type="textarea" name="toolDescription" required/>
                 </div>
 
                 <div>
-                    <label for="toolSecurity">Consignes de sécurité :</label>
+                    <label for="toolSecurity" class="title fontSize13px label">Consignes de sécurité :</label>
                     <input type="textarea" name="toolSecurity"/>
                 </div>
 
                 <div>
-                    <label for="toolAccessories">Accessoires fournis avec l'outil :</label>
+                    <label for="toolAccessories" class="title fontSize13px label">Accessoires fournis avec l'outil :</label>
                     <input type="textarea" name="toolAccessories"/>
                 </div>
 

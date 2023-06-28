@@ -36,7 +36,7 @@
 
                 <fieldset class="userContainerSections">
                     <legend id="general" class="title fontSize20px userContainerTitles">Général</legend>
-                    <div class="userGeneralInformations separationLine2px">
+                    <div class="userCreateToolInformations separationLine2px">
                         <div class="userFormInnerContainer leftInnerContainer">
                             <div class="userFormCategory firstElement userFormElements">
                                 <label for="category" class="title fontSize14px labelAccount">Catégorie :</label>
