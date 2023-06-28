@@ -59,6 +59,8 @@ a {text-decoration: none;}
 .footerLinks:active, 
 .userNavbarLinks:active {text-shadow: none;}
 
+²
+
 /* --------------- Boutons Carrés --------------- */
 .squareButton {
     display: flex;
@@ -281,7 +283,7 @@ footer {
 
 .pseudoEmail {margin-bottom: 15px;}
 
-.input {
+.inputCreateAccount, .inputLoginAccount {
     margin: 9px 0;
     padding: 5px;
     border-radius: 5px;
@@ -370,13 +372,13 @@ footer {
 }
 
 /* ------------------------------- USERPAGEACCOUNT ------------------------------- */
-.userContainer {
+.userMain {
     position: relative;
     display: flex;
     justify-content: space-between;
 }
 
-.userContainerForm {
+.userContainer {
     width: 100%;
     padding: 0 40px 0 380px;
 }
@@ -395,7 +397,7 @@ footer {
     right: 120px;
 }
 
-fieldset {
+.userContainerSections {
     margin-top: 25px;
     padding: 0;
     display: flex;
@@ -403,7 +405,7 @@ fieldset {
     border: transparent;
 }
 
-.userContainerFormTitles {
+.userContainerTitles {
     margin-bottom: 10px;
     color: #33A4B2;
 }
@@ -445,8 +447,8 @@ fieldset {
 .notificationToggle {
     width: 70%;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .noficationCheckbox {display: none;}
@@ -503,3 +505,10 @@ fieldset {
     display: flex;
     align-self: center;
 }
+
+/* ------------------------------- CREATETOOL ------------------------------- */
+.createToolFirstSection {
+    display: flex;
+    justify-content: space-between;
+}
+
