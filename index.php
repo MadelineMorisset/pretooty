@@ -51,7 +51,6 @@
             <section>
                 <?php showAllTools(); ?>
             </section>
-
         </main>
         
         <?php include("views/footer.php"); ?>
