@@ -25,26 +25,61 @@
         //include('views/userNavbar.php'); 
         include("php/functions.php"); ?>
 
-        <main>
+        <main class="userMain">
+            <?php include('views/userNavbar.php'); ?>
 
-            <section>
-                <h1>Mes outils</h1>
-                    <section >
+            <div class="userContainer">
+                <section class="userContainerSections">
+                    <section class="userTitleSections">
+                        <h1 class="title fontSize20px userContainerTitles">Mes outils</h1>
+
+                    </section>
+                    <section class="userInnerSections separationLine2px">
                         <?php showMyTools(); ?>
                     </section>
-                <a href="createTool.php">Ajouter un outil</a>
-            </section>
+                    <a href="createTool.php">Ajouter un outil</a>
+                </section>
 
-            <section>
-                <h1>Mes prêts</h1>
-            </section>
+                <section class="userContainerSections">
+                    <section class="userTitleSections">
+                        <h1 class="title fontSize20px userContainerTitles">Mes prêts</h1>
 
-            <section>
-                <h1>Mes emprunts</h1>
-            </section>
+                    </section>
+                    <section class="userInnerSections separationLine2px">
+                        <?php showMyTools(); ?>
+                    </section>
+                    <a href="createTool.php">Ajouter un outil</a>
+                </section>
+ 
+                <section class="userContainerSections">
+                    <section class="userTitleSections">
+                        <h1 class="title fontSize20px userContainerTitles">Mes emprunts</h1>
 
+                        <div class="filter" onClick="navHidden()">
+                            <div class="button40px squareButton"><i class="fa-solid fa-user fa-xl"></i></div>
 
+                            <div id="navHidden" class="visibilityNav">
+                                <div class="navUserLogin titleBox separationHorizontalLine1px">
+                                <a href="loginAccount.php" class="title titleHeader fontSize12px">Me connecter / M’inscrire</a>
+                                </div>
 
+                                <div class="navUserAccount titleBox separationHorizontalLine1px">
+                                <a href="userPageAccount.php" class="navUserAccountLinks title titleHeader fontSize12px">Mon compte</a>
+                                <a href="userPageActivities.php" class="navUserAccountLinks title titleHeader fontSize12px">Mes activités</a>
+                                <a href="userMessaging.php" class="navUserAccountLinks title titleHeader fontSize12px">Ma messagerie</a>
+                                </div>
+
+                                <div class="navUserLogout titleBox">
+                                <a href="php/logout.php" class="title titleHeader fontSize12px">Me déconnecter</a>
+                                </div>
+                            </div>
+                        </div> 
+                    </section>
+                    <section class="userInnerSections separationLine2px">
+                        <?php showMyTools(); ?>
+                    </section>
+                </section>
+            </div>
         </main>
 
         <?php include('views/footer.php'); ?>

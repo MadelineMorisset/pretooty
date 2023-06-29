@@ -72,7 +72,7 @@ error_reporting(E_ALL);
             $imagePath = "./assets/img/tools/".$userTool['photo'];
             $link = "<a href='./toolSheet.php?id_outil=".$userTool['id_outil']."'><img src='".$imagePath."' alt='photo de l'outil'/>".$userTool['nom_outil']."</a>";
             
-            ?> <div style= "border: 1px solid black;">
+            ?> <div class="ToolCardVerticalRectangle">
             <div> <?= $link; ?>  </div> </div> <?php
         }
     }
@@ -90,13 +90,14 @@ function showAllTools() {
     foreach ($tools as $tool) {
         $imagePath = "./assets/img/tools/".$tool['photo'];
         $link = "<a href='./toolSheet.php?id_outil=".$tool['id_outil']."'>".$tool['nom_outil']."";
-
-        ?> <div style= "border: 1px solid black;">
-        <div> <?= $link; ?> </div>
-        <img src="<?= $imagePath ?>" alt="photo de l'outil"/>
-        <div> <?= $tool['nom_categorie'] ?>, <?= $tool['nom_etat'] ?> </div>
-        <div> <?= $tool['ville'] ?> </a> </div>
-        </div> <?php
+        ?>  
+        <div class="ToolCardVerticalRectangle">
+            <div> <?= $link; ?> </div>
+            <img src="<?= $imagePath ?>" alt="photo de l'outil"/>
+            <div> <?= $tool['nom_categorie'] ?>, <?= $tool['nom_etat'] ?> </div>
+            <div> <?= $tool['ville'] ?> </a> </div>
+        </div> 
+        <?php
     }
 }
 

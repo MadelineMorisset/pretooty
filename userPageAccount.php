@@ -27,126 +27,127 @@
         $infoUser=showMyAccount(); ?>
 
 
-        <main class="userContainer">
+        <main class="userMain">
             <?php include('views/userNavbar.php'); ?>
 
-            <form action="userEditPageAccount.php" method="post" class="userContainerForm">
-                <div class="button40px squareButton generalModifyingButton"><i class="fa-solid fa-pencil fa-xl"></i></div>
+            <form action="userEditPageAccount.php" method="post" class="userContainer">
+                <div class="button40px squareButton generalModifyingButton"><i class="fa-solid fa-pencil fa-xl"></i></div> <!-- Bouton à venir et non fonctionnel -->
+                <input type="submit" value="Modifier" class="squareButton generalModifyingButton generalModifyingButtonTemporary"/> <!-- Bouton temporaire mais fonctionnel -->
 
-                <fieldset>
-                    <legend id="general" class="title fontSize20px userContainerFormTitles">Général</legend>
-                    <div class="userGeneralInformations separationLine2px">
+                <fieldset class="userContainerSections">
+                    <legend id="general" class="title fontSize20px userContainerTitles">Général</legend>
+                    <div class="userCreateToolInformations separationLine2px">
                         <div class="userFormInnerContainer leftInnerContainer">
-                            <div class="userFormCategory firstElement">
-                                <label for="category">Catégorie :</label>
-                                <input type="text" name="category" value="<?= $infoUser["nom_categorie_u"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormCategory firstElement userFormElements">
+                                <label for="category" class="title fontSize14px labelAccount">Catégorie :</label>
+                                <input type="text" name="category" value="<?= $infoUser["nom_categorie_u"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                                 <!-- <div class="button28px squareButton ModifyingElementButton">
                                     <i class="fa-solid fa-pencil fa-xl"></i>
                                 </div> -->
                             </div>
 
-                            <div class="userFormPseudonym secondElement">
-                                <label for="pseudo">Pseudonyme :</label>
-                                <input type="text" name="pseudo" value="<?= $infoUser["pseudonyme"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormPseudonym secondElement userFormElements">
+                                <label for="pseudo" class="title fontSize14px labelAccount">Pseudonyme :</label>
+                                <input type="text" name="pseudo" value="<?= $infoUser["pseudonyme"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                             </div>
                         </div>
 
                         <div class="userFormInnerContainer rightInnerContainer">
-                            <div class="userFormLastName firstElement">
-                                <label for="name">Nom :</label>
-                                <input type="text" name="name" value="<?= $infoUser["nom_utilisateur"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormLastName firstElement userFormElements">
+                                <label for="name" class="title fontSize14px labelAccount">Nom :</label>
+                                <input type="text" name="name" value="<?= $infoUser["nom_utilisateur"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                                 <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
 
-                            <div class="userFormFirstName secondElement">
-                                <label for="firstname">Prénom :</label>
-                                <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormFirstName secondElement userFormElements">
+                                <label for="firstname" class="title fontSize14px labelAccount">Prénom :</label>
+                                <input type="text" name="firstname" value="<?= $infoUser["prenom_utilisateur"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                                 <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
                         </div>
                     </div>
                 </fieldset>
 
-                <fieldset>
-                    <legend id="coordinates" class="title fontSize20px userContainerFormTitles">Coordonnées</legend>
+                <fieldset class="userContainerSections">
+                    <legend id="coordinates" class="title fontSize20px userContainerTitles">Coordonnées</legend>
                     <div class="userGeneralInformations separationLine2px">
                         <div class="userFormInnerContainer leftInnerContainer">
-                            <div class="userFormAddress firstElement">
-                                <label for="address">Adresse :</label>
-                                <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormAddress firstElement userFormElements">
+                                <label for="address" class="title fontSize14px labelAccount">Adresse :</label>
+                                <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                                 <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
 
-                            <div class="userFormCity secondElement">
-                                <label for="city">Ville :</label>
-                                <input type="text" name="city" value="<?= $infoUser["ville"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormCity secondElement userFormElements">
+                                <label for="city" class="title fontSize14px labelAccount">Ville :</label>
+                                <input type="text" name="city" value="<?= $infoUser["ville"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                                 <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
 
-                            <div class="userFormZipCode thirdElement">
-                                <label for="cp">Code Postal :</label>
-                                <input type="text" name="cp" value="<?= $infoUser["cp"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormZipCode thirdElement userFormElements">
+                                <label for="cp" class="title fontSize14px labelAccount">Code Postal :</label>
+                                <input type="text" name="cp" value="<?= $infoUser["cp"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                                 <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
                         </div>
 
                         <div class="userFormInnerContainer rightInnerContainer">
-                            <div class="userFormPhone firstElement">
-                                <label for="tel">Téléphone :</label>
-                                <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormPhone firstElement userFormElements">
+                                <label for="tel" class="title fontSize14px labelAccount">Téléphone :</label>
+                                <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                                 <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
 
-                            <div class="userFormMail secondElement">
-                                <label for="email">Adresse mail :</label>
-                                <input type="email" name="email" value="<?= $infoUser["mail"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormMail secondElement userFormElements">
+                                <label for="email" class="title fontSize14px labelAccount">Adresse mail :</label>
+                                <input type="email" name="email" value="<?= $infoUser["mail"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                             </div>
 
-                            <div class="userFormPassword thirdElement">
-                                <label for="mdp">Mot de passe</label>
+                            <div class="userFormPassword thirdElement userFormElements">
+                                <label for="mdp" class="title fontSize14px labelAccount">Mot de passe</label>
                                 <!-- <div class="button28px squareButton ModifyingElementButton"><i class="fa-solid fa-pencil fa-xl"></i></div> -->
                             </div>
                         </div>
                     </div>
                 </fieldset>
 
-                <fieldset>
-                    <legend id="parameters" class="title fontSize20px userContainerFormTitles">Paramètres</legend>
+                <fieldset class="userContainerSections">
+                    <legend id="parameters" class="title fontSize20px userContainerTitles">Paramètres</legend>
                     <div class="separationLine2px"></div>
 
                     <div class="userGeneralInformations separationLine2px">
                         <div class="userFormInnerContainer leftInnerContainer">
-                            <div class="userFormPhone firstElement">
-                                <div>Notifications</div>
+                            <div class="userFormNotification firstElement userFormElements">
+                                <div class="title fontSize14px labelAccount">Notifications</div>
+                                <div class="notificationToggle"> <!-- Non fonctionnel -->
+                                    <input type="checkbox" id="toggle" class="noficationCheckbox"/>
+                                    <label for="toggle" class="noficationCheckboxLabel"></label>
+                                </div>
                             </div>
 
-                            <div>
-                                <label for="delete">Supprimer mon compte</label>
-                                <button type="button" class="button28px squareButton deleteAccount"><i class="fa-solid fa-trash-can"></i></button>  
+                            <div class="userFormDeleteAccount secondElement userFormElements">
+                                <label for="delete" class="title fontSize14px labelAccount">Supprimer mon compte</label>
+                                <button type="button" class="button28px squareButton deleteAccount"><i class="fa-solid fa-trash-can"></i></button> <!-- Non fonctionnel -->
                                 <!-- Javascript pour appeler la fonction deleteMyAccount(); -->
                             </div>
                         </div>
 
                         <div class="userFormInnerContainer rightInnerContainer">
-                            <div>
-                                <label for="police">Taille de la police</label>
-                                <input type="text" name="police" value="<?= $infoUser["nom_taille"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormFontSize firstElement userFormElements">
+                                <label for="police" class="title fontSize14px labelAccount">Taille de la police :</label>
+                                <input type="text" name="police" value="<?= $infoUser["nom_taille"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                             </div>
 
-                            <div>
-                                <label for="theme">Thème couleur</label>
-                                <input type="text" name="theme" value="<?= $infoUser["nom_theme"]; ?>" readonly style="border: transparent"/>
+                            <div class="userFormColorTheme secondElement userFormElements">
+                                <label for="theme" class="title fontSize14px labelAccount">Thème couleur :</label>
+                                <input type="text" name="theme" value="<?= $infoUser["nom_theme"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
                             </div>
                         </div>
                     </div>
                 </fieldset>
-
-            <input type="submit" value="Modifier"/>
             </form>
         </main>
 
-        
         <?php include('views/footer.php'); ?>
-
     </body>
 </html>
