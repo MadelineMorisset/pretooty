@@ -27,16 +27,16 @@
         $infoUser=showMyAccount(); ?>
 
 
-        <main class="userContainer">
+        <main class="userMain">
             <?php include('views/userNavbar.php'); ?>
 
-            <form action="userEditPageAccount.php" method="post" class="userContainerForm">
+            <form action="userEditPageAccount.php" method="post" class="userContainer">
                 <div class="button40px squareButton generalModifyingButton"><i class="fa-solid fa-pencil fa-xl"></i></div> <!-- Bouton à venir et non fonctionnel -->
                 <input type="submit" value="Modifier" class="squareButton generalModifyingButton generalModifyingButtonTemporary"/> <!-- Bouton temporaire mais fonctionnel -->
 
-                <fieldset>
-                    <legend id="general" class="title fontSize20px userContainerFormTitles">Général</legend>
-                    <div class="userGeneralInformations separationLine2px">
+                <fieldset class="userContainerSections">
+                    <legend id="general" class="title fontSize20px userContainerTitles">Général</legend>
+                    <div class="userCreateToolInformations separationLine2px">
                         <div class="userFormInnerContainer leftInnerContainer">
                             <div class="userFormCategory firstElement userFormElements">
                                 <label for="category" class="title fontSize14px labelAccount">Catégorie :</label>
@@ -68,8 +68,8 @@
                     </div>
                 </fieldset>
 
-                <fieldset>
-                    <legend id="coordinates" class="title fontSize20px userContainerFormTitles">Coordonnées</legend>
+                <fieldset class="userContainerSections">
+                    <legend id="coordinates" class="title fontSize20px userContainerTitles">Coordonnées</legend>
                     <div class="userGeneralInformations separationLine2px">
                         <div class="userFormInnerContainer leftInnerContainer">
                             <div class="userFormAddress firstElement userFormElements">
@@ -111,8 +111,8 @@
                     </div>
                 </fieldset>
 
-                <fieldset>
-                    <legend id="parameters" class="title fontSize20px userContainerFormTitles">Paramètres</legend>
+                <fieldset class="userContainerSections">
+                    <legend id="parameters" class="title fontSize20px userContainerTitles">Paramètres</legend>
                     <div class="separationLine2px"></div>
 
                     <div class="userGeneralInformations separationLine2px">

@@ -18,7 +18,7 @@
 //     })
 // }
 
-/* Header - Menu de navigation utilisateur qui s'affiche et disparait en cliquant sur le bouton "button40px" */
+/* Fonction pour afficher le menu en cliquant sur le bouton user dans le header et la fenêtre de choix des filtres de recherche */
 function navHidden() {
     let element = document.getElementById("navHidden");
     element.classList.toggle("visibilityNav");
