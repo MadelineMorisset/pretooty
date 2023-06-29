@@ -27,39 +27,39 @@
 
         <main class="connectionAndCreationAccount">
             <!-- Formulaire de connexion -->
-            <div class="signInContainer">
+            <section class="signInContainer">
                 <h2 class="title fontSize22px titleConnection">Créer un compte</h2>
 
-                <div class="otherConnections">
-                    <div class="googleSignIn"></div>
-                    <div class="appleSignIn"></div>
-                </div>
+                <section class="otherConnections">
+                    <section class="googleSignIn"></section>
+                    <section class="appleSignIn"></section>
+                </section>
 
                 <p class="text fontSize20px textConnection">Identifiants personnels</p>
                 <form action="php/signup.php" method="post" class="formConnection">
-                    <div class="identification">
-                        <div class="pseudo">
+                    <section class="identification">
+                        <section class="pseudo">
                             <label for="pseudo" class="title fontSize13px label">Pseudonyme* :</label>
                             <input type="text" name="pseudo" required class="inputCreateAccount">
-                        </div>
+                        </section>
 
-                        <div class="email">
+                        <section class="email">
                             <label for="mail" class="title fontSize13px label">Adresse mail* :</label>
                             <input type="email" name="mail" required class="inputCreateAccount">
-                        </div>
+                        </section>
 
-                        <div class="password">
+                        <section class="password">
                             <label for="mdp" class="title fontSize13px label">Mot de passe* :</label>
                             <input type="password" name="mdp" required class="inputCreateAccount">
-                        </div>
+                        </section>
 
-                        <div class="confirmPassword">
+                        <section class="confirmPassword">
                             <label for="confirm" class="title fontSize13px label">Confirmer le mot de passe* :</label>
                             <input type="password" name="confirm" required class="inputCreateAccount">
-                        </div>
-                    </div>
+                        </section>
+                    </section>
 
-                    <div class="requiredCharacters">
+                    <section class="requiredCharacters">
                         <h3 class="requiredCharactersTitle">Caractères requis :</h3>
                         <ul class="requiredCharactersList">
                             <li>Minimum 6 caractères</li>
@@ -67,17 +67,17 @@
                             <li>Minuscules</li>
                             <li>Chiffres</li>
                         </ul>
-                    </div>
+                    </section>
 
-                    <div class="connection">
+                    <section class="connection">
                         <button type="submit" class="title fontSize13px button115px35px">Se connecter</button>
-                    </div>
+                    </section>
 
-                    <div class="returnLinks">
+                    <section class="returnLinks">
                         <a href="loginAccount.php" class="text fontSize14px toConnectionPageLink"> < Retour vers connexion</a>
-                    </div>
+                    </section>
                 </form>
-            </div>
+            </section>
         </main>
 
         <?php include('views/footer.php'); ?>

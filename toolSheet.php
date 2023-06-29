@@ -21,50 +21,86 @@
     </head>
 
     <body>
-        <?php include('views/header.php');
-        // include('views/userNavbar.php');
+        <?php include('views\header.php');
         include('php/functions.php');
         $tool = showToolSheet(); ?>
 
         <main>
-            <form>
+            <section class="toolSheetContainer">
+                <form class="toolSheetForm">
+                    <section class="toolSheetFormTitle">
+                        <h1><?= $tool['nom_outil'] ?></h1>
 
-                <h1><?= $tool['nom_outil'] ?></h1>
+                        <section class="button40px squareButton toolSheetCalendarBigButton"><i class="fa-solid fa-calendar-check fa-xl"></i></section> <!-- Bouton à venir et non fonctionnel -->
+                        <input type="button" value="Calendrier" class="squareButton toolSheetCalendarBigButton toolSheetCalendarBigButtonTemporary"/> <!-- Bouton temporaire mais fonctionnel -->
+                    </section>
 
-                <img src="./assets/img/tools/<?= $tool['photo'] ?>" alt="photo de l'outil"/>
+                    <section class="toolSheet">
+                        <section class="toolSheetLeftSection">
+                            <img src="./assets/img/tools/<?= $tool['photo'] ?>" alt="photo de l'outil" class="photoTool"/>
+                        </section>
 
-                <label for="toolCategory">Catégorie :</label>
-                <input type="text" name="toolCategory" value="<?= $tool['nom_categorie'] ?>" style="border:transparent"/>
+                        <section class="toolSheetRightSection">
+                            <section class="toolSheetTopSection">
+                                <section class="toolSheetTopLeftSection">
+                                    <section class="toolSheetFirstInformations toolSheetCategory">
+                                        <label for="toolCategory" class="title fontSize13px toolSheetLabel">Catégorie :</label>
+                                        <input type="text" name="toolCategory" value="<?= $tool['nom_categorie'] ?>" style="border:transparent" class="text fontSize13px inputToolSheet"/>
+                                    </section>
 
-                <label for="lender">Prêteur :</label>
-                <input type="text" name="lender" value="<?= $tool['pseudonyme'] ?>" style="border:transparent"/>
+                                    <section class="toolSheetFirstInformations toolSheetLender">
+                                        <label for="lender" class="title fontSize13px toolSheetLabel">Prêteur :</label>
+                                        <input type="text" name="lender" value="<?= $tool['pseudonyme'] ?>" style="border:transparent" class="text fontSize13px inputToolSheet"/>
+                                    </section>
+                                </section>
 
-                <label for="toolSatus">Etat :</label>
-                <input type="text" name="toolSatus" value="<?= $tool['nom_etat'] ?>" style="border:transparent"/>
+                                <section class="toolSheetTopRightSection">
+                                    <section class="toolSheetFirstInformations toolSheetStatus">
+                                        <label for="toolSatus" class="title fontSize13px toolSheetLabel">Etat :</label>
+                                        <input type="text" name="toolSatus" value="<?= $tool['nom_etat'] ?>" style="border:transparent" class="text fontSize13px inputToolSheet"/>
+                                    </section>
 
-                <label for="toolPlace">Lieu :</label>
-                <input type="text" name="toolPlace" value="<?= $tool['ville'] ?>" style="border:transparent"/>
+                                    <section class="toolSheetFirstInformations toolSheetPlace">
+                                        <label for="toolPlace" class="title fontSize13px toolSheetLabel">Lieu :</label>
+                                        <input type="text" name="toolPlace" value="<?= $tool['ville'] ?> (<?= $tool['cp'] ?>)" style="border:transparent" class="text fontSize13px inputToolSheet"/>
+                                    </section>
+                                </section>
+                        </section>
+
+                        <section class="toolSheetBottomSection">
+                            <section class="toolInformations">
+                                <label for="toolDescription" class="title fontSize13px toolInformationsLabel">Description :</label>
+                                <p name="toolDescription" id="toolDescription" class="text fontSize13px toolInputTextInformations"><?= $tool['description'] ?></p>
+                            </section>
+
+                            <section class="toolInformations">
+                                <label for="toolSecurity" class="title fontSize13px toolInformationsLabel">Consignes de sécurité :</label>
+                                <p name="toolSecurity" id="toolSecurity" class="text fontSize13px toolInputTextInformations"><?= $tool['consignes_securite'] ?></p>
+                            </section>
+
+                            <section class="toolInformations">
+                                <label for="toolAccessories" class="title fontSize13px toolInformationsLabel">Accessoires fournis avec l'outil :</label>
+                                <p name="toolAccessories" id="toolAccessories" class="text fontSize13px toolInputTextInformations"><?= $tool['accessoires'] ?></p>
+                            </section>
+                        </section>
+                    </section>
+                </form>
+            </section>
 
 
-
-                <label for="toolDescription">Description :</label>
-                <input type="text" name="toolDescription" value="<?= $tool['description'] ?>" style="border:transparent"/>
-
-                <label for="toolSecurity">Consignes de sécurité :</label>
-                <input type="text" name="toolSecurity" value="<?= $tool['consignes_securite'] ?>" style="border:transparent"/>
-
-                <label for="toolAccessories">Accessoires fournis avec l'outil :</label>
-                <input type="text" name="toolAccessories" value="<?= $tool['accessoires'] ?>" style="border:transparent"/>
-
-                <div>
-                    <input type="button" value="Calendrier"/>
-                </div>
-
-            </form>
-
-
-            <section>
-                <h1>Commentaires</h1>
+            <section class="commentContainer">
+                <section class="separationLineBottom2px">
+                    <h1>Commentaires</h1>
+                </section>
+                <section class="commentsSection">
+                    <section class="commentHeader">
+                        <section class="title fontSize16px"><!-- [nameUser] à utilisé cet outil de : --></section>
+                        <section class="text fontSize16px"><!-- ../../20.. --></section>
+                        <section class="title fontSize16px"><!-- au --></section>
+                        <section class="text fontSize16px"><!-- ../../20.. --></section>
+                    </section>
+                    <section class="commentText"><!-- Commentaire --></section>
+                </section>
             </section>
         </main>
 
