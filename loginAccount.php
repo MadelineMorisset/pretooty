@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="connection">
-                        <button type="submit" class="title fontSize13px connectButton">Se connecter</button>
+                        <button type="submit" class="title fontSize13px button115px35px">Se connecter</button>
                         <a href="createAccount.php" class="text fontSize14px notMemberLink">Pas encore membre ?</a>
                     </div>
                 </form>
