@@ -29,18 +29,18 @@
 
             <form action="./php/toolCreation.php" method="post" enctype="multipart/form-data" class="userContainer">
 
-                <section class="button40px squareButton calendarButtonBig"><i class="fa-solid fa-calendar-check fa-xl"></i></section> <!-- Bouton à venir et non fonctionnel -->
-                <input type="button" value="Calendrier" class="squareButton calendarButtonBig calendarButtonBigTemporary"/> <!-- Bouton temporaire mais fonctionnel -->
+                <section class="button40px squareButton createToolCalendarBigButton"><i class="fa-solid fa-calendar-check fa-xl"></i></section> <!-- Bouton à venir et non fonctionnel -->
+                <input type="button" value="Calendrier" class="squareButton createToolCalendarBigButton createToolCalendarBigButtonTemporary"/> <!-- Bouton temporaire mais fonctionnel -->
 
                 <section class="userContainerSections">
                     <section class="userInnerContainer leftInnerContainer">
                         <section class="toolName">
-                            <label for="toolName" class="title fontSize13px createToolLabel">Nom de l'outil :</label>
+                            <label for="toolName" class="title fontSize13px toolLabel">Nom de l'outil :</label>
                             <input type="text" name="toolName" value="" class="text fontSize13px inputCreateTool"/>
                         </section>
 
                         <section class="toolCategory">
-                            <label for="toolCategory" class="title fontSize13px createToolLabel">Catégorie :</label>
+                            <label for="toolCategory" class="title fontSize13px toolLabel">Catégorie :</label>
                             <select name="toolCategory" class="text fontSize13px inputCreateTool">
                                 <option value="" class="text fontSize16px createToolCategories">Veuillez choisir une catégorie</option>
                                 <option value="1" class="text fontSize16px createToolCategories">Clé</option>
@@ -62,36 +62,36 @@
                         </section>
                             
                         <section class="toolStatus">
-                            <label for="toolStatus" class="title fontSize13px createToolLabel">État :</label>
+                            <label for="toolStatus" class="title fontSize13px toolLabel">État :</label>
                             <section class="createToolStatus">
                                 <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="6"/>
-                                    <label for="new" class="text fontSize13px createToolLabel">Neuf</label>
+                                    <label for="new" class="text fontSize13px toolLabel">Neuf</label>
                                 </section>
 
                                 <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="5"/>
-                                    <label for="asNew" class="text fontSize13px createToolLabel">Comme neuf</label>
+                                    <label for="asNew" class="text fontSize13px toolLabel">Comme neuf</label>
                                 </section>
 
                                 <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="4"/>
-                                    <label for="veryGood" class="text fontSize13px createToolLabel">Très bon</label>
+                                    <label for="veryGood" class="text fontSize13px toolLabel">Très bon</label>
                                 </section>
 
                                 <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="3"/>
-                                    <label for="good" class="text fontSize13px createToolLabel">Bon</label>
+                                    <label for="good" class="text fontSize13px toolLabel">Bon</label>
                                 </section>
 
                                 <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="2"/>
-                                    <label for="bad" class="text fontSize13px createToolLabel">Mauvais</label>
+                                    <label for="bad" class="text fontSize13px toolLabel">Mauvais</label>
                                 </section>
 
                                 <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="1"/>
-                                    <label for="used" class="text fontSize13px createToolLabel">Usagé</label>
+                                    <label for="used" class="text fontSize13px toolLabel">Usagé</label>
                                 </section>
                             </section>
                         </section>
@@ -99,7 +99,7 @@
                     
                     <section class="userInnerContainer rightInnerContainer">
                         <section class="toolPhotoDownload">
-                            <label for="toolImage" class="title fontSize13px createToolLabel">Photo de l'outil :</label>
+                            <label for="toolImage" class="title fontSize13px toolLabel">Photo de l'outil :</label>
                             <input type="file" name="toolImage" accept=".png,.jpg,.jpeg" class="text fontSize13px inputPhotoDownload"/>
                         </section>
                         <section class="toolPhotoView">
@@ -111,17 +111,17 @@
                 <section class="userContainerSections">
                     <section class="userToolInnerContainer">
                         <section class="toolInformations">
-                            <label for="toolDescription" class="title fontSize13px createToolInformationsLabel">Description :</label>
+                            <label for="toolDescription" class="title fontSize13px toolInformationsLabel">Description :</label>
                             <textarea name="toolDescription" id="toolDescription" class="text fontSize13px toolTextArea"></textarea>
                         </section>
 
                         <section class="toolInformations">
-                            <label for="toolSecurity" class="title fontSize13px createToolInformationsLabel">Consignes de sécurité :</label>
+                            <label for="toolSecurity" class="title fontSize13px toolInformationsLabel">Consignes de sécurité :</label>
                             <textarea name="toolSecurity" id="toolSecurity" class="text fontSize13px toolTextArea"></textarea>
                         </section>
 
                         <section class="toolInformations">
-                            <label for="toolAccessories" class="title fontSize13px createToolInformationsLabel">Accessoires fournis avec l'outil :</label>
+                            <label for="toolAccessories" class="title fontSize13px toolInformationsLabel">Accessoires fournis avec l'outil :</label>
                             <textarea name="toolAccessories" id="toolAccessories" class="text fontSize13px toolTextArea"></textarea>
                         </section>
                     </section>

@@ -390,7 +390,7 @@ footer {
 }
 
 .generalModifyingButton, 
-.calendarButtonBig {
+.createToolCalendarBigButton {
     position: absolute;
     border: #3C5E68 solid 1px;
     border-bottom: #3C5E68 solid 4px;
@@ -399,7 +399,7 @@ footer {
 }
 
 .generalModifyingButtonTemporary, 
-.calendarButtonBigTemporary {  
+.createToolCalendarBigButtonTemporary {  
     border: 1px solid #3C5E68;
     border-bottom: 2px solid #3C5E68;
     top: 10px;
@@ -407,7 +407,7 @@ footer {
 }
 
 .generalModifyingButtonTemporary:active, 
-.calendarButtonBigTemporary:active {  
+.createToolCalendarBigButtonTemporary:active {  
     border: 1px solid #3C5E68;
     box-shadow: inset 0 2px rgba(0, 0, 0, .25);
 }
@@ -568,7 +568,7 @@ footer {
     border:solid 1px #3C5E68;
 }
 
-.createToolLabel {
+.toolLabel {
     width: 25%;
     line-height: 2.5em;
 }
@@ -583,7 +583,7 @@ footer {
     padding: 5px;
 }
 
-.createToolInformationsLabel {
+.toolInformationsLabel {
     width: 100%;
 }
 
@@ -652,6 +652,138 @@ footer {
 }
 
 /* ------------------------------- TOOLSHEET ------------------------------- */
+.toolSheetContainer {
+    width: 100%;
+    padding: 50px 0 75px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.toolSheetForm {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+    border: 2px solid #3C5E68;
+}
+
+.toolSheetFormTitle {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    color: #6D6E6F;
+}
+
+.toolSheetCalendarBigButton {
+    position: absolute;
+    border: #3C5E68 solid 1px;
+    border-bottom: #3C5E68 solid 4px;
+    top: 230px;
+    right: 260px;
+}
+ 
+.toolSheetCalendarBigButtonTemporary {  
+    border: 1px solid #3C5E68;
+    border-bottom: 2px solid #3C5E68;
+    top: 245px;
+    right: 320px;
+}
+
+.toolSheetCalendarBigButtonTemporary:active {  
+    border: 1px solid #3C5E68;
+    box-shadow: inset 0 2px rgba(0, 0, 0, .25);
+}
+
+.toolSheet {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 28px 28px 0;
+}
+
+.toolSheetLeftSection {
+    width: 20%;
+    height: auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    border-right: 5px solid #d9d9d9;
+    overflow: hidden;
+}
+
+.photoTool {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.toolSheetRightSection {
+    width: 80%;
+    padding-left: 26px;
+}
+
+.toolSheetTopSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 25px;
+}
+
+.toolSheetTopLeftSection, 
+.toolSheetTopRightSection {
+    padding: 10px 27px 0 0;
+    width: 50%;
+    flex-basis: 48%;
+}
+
+.toolSheetFirstInformations {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.toolSheetLabel {
+    width: 20%;
+    line-height: 3.5em;
+    color: #33A4B2;
+}
+
+.inputToolSheet {
+    width: 80%;
+}
+
+.toolSheetBottomSection {
+    width: 100%;
+    padding-top: 25px;
+    border-top: 2px solid #6D6E6F;
+}
+
+.toolInformations {
+    margin-top: 10px;
+}
+
+.toolInformationsLabel {
+    width: 100%;
+    color: #33A4B2;
+}
+
+.toolInputTextInformations {
+    width: 100%;
+    margin: 10px 0 0 100px;
+    border: transparent;
+}
+
+.commentContainer {
+    width: 100%;
+    height: auto;
+}
+
+.commentsSection {height: 200px;}
+
 .separationLineBottom2px {
     border-bottom: 2px solid #6D6E6F;
 }
