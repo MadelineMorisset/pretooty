@@ -29,6 +29,8 @@ main {
 
 .fontSize18px {font-size: 1.125em}
 
+.fontSize16px {font-size: 1em;}
+
 .fontSize14px {font-size: 0.875em;}
 
 .fontSize13px {font-size: 0.8125em;}
@@ -111,7 +113,9 @@ a {text-decoration: none;}
 
 /* Boutons rectangulaires */
 /* Bouton de connexion à l'espace utilisateur */
-.connectButton {
+.button115px35px {
+    width: 115px;
+    height: 35px;
     padding: 8px;
     background-color: #33A4B2;
     color: #fff;
@@ -124,7 +128,7 @@ a {text-decoration: none;}
     -o-border-radius: 5px;
 }
 
-.connectButton:active {
+.button115px35px:active {
     border: 1px solid #3C5E68;
     box-shadow: inset 0 2px rgba(0, 0, 0, .25);
 }
@@ -284,9 +288,10 @@ footer {
 .pseudoEmail {margin-bottom: 15px;}
 
 .inputCreateAccount, .inputLoginAccount, 
-.inputCreateTool {
+.inputCreateTool, .toolTextArea {
     margin: 9px 0;
     padding: 5px;
+    border: 1px solid #3C5E68;
     border-radius: 5px;
     background-color: #FFFDF9;
     -webkit-border-radius: 5px;
@@ -432,12 +437,14 @@ footer {
     align-content: center;
 }
 
-.userFormInnerContainer {
+.userInnerContainer {
     margin: 27px 0 0 36px;
     padding: 10px 27px 0 0;
     width: 50%;
     flex-basis: 48%;
 }
+
+.leftInnerContainer {border-right: #CCC9CB solid 4px;}
 
 .userFormElements {
     display: flex;
@@ -447,7 +454,9 @@ footer {
     line-height: 3.2em;
 }
 
-.leftInnerContainer {border-right: #CCC9CB solid 4px;}
+.labelAccount {
+    width: 30%;
+}
 
 .inputAccountInformations {
     width: 70%;
@@ -518,14 +527,81 @@ footer {
 }
 
 /* ------------------------------- CREATETOOL ------------------------------- */
-.inputCreateTool {
-    width: 50%;
-    margin-left: 24px;
+.userToolInnerContainer {
+    margin-left: 36px;
+    padding-top: 10px;
+    width: 100%;
 }
 
-.toolName, .toolCategory, .toolStatus {
+.toolName, .toolCategory, 
+.toolStatus, .toolPhotoDownload {
     display: flex;
-    align-content: center;
     width: 100%;
-    line-height: 3.2em;
+}
+
+.toolName, .toolCategory, 
+.toolPhotoDownload {
+    align-items: center;
+}
+
+.toolName, .toolStatus, .toolPhotoView {
+    margin-bottom: 8px;
+}
+
+.toolCategory, .toolPhotoDownload {
+    margin-bottom: 15px;
+}
+
+.toolInformations {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 39px;
+}
+
+.toolPhotoView {
+    width:350px; 
+    height:224px;
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+    border:solid 1px #3C5E68;
+}
+
+.createToolLabel {
+    width: 25%;
+    line-height: 2.5em;
+}
+
+.inputCreateTool, .createToolStatus, 
+.inputPhotoDownload {
+    width: 50%;
+}
+
+.inputPhotoDownload {
+    margin: 9px 0;
+    padding: 5px;
+}
+
+.createToolInformationsLabel {
+    width: 100%;
+}
+
+.toolTextArea {
+    width: 100%;
+    height: 154px;
+    margin: 19px 0 0 155px;
+}
+
+.userContainerButtons {
+    margin: 32px 0 71px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userToolButtons {
+    width: 25%;
+    display: flex;
+    /* justify-content: space-between; */ /* À activer lorsqu'on remettra le bouton Annuler */
+    justify-content: flex-end; /* À retirer lorsqu'on remettra le bouton Annuler */
 }

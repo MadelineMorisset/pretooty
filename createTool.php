@@ -33,77 +33,107 @@
                 <input type="button" value="Calendrier" class="squareButton calendarButtonBig calendarButtonBigTemporary"/> <!-- Bouton temporaire mais fonctionnel -->
 
                 <div class="userContainerSections">
-                    <div class="userFormInnerContainer leftInnerContainer">
+                    <div class="userInnerContainer leftInnerContainer">
                         <div class="toolName">
                             <label for="toolName" class="title fontSize13px createToolLabel">Nom de l'outil :</label>
-                            <input type="text" name="toolName" value="" required class="inputCreateTool"/>
+                            <input type="text" name="toolName" value="" class="text fontSize13px inputCreateTool"/>
                         </div>
 
                         <div class="toolCategory">
                             <label for="toolCategory" class="title fontSize13px createToolLabel">Catégorie :</label>
-                            <select name="toolCategory" required class="inputCreateTool">
-                                <option value="">Veuillez choisir une catégorie</option>
-                                <option value="1">Clé</option>
-                                <option value="2">Couper</option>
-                                <option value="3">Frapper</option>
-                                <option value="4">Tracer</option>
-                                <option value="5">Manutention</option>
-                                <option value="6">Mesurer</option>
-                                <option value="7">Poncer</option>
-                                <option value="8">Jardiner</option>
-                                <option value="9">Attacher</option>
-                                <option value="10">Percer</option>
-                                <option value="11">Pincert</option>
-                                <option value="12">Equipement de protection individuelle</option>
-                                <option value="13">Peindre</option>
-                                <option value="14">Visser</option>
-                                <option value="15">Souder</option>
+                            <select name="toolCategory" class="text fontSize13px inputCreateTool">
+                                <option value="" class="text fontSize16px createToolCategories">Veuillez choisir une catégorie</option>
+                                <option value="1" class="text fontSize16px createToolCategories">Clé</option>
+                                <option value="2" class="text fontSize16px createToolCategories">Couper</option>
+                                <option value="3" class="text fontSize16px createToolCategories">Frapper</option>
+                                <option value="4" class="text fontSize16px createToolCategories">Tracer</option>
+                                <option value="5" class="text fontSize16px createToolCategories">Manutention</option>
+                                <option value="6" class="text fontSize16px createToolCategories">Mesurer</option>
+                                <option value="7" class="text fontSize16px createToolCategories">Poncer</option>
+                                <option value="8" class="text fontSize16px createToolCategories">Jardiner</option>
+                                <option value="9" class="text fontSize16px createToolCategories">Attacher</option>
+                                <option value="10" class="text fontSize16px createToolCategories">Percer</option>
+                                <option value="11" class="text fontSize16px createToolCategories">Pincert</option>
+                                <option value="12" class="text fontSize16px createToolCategories">Equipement de protection individuelle</option>
+                                <option value="13" class="text fontSize16px createToolCategories">Peindre</option>
+                                <option value="14" class="text fontSize16px createToolCategories">Visser</option>
+                                <option value="15" class="text fontSize16px createToolCategories">Souder</option>
                             </select>
                         </div>
                             
                         <div class="toolStatus">
-                            <label for="toolStatus" class="title fontSize13px label">État :</label>
-                            <div>
-                                <input type="radio" name="toolStatus" value="6"/>
-                                <label for="new">Neuf</label>
-                                <input type="radio" name="toolStatus" value="5"/>
-                                <label for="asNew">Comme neuf</label>
-                                <input type="radio" name="toolStatus" value="4"/>
-                                <label for="veryGood">Très bon</label>
-                                <input type="radio" name="toolStatus" value="3"/>
-                                <label for="good">Bon</label>
-                                <input type="radio" name="toolStatus" value="2"/>
-                                <label for="bad">Mauvais</label>
-                                <input type="radio" name="toolStatus" value="1"/>
-                                <label for="used">Usagé</label>
+                            <label for="toolStatus" class="title fontSize13px createToolLabel">État :</label>
+                            <div class="createToolStatus">
+                                <div class="createToolStatusOptions">
+                                    <input type="radio" name="toolStatus" value="6"/>
+                                    <label for="new" class="text fontSize13px createToolLabel">Neuf</label>
+                                </div>
+
+                                <div class="createToolStatusOptions">
+                                    <input type="radio" name="toolStatus" value="5"/>
+                                    <label for="asNew" class="text fontSize13px createToolLabel">Comme neuf</label>
+                                </div>
+
+                                <div class="createToolStatusOptions">
+                                    <input type="radio" name="toolStatus" value="4"/>
+                                    <label for="veryGood" class="text fontSize13px createToolLabel">Très bon</label>
+                                </div>
+
+                                <div class="createToolStatusOptions">
+                                    <input type="radio" name="toolStatus" value="3"/>
+                                    <label for="good" class="text fontSize13px createToolLabel">Bon</label>
+                                </div>
+
+                                <div class="createToolStatusOptions">
+                                    <input type="radio" name="toolStatus" value="2"/>
+                                    <label for="bad" class="text fontSize13px createToolLabel">Mauvais</label>
+                                </div>
+
+                                <div class="createToolStatusOptions">
+                                    <input type="radio" name="toolStatus" value="1"/>
+                                    <label for="used" class="text fontSize13px createToolLabel">Usagé</label>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="userFormInnerContainer rightInnerContainer">
-                        <label for="toolImage" class="title fontSize13px label">Photo de l'outil :</label>
-                        <input type="file" name="toolImage" accept=".png,.jpg,.jpeg"/>
-                        <!-- <div style="width:350px; height:224px;border:solid 1px black;"> </div> AFFICHAGE DE LA PHOTO A VOIR PLUS TARD-->
+                    <div class="userInnerContainer rightInnerContainer">
+                        <div class="toolPhotoDownload">
+                            <label for="toolImage" class="title fontSize13px createToolLabel">Photo de l'outil :</label>
+                            <input type="file" name="toolImage" accept=".png,.jpg,.jpeg" class="text fontSize13px inputPhotoDownload"/>
+                        </div>
+                        <div class="toolPhotoView">
+                            <!-- <div></div> AFFICHAGE DE LA PHOTO A VOIR PLUS TARD -->
+                        </div>
                     </div>
                 </div>
 
-                <div>
-                    <label for="toolDescription" class="title fontSize13px label">Description :</label>
-                    <input type="textarea" name="toolDescription" required/>
+                <div class="userContainerSections">
+                    <div class="userToolInnerContainer">
+                        <div class="toolInformations">
+                            <label for="toolDescription" class="title fontSize13px createToolInformationsLabel">Description :</label>
+                            <textarea name="toolDescription" id="toolDescription" class="text fontSize13px toolTextArea"></textarea>
+                        </div>
+
+                        <div class="toolInformations">
+                            <label for="toolSecurity" class="title fontSize13px createToolInformationsLabel">Consignes de sécurité :</label>
+                            <textarea name="toolSecurity" id="toolSecurity" class="text fontSize13px toolTextArea"></textarea>
+                        </div>
+
+                        <div class="toolInformations">
+                            <label for="toolAccessories" class="title fontSize13px createToolInformationsLabel">Accessoires fournis avec l'outil :</label>
+                            <textarea name="toolAccessories" id="toolAccessories" class="text fontSize13px toolTextArea"></textarea>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="toolSecurity" class="title fontSize13px label">Consignes de sécurité :</label>
-                    <input type="textarea" name="toolSecurity"/>
-                </div>
+                <div class="userContainerButtons">
+                    <div class="userToolButtons">
+                        <!-- <a href="userPageActivities.php"><button class="title fontSize13px button115px35px">Annuler</button></a> -->
 
-                <div>
-                    <label for="toolAccessories" class="title fontSize13px label">Accessoires fournis avec l'outil :</label>
-                    <input type="textarea" name="toolAccessories"/>
+                        <button type="submit" class="title fontSize13px button115px35px">Valider</button>
+                    </div>
                 </div>
-
-                <input type="submit" value="Valider"/>
-                <a href="userPageActivities.php">Annuler</a>
 
             </form>
         </main>

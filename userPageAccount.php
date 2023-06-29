@@ -37,7 +37,7 @@
                 <fieldset class="userContainerSections">
                     <legend id="general" class="title fontSize20px userContainerTitles">Général</legend>
                     <div class="userCreateToolInformations separationLine2px">
-                        <div class="userFormInnerContainer leftInnerContainer">
+                        <div class="userInnerContainer leftInnerContainer">
                             <div class="userFormCategory firstElement userFormElements">
                                 <label for="category" class="title fontSize14px labelAccount">Catégorie :</label>
                                 <input type="text" name="category" value="<?= $infoUser["nom_categorie_u"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
@@ -52,7 +52,7 @@
                             </div>
                         </div>
 
-                        <div class="userFormInnerContainer rightInnerContainer">
+                        <div class="userInnerContainer rightInnerContainer">
                             <div class="userFormLastName firstElement userFormElements">
                                 <label for="name" class="title fontSize14px labelAccount">Nom :</label>
                                 <input type="text" name="name" value="<?= $infoUser["nom_utilisateur"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
@@ -71,7 +71,7 @@
                 <fieldset class="userContainerSections">
                     <legend id="coordinates" class="title fontSize20px userContainerTitles">Coordonnées</legend>
                     <div class="userGeneralInformations separationLine2px">
-                        <div class="userFormInnerContainer leftInnerContainer">
+                        <div class="userInnerContainer leftInnerContainer">
                             <div class="userFormAddress firstElement userFormElements">
                                 <label for="address" class="title fontSize14px labelAccount">Adresse :</label>
                                 <input type="text" name="address" value="<?= $infoUser["adresse"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
 
-                        <div class="userFormInnerContainer rightInnerContainer">
+                        <div class="userInnerContainer rightInnerContainer">
                             <div class="userFormPhone firstElement userFormElements">
                                 <label for="tel" class="title fontSize14px labelAccount">Téléphone :</label>
                                 <input type="text" name="tel" value="<?= $infoUser["tel"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>
@@ -116,7 +116,7 @@
                     <div class="separationLine2px"></div>
 
                     <div class="userGeneralInformations separationLine2px">
-                        <div class="userFormInnerContainer leftInnerContainer">
+                        <div class="userInnerContainer leftInnerContainer">
                             <div class="userFormNotification firstElement userFormElements">
                                 <div class="title fontSize14px labelAccount">Notifications</div>
                                 <div class="notificationToggle"> <!-- Non fonctionnel -->
@@ -132,7 +132,7 @@
                             </div>
                         </div>
 
-                        <div class="userFormInnerContainer rightInnerContainer">
+                        <div class="userInnerContainer rightInnerContainer">
                             <div class="userFormFontSize firstElement userFormElements">
                                 <label for="police" class="title fontSize14px labelAccount">Taille de la police :</label>
                                 <input type="text" name="police" value="<?= $infoUser["nom_taille"]; ?>" readonly style="border: transparent" class="inputAccountInformations"/>

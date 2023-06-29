@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="connection">
-                        <button type="submit" class="title fontSize13px connectButton">Se connecter</button>
+                        <button type="submit" class="title fontSize13px button115px35px">Se connecter</button>
                     </div>
 
                     <div class="returnLinks">
