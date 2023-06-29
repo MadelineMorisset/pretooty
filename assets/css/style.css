@@ -605,3 +605,49 @@ footer {
     /* justify-content: space-between; */ /* À activer lorsqu'on remettra le bouton Annuler */
     justify-content: flex-end; /* À retirer lorsqu'on remettra le bouton Annuler */
 }
+
+/* ------------------------------- TOOLCARDS ------------------------------- */
+
+.indexBoxToolCards {
+    margin: 61px 61px 90px 61px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.toolCardVerticalRectangle {
+    width: 208px;
+    max-height: 285px;
+    margin: 28px 35px;
+    padding: 15px 24px;
+    border: 2px solid #3C5E68;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
+    text-align: center;
+}
+
+.toolCardTitle a {
+    height: 40px;
+}
+
+.toolCardTitle, .containerPhotoTool, 
+.toolCardCategoryStatus {
+    margin-bottom: 20px;
+}
+
+.nameToolLinks {
+    display: inline-block;
+    text-decoration: none;
+    color: #6D6E6F;
+    text-align: center;
+}
+
+.containerPhotoTool {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+}
+
+.photoToolCard {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
