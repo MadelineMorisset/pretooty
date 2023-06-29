@@ -21,8 +21,8 @@
     </head>
 
     <body>
-        <?php include('views\header.php');
-        // include('views\userNavbar.php');
+        <?php include('views/header.php');
+        // include('views/userNavbar.php');
         include('php/functions.php');
         $tool = showToolSheet(); ?>
 
@@ -68,7 +68,7 @@
             </section>
         </main>
 
-        <?php include('views\footer.php'); ?>
+        <?php include('views/footer.php'); ?>
 
     </body>
 </html>

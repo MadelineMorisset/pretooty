@@ -27,7 +27,7 @@ error_reporting(E_ALL);
         // SUPPRIMER MON COMPTE
 
         function deleteMyAccount() {
-            include('php\dataBaseConnexion.php');
+            include('php/dataBaseConnexion.php');
             $query = $db->prepare('DELETE FROM utilisateur WHERE id_utilisateur = :id_user');
             $query->execute([
                 "id_user" => $_SESSION['id_utilisateur'],

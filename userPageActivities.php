@@ -21,7 +21,8 @@
     </head>
 
     <body>
-        <?php include('views\header.php');
+        <?php include('views/header.php');
+        //include('views/userNavbar.php'); 
         include("php/functions.php"); ?>
 
         <main class="userMain">
@@ -81,7 +82,7 @@
             </div>
         </main>
 
-        <?php include('views\footer.php'); ?>
+        <?php include('views/footer.php'); ?>
 
     </body>
 </html>
