@@ -1,30 +1,30 @@
 <header>
-  <div class="navHeader">
-    <div class="search">
-      <div class="button40px squareButton"><i class="fa-solid fa-magnifying-glass fa-xl"></i></div>
+  <section class="navHeader">
+    <section class="search">
+      <section class="button40px squareButton"><i class="fa-solid fa-magnifying-glass fa-xl"></i></section>
       <input id="searchInput" class="searchBar" type="search"  value="Rechercher un outil ...">
-    </div>
+    </section>
 
-    <div class="user" onClick="navHidden()">
-      <div class="button40px squareButton"><i class="fa-solid fa-user fa-xl"></i></div>
+    <section class="user" onClick="navHidden()">
+      <section class="button40px squareButton"><i class="fa-solid fa-user fa-xl"></i></section>
 
-      <div id="navHidden" class="visibilityNav">
-        <div class="navUserLogin titleBox separationHorizontalLine1px">
+      <section id="navHidden" class="visibilityNav">
+        <section class="navUserLogin titleBox separationHorizontalLine1px">
           <a href="loginAccount.php" class="title titleHeader fontSize12px">Me connecter / M’inscrire</a>
-        </div>
+        </section>
 
-        <div class="navUserAccount titleBox separationHorizontalLine1px">
+        <section class="navUserAccount titleBox separationHorizontalLine1px">
           <a href="userPageAccount.php" class="navUserAccountLinks title titleHeader fontSize12px">Mon compte</a>
           <a href="userPageActivities.php" class="navUserAccountLinks title titleHeader fontSize12px">Mes activités</a>
           <a href="userMessaging.php" class="navUserAccountLinks title titleHeader fontSize12px">Ma messagerie</a>
-        </div>
+        </section>
 
-        <div class="navUserLogout titleBox">
+        <section class="navUserLogout titleBox">
           <a href="php/logout.php" class="title titleHeader fontSize12px">Me déconnecter</a>
-        </div>
-      </div>
-    </div> 
-  </div> 
+        </section>
+      </section>
+    </section> 
+  </section> 
   
-  <a href="index.php"><div class="logoPretooty"></div></a>
+  <a href="index.php"><section class="logoPretooty"></section></a>
 </header>

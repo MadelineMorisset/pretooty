@@ -34,7 +34,7 @@ error_reporting(E_ALL);
             ]);
             $query->fetchAll();
 
-            echo '<div>Compte supprimé avec succès.</div>';    
+            echo '<section>Compte supprimé avec succès.</section>';    
         }
 
 
@@ -72,9 +72,9 @@ error_reporting(E_ALL);
             $imagePath = "./assets/img/tools/".$userTool['photo'];
             $link = "<a href='./toolSheet.php?id_outil=".$userTool['id_outil']."'><img src=".$imagePath." alt='photo de l'outil'/>".$userTool['nom_outil']."</a>";
             ?> 
-            <div class="ToolCardHorizontalRectangle">
-                <div><?= $link; ?></div> 
-            </div> 
+            <section class="ToolCardHorizontalRectangle">
+                <section><?= $link; ?></section> 
+            </section> 
             <?php
         }
     }
@@ -89,24 +89,24 @@ function showAllTools() {
     $query->execute();
     $tools = $query->fetchAll();
     ?>
-    <div class="indexBoxToolCards">
+    <section class="indexBoxToolCards">
         <?php
         foreach ($tools as $tool) {
             $imagePath = "./assets/img/tools/".$tool['photo'];
             $link = "<a href='./toolSheet.php?id_outil=".$tool['id_outil']."' class='nameToolLinks'>".$tool['nom_outil']."";
             ?>  
-            <div class="toolCardVerticalRectangle">
-                <div class="title fontSize16px toolCardTitle"> <?= $link; ?> </div>
-                <div class="containerPhotoTool">
+            <section class="toolCardVerticalRectangle">
+                <section class="title fontSize16px toolCardTitle"> <?= $link; ?> </section>
+                <section class="containerPhotoTool">
                     <img src="<?= $imagePath ?>" alt="photo de l'outil" class="photoToolCard"/>
-                </div>
-                <div class="text fontSize14px toolCardCategoryStatus"> <?= $tool['nom_categorie'] ?>, <?= $tool['nom_etat'] ?> </div>
-                <div class="title fontSize14px toolCardCity"> <?= $tool['ville'] ?> (<?= $tool['cp'] ?>) </a> </div>
-            </div> 
+                </section>
+                <section class="text fontSize14px toolCardCategoryStatus"> <?= $tool['nom_categorie'] ?>, <?= $tool['nom_etat'] ?> </section>
+                <section class="title fontSize14px toolCardCity"> <?= $tool['ville'] ?> (<?= $tool['cp'] ?>) </a> </section>
+            </section> 
             <?php
         }
         ?>
-    </div>
+    </section>
     <?php
 }
 

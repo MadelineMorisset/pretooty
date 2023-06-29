@@ -27,35 +27,35 @@
 
         <main class="connectionAndCreationAccount">
             <!-- Formulaire de connexion -->
-            <div class="signInContainer">
+            <section class="signInContainer">
                 <h2 class="title title24px titleConnection">Connexion</h2>
 
-                <div class="otherConnections">
-                    <div class="googleSignIn"></div>
-                    <div class="appleSignIn"></div>
-                </div>
+                <section class="otherConnections">
+                    <section class="googleSignIn"></section>
+                    <section class="appleSignIn"></section>
+                </section>
 
                 <p class="text fontSize20px textConnection">Identifiants personnels</p>
                 <form action="php/login.php" method="post" class="formConnection">
-                    <div class="identification">
-                        <div class="pseudoEmail">
+                    <section class="identification">
+                        <section class="pseudoEmail">
                             <label for="pseudoMail" class="title fontSize13px label">Pseudo / Adresse mail :</label>
                             <input type="text" name="pseudoMail" required class="inputLoginAccount">
-                        </div>
+                        </section>
 
-                        <div class="password">
+                        <section class="password">
                             <label for="mdp" class="title fontSize13px label">Mot de passe :</label>
                             <input type="password" name="mdp" required class="inputLoginAccount">
                             <a href="forgottenPassword_mail.php" class="text fontSize14px forgottenPasswordLink">Mot de passe oublié ?</a>
-                        </div>
-                    </div>
+                        </section>
+                    </section>
 
-                    <div class="connection">
+                    <section class="connection">
                         <button type="submit" class="title fontSize13px button115px35px">Se connecter</button>
                         <a href="createAccount.php" class="text fontSize14px notMemberLink">Pas encore membre ?</a>
-                    </div>
+                    </section>
                 </form>
-            </div>
+            </section>
         </main>
 
         <?php include('views/footer.php'); ?>

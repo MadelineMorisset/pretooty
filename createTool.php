@@ -29,17 +29,17 @@
 
             <form action="./php/toolCreation.php" method="post" enctype="multipart/form-data" class="userContainer">
 
-                <div class="button40px squareButton calendarButtonBig"><i class="fa-solid fa-calendar-check fa-xl"></i></div> <!-- Bouton à venir et non fonctionnel -->
+                <section class="button40px squareButton calendarButtonBig"><i class="fa-solid fa-calendar-check fa-xl"></i></section> <!-- Bouton à venir et non fonctionnel -->
                 <input type="button" value="Calendrier" class="squareButton calendarButtonBig calendarButtonBigTemporary"/> <!-- Bouton temporaire mais fonctionnel -->
 
-                <div class="userContainerSections">
-                    <div class="userInnerContainer leftInnerContainer">
-                        <div class="toolName">
+                <section class="userContainerSections">
+                    <section class="userInnerContainer leftInnerContainer">
+                        <section class="toolName">
                             <label for="toolName" class="title fontSize13px createToolLabel">Nom de l'outil :</label>
                             <input type="text" name="toolName" value="" class="text fontSize13px inputCreateTool"/>
-                        </div>
+                        </section>
 
-                        <div class="toolCategory">
+                        <section class="toolCategory">
                             <label for="toolCategory" class="title fontSize13px createToolLabel">Catégorie :</label>
                             <select name="toolCategory" class="text fontSize13px inputCreateTool">
                                 <option value="" class="text fontSize16px createToolCategories">Veuillez choisir une catégorie</option>
@@ -54,86 +54,86 @@
                                 <option value="9" class="text fontSize16px createToolCategories">Attacher</option>
                                 <option value="10" class="text fontSize16px createToolCategories">Percer</option>
                                 <option value="11" class="text fontSize16px createToolCategories">Pincert</option>
-                                <option value="12" class="text fontSize16px createToolCategories">Equipement de protection individuelle</option>
+                                <option value="12" class="text fontSize16px createToolCategories">Equipement de protection insectioniduelle</option>
                                 <option value="13" class="text fontSize16px createToolCategories">Peindre</option>
                                 <option value="14" class="text fontSize16px createToolCategories">Visser</option>
                                 <option value="15" class="text fontSize16px createToolCategories">Souder</option>
                             </select>
-                        </div>
+                        </section>
                             
-                        <div class="toolStatus">
+                        <section class="toolStatus">
                             <label for="toolStatus" class="title fontSize13px createToolLabel">État :</label>
-                            <div class="createToolStatus">
-                                <div class="createToolStatusOptions">
+                            <section class="createToolStatus">
+                                <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="6"/>
                                     <label for="new" class="text fontSize13px createToolLabel">Neuf</label>
-                                </div>
+                                </section>
 
-                                <div class="createToolStatusOptions">
+                                <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="5"/>
                                     <label for="asNew" class="text fontSize13px createToolLabel">Comme neuf</label>
-                                </div>
+                                </section>
 
-                                <div class="createToolStatusOptions">
+                                <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="4"/>
                                     <label for="veryGood" class="text fontSize13px createToolLabel">Très bon</label>
-                                </div>
+                                </section>
 
-                                <div class="createToolStatusOptions">
+                                <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="3"/>
                                     <label for="good" class="text fontSize13px createToolLabel">Bon</label>
-                                </div>
+                                </section>
 
-                                <div class="createToolStatusOptions">
+                                <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="2"/>
                                     <label for="bad" class="text fontSize13px createToolLabel">Mauvais</label>
-                                </div>
+                                </section>
 
-                                <div class="createToolStatusOptions">
+                                <section class="createToolStatusOptions">
                                     <input type="radio" name="toolStatus" value="1"/>
                                     <label for="used" class="text fontSize13px createToolLabel">Usagé</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
                     
-                    <div class="userInnerContainer rightInnerContainer">
-                        <div class="toolPhotoDownload">
+                    <section class="userInnerContainer rightInnerContainer">
+                        <section class="toolPhotoDownload">
                             <label for="toolImage" class="title fontSize13px createToolLabel">Photo de l'outil :</label>
                             <input type="file" name="toolImage" accept=".png,.jpg,.jpeg" class="text fontSize13px inputPhotoDownload"/>
-                        </div>
-                        <div class="toolPhotoView">
-                            <!-- <div></div> AFFICHAGE DE LA PHOTO A VOIR PLUS TARD -->
-                        </div>
-                    </div>
-                </div>
+                        </section>
+                        <section class="toolPhotoView">
+                            <!-- <section></section> AFFICHAGE DE LA PHOTO A VOIR PLUS TARD -->
+                        </section>
+                    </section>
+                </section>
 
-                <div class="userContainerSections">
-                    <div class="userToolInnerContainer">
-                        <div class="toolInformations">
+                <section class="userContainerSections">
+                    <section class="userToolInnerContainer">
+                        <section class="toolInformations">
                             <label for="toolDescription" class="title fontSize13px createToolInformationsLabel">Description :</label>
                             <textarea name="toolDescription" id="toolDescription" class="text fontSize13px toolTextArea"></textarea>
-                        </div>
+                        </section>
 
-                        <div class="toolInformations">
+                        <section class="toolInformations">
                             <label for="toolSecurity" class="title fontSize13px createToolInformationsLabel">Consignes de sécurité :</label>
                             <textarea name="toolSecurity" id="toolSecurity" class="text fontSize13px toolTextArea"></textarea>
-                        </div>
+                        </section>
 
-                        <div class="toolInformations">
+                        <section class="toolInformations">
                             <label for="toolAccessories" class="title fontSize13px createToolInformationsLabel">Accessoires fournis avec l'outil :</label>
                             <textarea name="toolAccessories" id="toolAccessories" class="text fontSize13px toolTextArea"></textarea>
-                        </div>
-                    </div>
-                </div>
+                        </section>
+                    </section>
+                </section>
 
-                <div class="userContainerButtons">
-                    <div class="userToolButtons">
+                <section class="userContainerButtons">
+                    <section class="userToolButtons">
                         <!-- <a href="userPageActivities.php"><button class="title fontSize13px button115px35px">Annuler</button></a> -->
 
                         <button type="submit" class="title fontSize13px button115px35px">Valider</button>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
             </form>
         </main>
