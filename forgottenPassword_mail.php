@@ -22,7 +22,7 @@
     <body>
         <?php include('views/header.php'); ?>
 
-        <form action="php\mailInitPassword.php" method="post">
+        <form action="php/mailInitPassword.php" method="post">
             <input type="email" name="mail" placeholder="Votre adresse mail" required>
             <button type="submit">Envoyer</button>
 
